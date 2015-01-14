@@ -1,237 +1,25 @@
-<div class="game-wrapper">
-<audio id="spinner-sound">
-    <source src="/sounds/quizspin/spinner.mp3" type="audio/mpeg">
-    <source src="/sounds/quizspin/spinner.ogg" type="audio/ogg">
-    Your browser does not support this audio format.
-</audio>
-<audio id="cranker">
-    <source src="/sounds/quizspin/crank.mp3" type="audio/mpeg">
-    <source src="/sounds/quizspin/crank.ogg" type="audio/ogg">
-    Your browser does not support this audio format.
-</audio>
-<img src="/gameassets/quizspin/spinclick.png" id="spinclick"/>
+<html>
+<head>
+    <title>Quizpin</title>
 
-<div id="machine-half">
-    <div class="question-image">
-        <span class="Centerer"></span>
-        <img src="http://sim05.in.com/1c42b8c38e7bfc876475fa513cd0386c_m.jpg" class="Centered image-for-question">
-    </div>
+    <script type="text/javascript" src="assets/js/standardLoad/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/standardLoad/modernizr-2.6.2.min.js.js"></script>
+    <script type="text/javascript" src="assets/js/standardLoad/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/standardLoad/jquery.easing.1.3.js.js"></script>
+    <script type="text/javascript" src="assets/js/standardLoad/jquery.slotmachine.js"></script>
 
-    <div id="machine">
-        <img src="/gameassets/quizspin/machine.png" id="machine-image"/>
+    <script type="text/javascript" src="assets/js/standardLoad/ptotemy-game-adaptor.js"></script>
 
-        <div id="handle-wrapper">
-            <img src="/gameassets/quizspin/handle.png" id="slot-handle"/>
-        </div>
-        <div id="slots-panel">
-            <ul class="slots">
-                <li>
-                    <span><img src="" class="questioner"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="questioner"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="icon1"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="icon2"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="icon3"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="icon4"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="icon5"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="icon3"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="icon4"/></span>
-                </li>
-                <li>
-                    <span><img src="" class="icon5"/></span>
-                </li>
-            </ul>
-            <img src="/gameassets/quizspin/over.png" id="slotOverlay"/>
-        </div>
-    </div>
-</div>
-<div id="matter-half">
-    <div id="header-panel">
-        <img src="/gameassets/quizspin/logo.png" id="logo"/>
-        <br/>
+    <script type="text/javascript" src='assets/js/quizspin-config.js'></script>
+    <script type="text/javascript" src='assets/js/quizspin-data.js'></script>
+    <script type="text/javascript" src='assets/js/quizspin.js'></script>
 
-        <div id="credits">
-            <div id="creditsVal"></div>
-            <div id="creditsLabel"></div>
-        </div>
-    </div>
-    <div id="matter-panel">
-        <div id="base-panel">
-            <img src="/gameassets/quizspin/panelBack.png" class="panelBack"/>
-        </div>
-        <div id="intro-panel" class="content-panel">
-            <img src="/gameassets/quizspin/panelBack.png" class="panelBack"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/quizspin.css" />
 
-            <div id="intro-text">
-                <img src="" id="gamelogo"/>
-                <br/>
-                Welcome to Quiz Spin
-                <br/>
-                <br/>
-                Spin the slots to try your luck. But as they say, you can make your own luck. Can you? Answer the
-                questions to win big and leave lady luck gasping...
-                <br/>
-                <br/>
-                <img src="/gameassets/quizspin/exit.png" id="exiter"/>
-            </div>
-        </div>
-        <div id="leaderboard-panel" class="content-panel">
-            <img src="/gameassets/quizspin/panelBack.png" class="panelBack"/>
+</head>
+<body>
 
-            <div id="leaderboard-table">
-                <h1>Leaderboard</h1>
-                <table>
-                    <tr>
-                        <th>Rank</th>
-                        <th>User</th>
-                        <th>Credits</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Amit Sharma</td>
-                        <td>10000</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div id="payoff-panel" class="content-panel">
-            <img src="/gameassets/quizspin/panelBack.png" class="panelBack"/>
-
-            <div id="payoff-table">
-                <h2>Payoff Table</h2>
-                <table>
-                    <tr>
-                        <td>
-                            <img src="" class="icon1"/><img src="" class="icon1"/><img src=""
-                                                                                       class="icon1"/><span>60</span>
-                        </td>
-                        <td>
-                            <img src="" class="icon1"/><img src="" class="icon1"/><span>30</span>
-                        </td>
-                        <td>
-                            <img src="" class="icon1"/><span>15</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="" class="icon2"/><img src="" class="icon2"/><img src=""
-                                                                                       class="icon2"/><span>50</span>
-                        </td>
-                        <td>
-                            <img src="" class="icon2"/><img src="" class="icon2"/><span>25</span>
-                        </td>
-                        <td>
-                            <img src="" class="icon2"/><span>10</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="" class="icon3"/><img src="" class="icon3"/><img src=""
-                                                                                       class="icon3"/><span>40</span>
-                        </td>
-                        <td>
-                            <img src="" class="icon3"/><img src="" class="icon3"/><span>20</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="" class="icon4"/><img src="" class="icon4"/><img src=""
-                                                                                       class="icon4"/><span>30</span>
-                        </td>
-                        <td>
-                            <img src="" class="icon4"/><img src="" class="icon4"/><span>15</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="" class="icon5"/><img src="" class="icon5"/><img src=""
-                                                                                       class="icon5"/><span>20</span>
-                        </td>
-                        <td>
-                            <img src="" class="icon5"/><img src="" class="icon5"/><span>10</span>
-                        </td>
-                    </tr>
-
-                </table>
-                <p style="width:90%;">
-                    <img src="" class="questioner"/>
-                    Answer questions to win free spins.</p>
-                <br>
-
-            </div>
-        </div>
-        <div id="profile-panel" class="content-panel">
-            <img src="/gameassets/quizspin/panelBack.png" class="panelBack"/>
-
-            <div id="profile-text">
-
-            </div>
-        </div>
-        <div id="quiz-panel" class="content-panel">
-            <img src="/gameassets/quizspin/panelBack.png" class="panelBack"/>
-
-            <div id="quiz-content" class="questioned">
-                <div id="qquestion"></div>
-                <div id="qid"></div>
-                <ul id="answerBlock">
-                    <li class="answer" id="optax"></li>
-                    <li class="answer" id="optbx"></li>
-                    <li class="answer" id="optcx"></li>
-                    <li class="answer" id="optdx"></li>
-                    <!--<li class="learn-more-modal" id="learnlink" >Learn More...</li>-->
-                </ul>
-                <div id="answerMsg"></div>
-                <a href="#" class="learn-more-modal" id="learnlink" >Learn More</a>
-            </div>
-        </div>
-        <div id="scoring-panel" class="content-panel">
-            <img src="/gameassets/quizspin/panelBack.png" class="panelBack"/>
-
-            <div id="scoring"></div>
-        </div>
-    </div>
-    <div id="menu-panel">
-        <div id="standard-menu">
-            <div id="introBtn" class="menuBtn activeBtn" title="Welcome Panel">
-                <img src="/gameassets/quizspin/menubtns/info.png"/>
-            </div>
-            <div id="payoffBtn" class="menuBtn" title="Payoff Panel">
-                <img src="/gameassets/quizspin/menubtns/payoff.png"/>
-            </div>
-            <div id="leaderboardBtn" class="menuBtn" title="Leaderboard Panel">
-                <img src="/gameassets/quizspin/menubtns/leaderboard.png"/>
-            </div>
-            <div id="profileBtn" class="menuBtn" title="About Us">
-                <img src="/gameassets/quizspin/menubtns/about.png"/>
-            </div>
-        </div>
-        <div id="answer-menu">
-            <div id="opta" class="menuBtn answerBtn">A</div>
-            <div id="optb" class="menuBtn answerBtn">B</div>
-            <div id="optc" class="menuBtn answerBtn">C</div>
-            <div id="optd" class="menuBtn answerBtn">D</div>
-        </div>
-        <div id="freespin-counter">
-            <span id="freespin-count"></span> Free Spins Left
-        </div>
-    </div>
-
-</div>
-
-</div>
-
+    <div id="entities"></div>
+    <div id="ptotemy-game"></div>
+</body>
+</html>

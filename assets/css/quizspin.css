@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa);
+
+/* -------------- Please do not change the CSS for the below elements ----------- */
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Comfortaa', cursive;
+    background-color: #123456
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#ptotemy-game {
+    position: fixed;
+    width: 640px;
+    height: 480px;
+    margin:auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#log {
+    display: none;
+    pointer-events: none;
+}
+
+#entities, #items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+    pointer-events: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.environment, .location, .entity, .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.no-click { pointer-events: none; }
+
+/*--------------- You can edit below this -------------- */
+
+#entities { display:none;}
+
+#machine {
+    width: 45%;
+    height: 85%;
+}
+
+#handle {
+    width: 40px;
+    height: 150px;
+    overflow:hidden;
+    cursor: pointer;
+    display: inline-block;
+    top: 28.5%;
+    left:39%;
+}
+
+#handle img {
+    width: 500px;
+}
+
+.slotwrapper {
+    width: auto;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 25%;
+}
+
+.slotholder {
+    border: 5px solid #fff;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    padding: 0px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.slotMachine{
+    width: 25px;
+    height: 25px;
+    padding: 0px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#slot1, #slot2, #slot3 {
+    position: static;
+    width: 35px;
+    height: 35px;
+    padding: 0 0px;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #ffffff;
+}
+
+#slot-1-item-1, #slot-1-item-2, #slot-1-item-3, #slot-1-item-4, #slot-1-item-5, #slot-1-item-6,
+#slot-2-item-1, #slot-2-item-2, #slot-2-item-3, #slot-2-item-4, #slot-2-item-5, #slot-2-item-6,
+#slot-3-item-1, #slot-3-item-2, #slot-3-item-3, #slot-3-item-4, #slot-3-item-5, #slot-3-item-6 {
+    position: inherit;
+}
+
+#branding, #logo {
+    display:none;
+}
