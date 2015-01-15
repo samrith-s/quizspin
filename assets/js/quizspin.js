@@ -18,37 +18,16 @@ function observers() {
 
 function initSlots() {
 
-    var slot1, slot2, slot3;
-    slot1 = new Environment("slot1");
-    slot2 = new Environment("slot2");
-    slot3 = new Environment("slot3");
+    for(var i=0; i<3; i++) {
 
-    loadConfig(slot1);
-    loadConfig(slot2);
-    loadConfig(slot3);
+        var thisSlot = "slot" + (i+1);
+        $("#slots").append("<div id='" + thisSlot + "'></div>");
 
-
-    $("#slot1, #slot2, #slot3").wrap("<div class='slotholder'></div>");
-    $(".slotholder").wrapAll("<div class='slotwrapper'></div>");
-    $(".slotwrapper").css({width: ''});
-
-    var machine1 = $("#slot1").slotMachine({
-        active	: 1,
-        delay	: 450
-    });
-
-    var machine2 = $("#slot2").slotMachine({
-        active	: 1,
-        delay	: 650
-    });
-
-    var machine3 = $("#slot3").slotMachine({
-        active	: 1,
-        delay	: 850
-    });
-
-    var allMachines = [machine1, machine2, machine3];
-    allSlots = allMachines;
+        for(var j=0; j<5; j++) {
+            $("#" + thisSlot).append("<div class='slots slot-item-" + (i+1) + "'>" +
+                "<img src='assets/img/slotitems/" + (i+1) + ".png' /></div>");
+        }
+    }
 }
 
 function spinSlots(allSlots) {
@@ -68,7 +47,24 @@ function pullHandle() {
 
     var m = $("#handle img");
 
-    spinSlots(allSlots);
+    var machine1 = $("#slot1").slotMachine({
+        active	: 1,
+        delay	: 450
+    });
+
+    var machine2 = $("#slot2").slotMachine({
+        active	: 1,
+        delay	: 650
+    });
+
+    var machine3 = $("#slot3").slotMachine({
+        active	: 1,
+        delay	: 850
+    });
+
+    machine1.shuffle(5);
+    machine2.shuffle(5);
+    machine3.shuffle(5);
 
     m.animate({
             "width": "500px"

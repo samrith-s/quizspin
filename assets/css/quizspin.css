@@ -83,23 +83,11 @@ img {
     width: 500px;
 }
 
-.slotwrapper {
+#slots {
     width: auto;
-    position: absolute;
-    z-index: 1;
-    top: 25%;
-    left: 25%;
-}
-
-.slotholder {
-    border: 5px solid #fff;
-    width: 35px;
-    height: 35px;
-    margin: 5px;
-    padding: 0px;
-    display: inline-block;
-    overflow: hidden;
-    background-color: #ffffff;
+    height: auto;
+    top: 30%;
+    left: 20%;
 }
 
 .slotMachine{
@@ -117,15 +105,10 @@ img {
     width: 35px;
     height: 35px;
     padding: 0 0px;
+    margin: 5px;
     overflow: hidden;
     display: inline-block;
     background-color: #ffffff;
-}
-
-#slot-1-item-1, #slot-1-item-2, #slot-1-item-3, #slot-1-item-4, #slot-1-item-5, #slot-1-item-6,
-#slot-2-item-1, #slot-2-item-2, #slot-2-item-3, #slot-2-item-4, #slot-2-item-5, #slot-2-item-6,
-#slot-3-item-1, #slot-3-item-2, #slot-3-item-3, #slot-3-item-4, #slot-3-item-5, #slot-3-item-6 {
-    position: inherit;
 }
 
 #branding, #logo {
