@@ -1,4 +1,3 @@
-var allSlots = [];
 
 $(function() {
     initGame();
@@ -14,8 +13,6 @@ function observers() {
     $("#handle img").unbind('click').on('click', pullHandle);
 }
 
-
-
 function initSlots() {
 
     for(var i=0; i<3; i++) {
@@ -27,13 +24,6 @@ function initSlots() {
             $("#" + thisSlot).append("<div class='slots slot-item-" + (i+1) + "'>" +
                 "<img src='assets/img/slotitems/" + (j+1) + ".png' /></div>");
         }
-    }
-}
-
-function spinSlots(allSlots) {
-    for(i in allSlots) {
-        allSlots[i].shuffle(5);
-        console.log(allSlots[i]);
     }
 }
 
@@ -64,7 +54,12 @@ function pullHandle() {
 
     machine1.shuffle(5);
     machine2.shuffle(5);
-    machine3.shuffle(5);
+    machine3.shuffle(5, function() {
+        $("#slot1 img").effect("pulsate");
+        $("#slot2 img").effect("pulsate");
+        $("#slot3 img").effect("pulsate");
+        console.log("machine 1: " + machine1.active + ", machine 2: " + machine2.active + ", machine 3: " +machine3.active);
+    });
 
     m.animate({
             "width": "500px"

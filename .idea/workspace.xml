@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c733614-17bc-4a45-b3ba-f7872cfb2631" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/slotitems/1.png" afterPath="$PROJECT_DIR$/assets/img/slotitems/1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/quizspin.css" afterPath="$PROJECT_DIR$/assets/css/quizspin.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/quizspin.js" afterPath="$PROJECT_DIR$/assets/js/quizspin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="quizspin.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421327523142" ignored="false" />
     <file path="/quizspin-config.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421254365266" ignored="false" />
     <file path="/index.html" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421261023838" ignored="false" />
-    <file path="/quizspin.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421328650253" ignored="false" />
+    <file path="/quizspin.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421335783095" ignored="false" />
     <file path="/quizspin.css" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421332581200" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,20 +40,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quizspin.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="quizspin.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/quizspin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="13" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.50980395">
+            <state line="133" column="0" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quizspin.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="quizspin.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/quizspin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="54" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="5" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.12254902">
+              <folding>
+                <element signature="n#!!block;n#pullHandle#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,6 +66,13 @@
             <state line="30" column="21" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="6.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/img/slotitems/6.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -90,8 +97,8 @@
         <option value="$PROJECT_DIR$/assets/js/quizspin-data.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/js/quizspin-config.js" />
-        <option value="$PROJECT_DIR$/assets/js/quizspin.js" />
         <option value="$PROJECT_DIR$/assets/css/quizspin.css" />
+        <option value="$PROJECT_DIR$/assets/js/quizspin.js" />
       </list>
     </option>
   </component>
@@ -159,8 +166,22 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="quizspin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quizspin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -179,6 +200,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slotitems" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,26 +390,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/img/New folder/info.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/New folder/bonus.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/New folder/panelbackground.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/New folder/Untitled-1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/New folder/back.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -405,11 +410,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/slotitems/4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/slotmachine.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -425,18 +425,26 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/standardLoad/jQuery-SlotMachine-master/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="19" selection-start="935" selection-end="935" vertical-scroll-proportion="-11.25">
+        <state line="20" column="33" selection-start="939" selection-end="939" vertical-scroll-proportion="-2.2173913">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/quizspin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="54" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/assets/img/slotitems/4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/slotitems/3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/slotitems/5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/quizspin-config.js">
@@ -446,10 +454,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/slotitems/6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="19" selection-start="935" selection-end="935" vertical-scroll-proportion="-11.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/quizspin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="13" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.50980395">
+        <state line="133" column="0" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/quizspin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.12254902">
+          <folding>
+            <element signature="n#!!block;n#pullHandle#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
