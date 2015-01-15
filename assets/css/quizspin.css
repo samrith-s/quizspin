@@ -64,6 +64,15 @@ img {
 
 #entities { display:none;}
 
+#ptotemy-game {
+    background: #111;
+}
+
+#slotmachine {
+    margin-top: 6.5%;
+    /*background-color: #fff;*/
+}
+
 #machine {
     width: 45%;
     height: 85%;
@@ -76,7 +85,7 @@ img {
     cursor: pointer;
     display: inline-block;
     top: 28.5%;
-    left:39%;
+    left:39.5%;
 }
 
 #handle img {
@@ -86,13 +95,13 @@ img {
 #slots {
     width: auto;
     height: auto;
-    top: 30%;
-    left: 20%;
+    top: 35.35%;
+    left: 10.75%;
+    -webkit-perspective: 500px; /* Chrome, Safari, Opera */
+    perspective: 500px;
 }
 
 .slotMachine{
-    width: 25px;
-    height: 25px;
     padding: 0px;
     overflow: hidden;
     display: inline-block;
@@ -104,12 +113,20 @@ img {
     position: static;
     width: 35px;
     height: 35px;
-    padding: 0 0px;
-    margin: 5px;
+    padding: 5px;
+    margin: 2px;
     overflow: hidden;
     display: inline-block;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
 }
+
+#slot1 img, #slot2 img, #slot3 img {
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+#slot2 { border-left: 1px solid #111; border-right: 1px solid #111; }
 
 #branding, #logo {
     display:none;

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c733614-17bc-4a45-b3ba-f7872cfb2631" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/quizspin-config.js" afterPath="$PROJECT_DIR$/assets/js/quizspin-config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/slotitems/1.png" afterPath="$PROJECT_DIR$/assets/img/slotitems/1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/quizspin.css" afterPath="$PROJECT_DIR$/assets/css/quizspin.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/quizspin.js" afterPath="$PROJECT_DIR$/assets/js/quizspin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="quizspin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -12,7 +13,7 @@
     <file path="/quizspin-config.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421254365266" ignored="false" />
     <file path="/index.html" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421261023838" ignored="false" />
     <file path="/quizspin.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421328650253" ignored="false" />
-    <file path="/quizspin.css" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421329088164" ignored="false" />
+    <file path="/quizspin.css" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421332581200" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
       <file leaf-file-name="quizspin.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/quizspin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="14" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.3872549">
+            <state line="87" column="13" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.50980395">
               <folding />
             </state>
           </provider>
@@ -53,7 +54,7 @@
       <file leaf-file-name="quizspin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/quizspin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="12" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+            <state line="27" column="54" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -424,13 +425,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/quizspin-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="21" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="19" selection-start="935" selection-end="935" vertical-scroll-proportion="-11.25">
@@ -440,14 +434,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/quizspin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="12" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+        <state line="27" column="54" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/quizspin-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="21" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/quizspin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="14" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.3872549">
+        <state line="87" column="13" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.50980395">
           <folding />
         </state>
       </provider>

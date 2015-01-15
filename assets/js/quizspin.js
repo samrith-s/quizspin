@@ -25,7 +25,7 @@ function initSlots() {
 
         for(var j=0; j<5; j++) {
             $("#" + thisSlot).append("<div class='slots slot-item-" + (i+1) + "'>" +
-                "<img src='assets/img/slotitems/" + (i+1) + ".png' /></div>");
+                "<img src='assets/img/slotitems/" + (j+1) + ".png' /></div>");
         }
     }
 }
