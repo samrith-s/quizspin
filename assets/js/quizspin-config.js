@@ -1,12 +1,15 @@
 
 var config = {};
 
-config.initCoins = 100;
+config.currencyName = "Coins"
+config.coins = function() {
+    return 100; //value to be returned
+}
 
 config.base = {
     type: "environment",
     states: [
-        {name: "default", representation: "<img src='http://www.toptenz.net/wp-content/uploads/2014/01/god-of-war.jpg'/>"}
+        {name: "default", representation: "<img src='http://quizspin.ptotem.in/img/quizspin/background.jpg'/>"}
     ]
 }
 
@@ -40,14 +43,20 @@ config.payofftable = {
         {name: "default", representation: ""}
     ],
     locations: [
+        {name: "currencyholder", states: [
+            {name: "default", representation: "<span>" + config.currencyName + "</span><span>" + config.coins() + "</span>"}
+        ]},
         {name: "payoffs", states: [
-            {name: "default", representation: ""}
+            {name: "default", representation: "<div><h3>Payoff Table</h3></div>"}
         ]},
         {name: "iconsPanel", states: [
-            {name: "default", representation: ""}
-        ]},
-        {name: "currencyholder", states: [
-            {name: "default", representation: ""}
+            {name: "default", representation:
+                "<div>" +
+                    "<img src='assets/img/payoff.png' />" +
+                    "<img src='assets/img/info.png' />" +
+                    "<img src='assets/img/about.png' />" +
+                    "<img src='assets/img/exit.png' />" +
+                "</div>"}
         ]}
     ]
 }

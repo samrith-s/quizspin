@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     overflow: hidden;
     font-family: 'Comfortaa', cursive;
-    background-color: #123456
+    background-color: #000;
 }
 
 * {
@@ -135,7 +135,7 @@ img {
 
 #branding {
     width: 27.5%;
-    background: #2b81af;
+    /*background: #2b81af;*/
     height: 12%;
     top: 14%;
     left: 8.5%;
@@ -143,7 +143,7 @@ img {
 
 #logo {
     width: 30.75%;
-    background: #EE5757;
+    /*background: #EE5757;*/
     height: 16.5%;
     top: 54%;
     left: 7%;
@@ -156,30 +156,77 @@ img {
 
 #payofftable div {
     float:right;
-    display: block;
+    display: table;
     position: relative;
 }
 
 #payoffs, #currencyholder, #iconspanel {
     width: 47%;
     margin: 0 30px;
-}
-#payoffs {
-    background: #374e0c;
-    height: 60%;
-    margin-top: 6.5%;
+    display: table;
 }
 
 #currencyholder {
-    background: #fb9e25;
+    background: rgba(1,1,1,0.6);
     height: 9%;
+    margin: 0 30px;
+    margin-top: 6.5%;
+    border-radius: 7px;
+    font-size: 20px;
+    color: gold;
+    text-shadow: 1px 1px #111;
+}
+
+#currencyholder span, #iconspanel div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+    float: none;
+}
+
+#currencyholder span {
+    width: 46%;
+    padding: 0 2%;
+}
+
+#currencyholder span:first-child { text-align: left; }
+#currencyholder span:last-child  { text-align: right; }
+
+
+#payoffs {
+    background: url('../img/panelbackground.png') center no-repeat;
+    background-size: 100%;
+    height: 60%;
+    color: gold;
+    text-shadow: 2px 1px #111;
+    margin-top:1%;
+}
+
+#payoffs div {
+    width: 80%;
+    margin: 2% 10%;
+    float: none;
+}
+
+#payoffs h3 {
+    text-align: center;
+    background: rgba(1,1,1,0.5);
+    padding: 5px;
+    border-radius: 7px;
+}
+
+#iconsPanel {
+    /*background: #710909;*/
+    height: 12%;
     margin: 0 30px;
     margin-top: 1%;
 }
 
-#iconsPanel {
-    background: #710909;
-    height: 12%;
-    margin: 0 30px;
-    margin-top: 1%;
+#iconsPanel img {
+    position: static;
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 7px;
+    /*box-shadow: 0px 0px 15px #FFDD00;*/
 }

@@ -4,6 +4,7 @@ $(function() {
 });
 
 function initGame() {
+    initBase();
     initPayOffTable();
     initSlotMachine();
     initSlots();
@@ -12,6 +13,11 @@ function initGame() {
 
 function observers() {
     $("#handle img").unbind('click').on('click', pullHandle);
+}
+
+function initBase() {
+    var base = new Environment("base");
+    loadConfig(base);
 }
 
 function initSlots() {
@@ -61,9 +67,6 @@ function pullHandle() {
     machine1.shuffle(5);
     machine2.shuffle(5);
     machine3.shuffle(5, function() {
-        $("#slot1 img").effect("pulsate");
-        $("#slot2 img").effect("pulsate");
-        $("#slot3 img").effect("pulsate");
         console.log("machine 1: " + machine1.active + ", machine 2: " + machine2.active + ", machine 3: " +machine3.active);
     });
 
