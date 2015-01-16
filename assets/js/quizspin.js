@@ -4,6 +4,7 @@ $(function() {
 });
 
 function initGame() {
+    initPayOffTable();
     initSlotMachine();
     initSlots();
     observers();
@@ -30,6 +31,11 @@ function initSlots() {
 function initSlotMachine() {
     var slotmachine = new Environment("slotmachine");
     loadConfig(slotmachine);
+}
+
+function initPayOffTable() {
+    var payofftable = new Environment("payofftable");
+    loadConfig(payofftable);
 }
 
 function pullHandle() {

@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c733614-17bc-4a45-b3ba-f7872cfb2631" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/quizspin-config.js" afterPath="$PROJECT_DIR$/assets/js/quizspin-config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/quizspin.css" afterPath="$PROJECT_DIR$/assets/css/quizspin.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/quizspin.js" afterPath="$PROJECT_DIR$/assets/js/quizspin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="quizspin.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421327523142" ignored="false" />
-    <file path="/quizspin-config.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421254365266" ignored="false" />
+    <file path="/quizspin-config.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421390296715" ignored="false" />
     <file path="/index.html" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421261023838" ignored="false" />
-    <file path="/quizspin.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421335783095" ignored="false" />
-    <file path="/quizspin.css" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421332581200" ignored="false" />
+    <file path="/quizspin.js" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421390368262" ignored="false" />
+    <file path="/quizspin.css" changelist="7c733614-17bc-4a45-b3ba-f7872cfb2631" time="1421391380695" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
       <file leaf-file-name="quizspin.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/quizspin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="0" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.0">
+            <state line="181" column="13" selection-start="3040" selection-end="3040" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,8 +54,11 @@
       <file leaf-file-name="quizspin.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/quizspin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.12254902">
+            <state line="16" column="21" selection-start="251" selection-end="251" vertical-scroll-proportion="0.39215687">
               <folding>
+                <element signature="n#!!block;n#initSlots#0" expanded="false" />
+                <element signature="n#!!block;n#initSlotMachine#0" expanded="false" />
+                <element signature="n#!!block;n#initPayOffTable#0" expanded="false" />
                 <element signature="n#!!block;n#pullHandle#0" expanded="false" />
               </folding>
             </state>
@@ -63,7 +68,7 @@
       <file leaf-file-name="quizspin-config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/quizspin-config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="21" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+            <state line="3" column="10" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,14 +101,14 @@
       <list>
         <option value="$PROJECT_DIR$/assets/js/quizspin-data.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/js/quizspin-config.js" />
         <option value="$PROJECT_DIR$/assets/css/quizspin.css" />
+        <option value="$PROJECT_DIR$/assets/js/quizspin-config.js" />
         <option value="$PROJECT_DIR$/assets/js/quizspin.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1367" />
+    <option name="x" value="-1" />
     <option name="y" value="-4" />
     <option name="width" value="1368" />
     <option name="height" value="773" />
@@ -203,7 +208,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="slotitems" />
+              <option name="myItemId" value="New folder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,7 +312,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1367" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -390,11 +395,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/img/New folder/back.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/New folder/leaderboard.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -447,13 +447,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/quizspin-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="21" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/slotitems/6.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -466,17 +459,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/New folder/panelbackground.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/quizspin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.0">
+        <state line="181" column="13" selection-start="3040" selection-end="3040" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/quizspin-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="10" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/quizspin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.12254902">
+        <state line="16" column="21" selection-start="251" selection-end="251" vertical-scroll-proportion="0.39215687">
           <folding>
+            <element signature="n#!!block;n#initSlots#0" expanded="false" />
+            <element signature="n#!!block;n#initSlotMachine#0" expanded="false" />
+            <element signature="n#!!block;n#initPayOffTable#0" expanded="false" />
             <element signature="n#!!block;n#pullHandle#0" expanded="false" />
           </folding>
         </state>

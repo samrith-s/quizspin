@@ -33,3 +33,21 @@ config.slotmachine = {
         ]}
     ]
 }
+
+config.payofftable = {
+    type: "environment",
+    states: [
+        {name: "default", representation: ""}
+    ],
+    locations: [
+        {name: "payoffs", states: [
+            {name: "default", representation: ""}
+        ]},
+        {name: "iconsPanel", states: [
+            {name: "default", representation: ""}
+        ]},
+        {name: "currencyholder", states: [
+            {name: "default", representation: ""}
+        ]}
+    ]
+}
