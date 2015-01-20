@@ -7,6 +7,7 @@ html, body {
     overflow: hidden;
     font-family: 'Comfortaa', cursive;
     background-color: #000;
+    color: #fff;
 }
 
 * {
@@ -149,6 +150,38 @@ img {
     left: 7%;
 }
 
+#displaybox {
+    width: 31.5%;
+    height: 7%;
+    top: 75%;
+    left: 6%;
+    padding: 3px;
+    text-align: center;
+    /*display: none;*/
+    background: rgba(1,1,1,0.8);
+    text-shadow: 2px 1px #000;
+    display: table;
+    box-shadow: 1px 1px 5px gold;
+}
+
+#displaybox span { display: table-cell; vertical-align: middle;}
+
+#freespins {
+    background: rgba(1,1,1,0.5);
+    width: 6%;
+    height:15%;
+    left: 36%;
+    top: 10%;
+    border-radius: 5px;
+    padding: 5px 5px 5px 15px;
+    text-align: center;
+    text-shadow: 2px 1px #000;
+}
+
+#freespins span:last-child { font-size:32px;}
+#freespins span:first-child { font-size:11px;}
+
+
 /*-------------------
 * RIGHT PANEL : Pay off table and Quiz.
 * This is the CSS for the pay off table and questions on the right.
@@ -160,7 +193,7 @@ img {
     position: relative;
 }
 
-#payoffs, #currencyholder, #iconspanel {
+#payoffs, #currencyholder, #botPanel {
     width: 47%;
     margin: 0 30px;
     display: table;
@@ -173,11 +206,11 @@ img {
     margin-top: 6.5%;
     border-radius: 7px;
     font-size: 20px;
-    color: gold;
     text-shadow: 1px 1px #111;
+    box-shadow: 0px 0px 7px goldenrod;
 }
 
-#currencyholder span, #iconspanel div {
+#currencyholder span, #botPanel div {
     display: table-cell;
     vertical-align: middle;
     text-align:center;
@@ -197,7 +230,6 @@ img {
     background: url('../img/panelbackground.png') center no-repeat;
     background-size: 100%;
     height: 60%;
-    color: gold;
     text-shadow: 2px 1px #111;
     margin-top:1%;
 }
@@ -213,20 +245,58 @@ img {
     background: rgba(1,1,1,0.5);
     padding: 5px;
     border-radius: 7px;
+    width: 78%;
+    margin: 8% 10%;
+    float: none;
 }
 
-#iconsPanel {
+#payoffs div {
+    text-align: left;
+    /*background: rgba(1,1,1,0.5);*/
+    padding: 5px;
+    border-radius: 7px;
+    width: 78%;
+    margin: 0 10%;
+    margin-top: -6%;
+    float: none;
+    line-height: 30px;
+}
+
+#payoffs img { width: 25px; height: 25px; vertical-align: middle; }
+#payoffs span { line-height: 50px; font-size: 12px; vertical-align: middle; }
+
+#botPanel {
     /*background: #710909;*/
     height: 12%;
     margin: 0 30px;
     margin-top: 1%;
 }
 
-#iconsPanel img {
+#botPanel img {
     position: static;
     margin: 5px;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border-radius: 7px;
     /*box-shadow: 0px 0px 15px #FFDD00;*/
 }
+
+#messages {
+    display: table;
+    background: rgba(1,1,1,0.7);
+    vertical-align: middle;
+    text-align: center;
+}
+
+#messageBox {
+    display: table-cell;
+    vertical-align: middle;
+    color: whitesmoke;
+    position: static;
+    padding: 5px;
+    border-radius: 7px;
+    background: rgba(1,1,1,0.7);
+}
+
+#quiz { display: none;}
+

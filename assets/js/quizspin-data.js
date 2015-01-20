@@ -2,8 +2,6 @@
 quizspin = {};
 
 quizspin.combo = [
-    {
 
 
-    }
 ]

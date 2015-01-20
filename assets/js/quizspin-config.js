@@ -6,6 +6,13 @@ config.coins = function() {
     return 100; //value to be returned
 }
 
+config.player = {
+    type: "entity",
+    states: [
+        {name: "default", representation: ""}
+    ]
+}
+
 config.base = {
     type: "environment",
     states: [
@@ -19,6 +26,9 @@ config.slotmachine = {
         {name: "default", representation: ""}
     ],
     locations: [
+        {name: "freespins", states: [
+            {name: "default", representation: "<span>Free Spins</span><br /><span>0</span>"}
+        ]},
         {name: "machine", states: [
             {name: "default", representation: "<img src='assets/img/slotmachine.png' />"}
         ]},
@@ -33,6 +43,9 @@ config.slotmachine = {
         ]},
         {name: "slots", states: [
             {name: "default", representation: ""}
+        ]},
+        {name: "displaybox", states: [
+            {name: "default", representation: "<span>Rewards this round: 0</span>"}
         ]}
     ]
 }
@@ -47,9 +60,9 @@ config.payofftable = {
             {name: "default", representation: "<span>" + config.currencyName + "</span><span>" + config.coins() + "</span>"}
         ]},
         {name: "payoffs", states: [
-            {name: "default", representation: "<div><h3>Payoff Table</h3></div>"}
+            {name: "default", representation: "<h3>Payoff Table</h3><div></div>"}
         ]},
-        {name: "iconsPanel", states: [
+        {name: "botPanel", states: [
             {name: "default", representation:
                 "<div>" +
                     "<img src='assets/img/payoff.png' />" +
@@ -57,6 +70,18 @@ config.payofftable = {
                     "<img src='assets/img/about.png' />" +
                     "<img src='assets/img/exit.png' />" +
                 "</div>"}
+        ]}
+    ]
+}
+
+config.messages = {
+    type: "environment",
+    states: [
+        {name: "default", representation: ""}
+    ],
+    locations: [
+        {name: "messageBox", states: [
+            {name: "default", representation: "<span>" + config.currencyName + "</span><span></span>"}
         ]}
     ]
 }
