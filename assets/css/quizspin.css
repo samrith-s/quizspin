@@ -64,6 +64,7 @@ img {
 /*--------------- You can edit below this -------------- */
 
 #entities { display:none;}
+#items {display:none;}
 
 #ptotemy-game {
     background: #111;
