@@ -118,6 +118,7 @@ function pullHandle() {
     if(!free){
         updateCoins(player.coins.is(), player.coins.is()-10);
         player.coins.is(player.coins.is()-10);
+        $(".slot-item-6 img").attr("src", "assets/img/slotitems/6.png");
     }
 
     var ml=0;
@@ -200,62 +201,63 @@ function processCombo(machine1, machine2, machine3) {
     if(!free)
     {
         if(machine1.active == 5 || machine2.active == 5 || machine3.active == 5) {
-            playQuiz();
+                playQuiz();
         }
     }
 }
 
 function playQuiz() {
     var question = quesbank.pop();
-    if(!question)
-    {
-        $("#messageBox").html("YOU WIN!<br />You've answered all questions correctly!");
-        $("#messages").fadeIn();
-    }
+    console.log(quesbank)
+
 
     $("#quiz").css({display:"table"}); Question.showQuizPanel(quiz, question);
     $("#quiz").fadeIn(1000);
 
     $(question).unbind('answered').on('answered', function(e, data) {
         if(data.correct) {
-            free = true;
-            freeSpin(5);
-            $("#quiz").fadeOut(500);
-            $("#messages").css("display", "table");
-            $("#messageBox").html("<p>You have won 5 free spins!</p>" +
-                "<p>The <img src='assets/img/slotitems/7.png' /> gives you 50 bonus per slot!</p>")
-            $("#messages").fadeIn(500);
-            setTimeout(function() { $("#messages").fadeOut(500);}, 5000);
+            if(quesbank.length==0)
+                victory();
+            else {
+                free = true;
+                freeSpin(5);
+                $("#quiz").fadeOut(500);
+                $("#messages").css("display", "table");
+                $("#messages").removeClass("environment");
+                $("#messageBox").html("<p>You have won 5 free spins!</p>" +
+                    "<p>The <img src='assets/img/slotitems/7.png' /> gives you 50 bonus per slot!</p>")
+                $("#messages").fadeIn(500);
+                setTimeout(function() { $("#messages").fadeOut(500);}, 5000);
+            }
         }
         else {
             free = false;
             quesbank.unshift(question);
             $("#quiz").fadeOut(500);
         }
-
     });
 }
 
 function freeSpin(n) {
-
+    $("#blank").remove();
+    $("#ptotemy-game").append("<div id='blank' class='environment'></div>");
     $("#freespins span").eq(1).fadeOut().text(n);
     setTimeout(function() {$("#freespins span").eq(1).fadeIn()}, 400);
     $(".slot-item-6 img").effect("pulsate");
-    setTimeout(function() { $(".slot-item-6 img").attr("src", "assets/img/slotitems/7.png"); }, 400);
 
     setTimeout(function() { $("#messages").fadeOut(); }, 2000);
     if(n>=1) {
         setTimeout(function() {
             $("#handle img").trigger('click');
+            $(".slot-item-6 img").attr("src", "assets/img/slotitems/7.png");
             n--;
             freeSpin(n);
+
         }, 6000);
     }
     else {
         setTimeout(function() {
             $("#blank").remove();
-            $(".slot-item-6 img").effect("pulsate");
-            setTimeout(function() { $(".slot-item-6 img").attr("src", "assets/img/slotitems/6.png"); }, 400);
             free=false;
         },6000);
     }
@@ -350,6 +352,14 @@ function handleIcons() {
         "Can you? Answer the questions to win big and leave lady luck gasping... ");
     });
 
+}
+
+function victory() {
+    $("#quiz").fadeOut();
+    $("#messageBox").html("YOU WIN!<br />You've answered all questions correctly!");
+    $("#messages").css("display", "table");
+    $("#messages").removeClass("environment");
+    $("#messages").fadeIn();
 }
 
 function commaSeparateNumber (val){
