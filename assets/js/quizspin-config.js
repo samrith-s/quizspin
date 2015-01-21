@@ -68,7 +68,6 @@ config.payofftable = {
                     "<img src='assets/img/payoff.png' />" +
                     "<img src='assets/img/info.png' />" +
                     "<img src='assets/img/about.png' />" +
-                    "<img src='assets/img/exit.png' />" +
                 "</div>"}
         ]}
     ]
@@ -81,7 +80,7 @@ config.messages = {
     ],
     locations: [
         {name: "messageBox", states: [
-            {name: "default", representation: "<span>" + config.currencyName + "</span><span></span>"}
+            {name: "default", representation: ""}
         ]}
     ]
 }

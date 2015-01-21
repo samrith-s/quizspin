@@ -16,10 +16,13 @@ function initGame() {
     initSlotMachine();
     initSlots();
     initMessages();
-//    initQuiz();
+    initQuiz();
     observers();
+    handleIcons();
+    initPayOffTable();
 
     $("#currencyholder span").eq(1).text(player.coins.is());
+    $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
 }
 
 function observers() {
@@ -64,6 +67,10 @@ function initPayOffArea() {
 }
 
 function initPayOffTable() {
+    $("#payoffs h3").empty();
+    $("#payoffs h3").text("Payoff Table");
+    $("#payoffs div").empty();
+
     for(var i=5; i>=1; i--) {
         var rwd;
 
@@ -189,25 +196,42 @@ function processCombo(machine1, machine2, machine3) {
     if(!free)
     {
         if(machine1.active == 5 || machine2.active == 5 || machine3.active == 5) {
-            free = true;
-//            var question = Question.getByWeight(1);
-//            console.log(question);
-            $("#quiz").fadeIn(function() {
-                Question.showQuizPanel(quiz, question);
-            });
-            $("#ptotemy-game").append("<div id='blank' class='environment'></div>");
-            $(".slot-item-6 img").effect("pulsate");
-            setTimeout(function() { $(".slot-item-6 img").attr("src", "assets/img/slotitems/7.png"); }, 400);
-
-            freeSpin(5);
+            playQuiz();
         }
     }
+}
+
+function playQuiz() {
+    var question = Question.getByWeight(1);
+    console.log(question);
+    $("#quiz").css({display:"table"}); Question.showQuizPanel(quiz, question);
+    $("#quiz").fadeIn(1000);
+
+    $(question).unbind('answered').on('answered', function(e, data) {
+        if(data.correct) {
+            free = true;
+            freeSpin(5);
+            $("#quiz").fadeOut(500);
+            $("#messages").css("display", "table");
+            $("#messageBox").html("<p>You have won 5 free spins!</p>" +
+                "<p>The <img src='assets/img/slotitems/7.png' /> gives you 50 bonus per slot!</p>")
+            $("#messages").fadeIn(500);
+            setTimeout(function() { $("#messages").fadeOut(500);}, 5000);
+        }
+        else {
+            free = false;
+            $("#quiz").fadeOut(500);
+        }
+
+    });
 }
 
 function freeSpin(n) {
 
     $("#freespins span").eq(1).fadeOut().text(n);
     setTimeout(function() {$("#freespins span").eq(1).fadeIn()}, 400);
+    $(".slot-item-6 img").effect("pulsate");
+    setTimeout(function() { $(".slot-item-6 img").attr("src", "assets/img/slotitems/7.png"); }, 400);
 
 //    $("#messages").fadeIn().css("display", "table");
 
@@ -279,8 +303,6 @@ function rewards(combo) {
     player.coins.is(player.coins.is() + rwd);
 
     $("#displaybox span").effect("pulsate").text("Rewards this round: " + rwd);
-
-    //    $("#currencyholder span").eq(1).effect("slide").text(player.coins.is());
 }
 
 function updateCoins(coins, change) {
@@ -296,6 +318,31 @@ function updateCoins(coins, change) {
             $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
         }
     });
+}
+
+function handleIcons() {
+
+    $("#payoffs h3").empty();
+    $("#payoffs div").empty();
+
+    $("#botPanel img").eq(0).unbind('click').on('click', function() {
+        initPayOffTable();
+        console.log("CLICKED!");
+    });
+    $("#botPanel img").eq(1).unbind('click').on('click', function() {
+        $("#payoffs h3").text("Instructions");
+        $("#payoffs div").text("The main aim of the game is to spin the slot machine and get points." +
+                        " Earn more points if you answer questions right. " +
+                        "Free spins are awarded for every correct answer."
+        )
+    });
+    $("#botPanel img").eq(2).unbind('click').on('click', function() {
+        $("#payoffs h3").text("Story");
+        $("#payoffs div").text("Welcome to Quiz Spin. " +
+        "Spin the slots to try your luck. But as they say, you can make your own luck. " +
+        "Can you? Answer the questions to win big and leave lady luck gasping... ");
+    });
+
 }
 
 function commaSeparateNumber (val){

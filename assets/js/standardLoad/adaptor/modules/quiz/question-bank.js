@@ -5,19 +5,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Delhi",
-        optacorrect: "true",
+        optacorrect: true,
         optapoints: "10",
 
         optb: "Mumbai",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "Chennai",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "Bengaluru",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -27,19 +27,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Delhi",
-        optacorrect: "false",
+        optacorrect: false,
         optapoints: "0",
 
         optb: "Mumbai",
-        optbcorrect: "true",
+        optbcorrect: true,
         optbpoints: "10",
 
         optc: "Pune",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "Bengaluru",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -49,19 +49,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Delhi",
-        optacorrect: "true",
+        optacorrect: true,
         optapoints: "10",
 
         optb: "Agra",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "Patna",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "Shimla",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -71,19 +71,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "East of India",
-        optacorrect: "true",
+        optacorrect: true,
         optapoints: "10",
 
         optb: "West of India",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "North of India",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "South of India",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -93,19 +93,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Hyderabad",
-        optacorrect: "true",
+        optacorrect: true,
         optapoints: "10",
 
         optb: "Chennai",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "Mysore",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "Patna",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -115,19 +115,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Delhi",
-        optacorrect: "false",
+        optacorrect: false,
         optapoints: "0",
 
         optb: "Pune",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "Mumbai",
-        optccorrect: "true",
+        optccorrect: true,
         optcpoints: "10",
 
         optd: "Goa",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -137,19 +137,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "West Bengal",
-        optacorrect: "true",
+        optacorrect: true,
         optapoints: "10",
 
         optb: "Tamil Nadu",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "Gujarat",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "Himachal Pradesh",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -159,19 +159,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Mahatma Gandhi",
-        optacorrect: "true",
+        optacorrect: true,
         optapoints: "10",
 
         optb: "Jawaharlal Nehru",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "Nathuram Godse",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "Lee Harvey Oswald",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -181,19 +181,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Mount Everest",
-        optacorrect: "false",
+        optacorrect: false,
         optapoints: "0",
 
         optb: "Mount Kanchendzonga",
-        optbcorrect: "true",
+        optbcorrect: true,
         optbpoints: "10",
 
         optc: "Gilbert Hill",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "Deccan Plateau",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321
@@ -203,19 +203,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Penny",
-        optacorrect: "false",
+        optacorrect: false,
         optapoints: "0",
 
         optb: "Jenny",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "Kenny",
-        optccorrect: "false",
+        optccorrect: false,
         optcpoints: "0",
 
         optd: "Fenny",
-        optdcorrect: "true",
+        optdcorrect: true,
         optdpoints: "10",
 
         slide_id:321
@@ -225,19 +225,19 @@ questionbank.questions = [
         weight: 1,
 
         opta: "Asha Bhosle",
-        optacorrect: "false",
+        optacorrect: false,
         optapoints: "0",
 
         optb: "Alisha Chinoy",
-        optbcorrect: "false",
+        optbcorrect: false,
         optbpoints: "0",
 
         optc: "Sarojini Naidu",
-        optccorrect: "true",
+        optccorrect: true,
         optcpoints: "10",
 
         optd: "Lady GaGa",
-        optdcorrect: "false",
+        optdcorrect: false,
         optdpoints: "0",
 
         slide_id:321

@@ -1,5 +1,23 @@
 var quiz;
 
+config.quiz = {
+    type: "environment",
+    states: [
+        {name: "default", representation: ""}
+    ],
+    locations: [
+        {name: "statement-area", states: [
+            {name: "default", representation: ""}
+        ]},
+        {name: "options", states: [
+            {name: "default", representation: ""}
+        ]},
+        {name: "knowmore", states: [
+            {name: "default", representation: "<img /><span>Know More</span>"}
+        ]}
+    ]
+};
+
 function initQuiz() {
     quiz = new Environment("quiz");
     loadConfig(quiz);
@@ -41,11 +59,11 @@ var Question = Fiber.extend(function () {
             Question.all.push(this);
             log.add('Question: ' + name + ' created')
         },
-        checkAnswer: function (option) {
+        checkAnswer: function (id, option) {
             var thisAnswer = $.grep(this.options, function (a) {
                 return ( a == option );
             })[0];
-            return {correct: thisAnswer.correct, weight: this.weight, points: thisAnswer.points, help: this.help}
+            return {optionId: id, correct: thisAnswer.correct, weight: this.weight, points: thisAnswer.points, help: this.help}
         }
     }
 });
@@ -70,7 +88,7 @@ Question.showQuizPanel = function (obj, question) {
     }
     $('.option-block').unbind('click').on('click', function () {
         $this = $(this);
-        $(question).trigger("answered", [question.checkAnswer(question.options[parseInt($this.attr("id").split("option-block-")[1])])]);
+        $(question).trigger("answered", [question.checkAnswer($this.attr('id'),question.options[parseInt($this.attr("id").split("option-block-")[1])])]);
     });
 };
 
