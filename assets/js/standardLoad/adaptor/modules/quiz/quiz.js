@@ -77,6 +77,14 @@ Question.getByWeight = function (weight) {
     return questions[randBetween(0, questions.length - 1)]
 };
 
+Question.getAllByWeight = function(weight) {
+    var questions = $.grep(Question.all, function(a) {
+        return (a.weight == weight);
+    });
+    console.log(questions);
+    return questions;
+}
+
 Question.showQuizPanel = function (obj, question) {
     $('#statement-area').html(question.name);
     $('#options').empty().append("<ul></ul>");

@@ -6,6 +6,8 @@ var coins = new Currency("coins");
 
 player.createWallet(coins, 0, 9999999999, config.coins());
 
+var quesbank = [];
+
 $(function() {
     initGame();
 });
@@ -23,6 +25,8 @@ function initGame() {
 
     $("#currencyholder span").eq(1).text(player.coins.is());
     $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
+    quesbank = Question.getAllByWeight(1);
+    quesbank = shuffle(quesbank);
 }
 
 function observers() {
@@ -202,8 +206,13 @@ function processCombo(machine1, machine2, machine3) {
 }
 
 function playQuiz() {
-    var question = Question.getByWeight(1);
-    console.log(question);
+    var question = quesbank.pop();
+    if(!question)
+    {
+        $("#messageBox").html("YOU WIN!<br />You've answered all questions correctly!");
+        $("#messages").fadeIn();
+    }
+
     $("#quiz").css({display:"table"}); Question.showQuizPanel(quiz, question);
     $("#quiz").fadeIn(1000);
 
@@ -220,6 +229,7 @@ function playQuiz() {
         }
         else {
             free = false;
+            quesbank.unshift(question);
             $("#quiz").fadeOut(500);
         }
 
@@ -233,14 +243,11 @@ function freeSpin(n) {
     $(".slot-item-6 img").effect("pulsate");
     setTimeout(function() { $(".slot-item-6 img").attr("src", "assets/img/slotitems/7.png"); }, 400);
 
-//    $("#messages").fadeIn().css("display", "table");
-
     setTimeout(function() { $("#messages").fadeOut(); }, 2000);
     if(n>=1) {
         setTimeout(function() {
             $("#handle img").trigger('click');
             n--;
-            console.log("Free spins left: " + n);
             freeSpin(n);
         }, 6000);
     }
@@ -350,4 +357,9 @@ function commaSeparateNumber (val){
         val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     }
     return val;
+}
+
+function shuffle(array) {
+    for (var j, x, i = array.length; i; j = Math.floor(Math.random() * i), x = array[--i], array[i] = array[j], array[j] = x);
+    return array;
 }
