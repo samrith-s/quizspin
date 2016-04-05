@@ -1,0 +1,351 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa);
+
+/* -------------- Please do not change the CSS for the below elements ----------- */
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Comfortaa', cursive;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#ptotemy-game {
+    width: 640px;
+    height:480px;
+    margin: 5% auto;
+    position: relative;
+
+}
+
+#payofftable{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+
+}
+ #currencyholder{
+    display: block;
+    text-align: center;
+    background: rgba(1,1,1,0.8);
+    height: auto;
+    text-shadow: 1px 1px #111;
+    z-index: 1;
+    top: 1.3%;
+    position: absolute;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 56%;
+    left: 21%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+ #info-btn{
+    display: block;
+    text-align: center;
+    background: rgba(51, 27, 27, 0.8);
+    height: auto;
+    text-shadow: 1px 1px #111;
+    z-index: 1;
+    position: absolute;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 75%;
+    left: 12%;
+    border-bottom-left-radius: 7px;
+    bottom: -4.5%;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+}
+
+
+#currencyholder span {
+    width: 46%;
+    padding: 0 2%;
+}
+
+#currencyholder span:first-child { text-align: left; }
+#currencyholder span:last-child  { text-align: right; }
+
+
+#payoffs {
+    background: url('../img/panelbackground.png') center no-repeat;
+    background-size: 100%;
+    height: 60%;
+    text-shadow: 2px 1px #111;
+    margin-top:1%;
+    display: none;
+}
+
+
+#payoffs h3 {
+    text-align: center;
+    background: rgba(1,1,1,0.5);
+    padding: 5px;
+    border-radius: 7px;
+    width: 78%;
+    margin: 8% 10%;
+    float: none;
+}
+
+#payoffs div {
+    text-align: left;
+    /*background: rgba(1,1,1,0.5);*/
+    padding: 5px;
+    border-radius: 7px;
+    width: 78%;
+    margin: 0 15%;
+    margin-top: -6%;
+    float: none;
+    line-height: 30px;
+}
+
+#payoffs img { width: 25px !important; height: 25px !important; vertical-align: middle; }
+#payoffs span { line-height: 50px; font-size: 12px; vertical-align: middle; }
+
+
+#botPanel{
+    width: 100%;
+    display: table;
+    height: 12%;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    top: 68%;
+    cursor: pointer;
+}
+
+#botPanel img {
+    position: static;
+    margin: 5px;
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#botPanel div {
+    /*display: table-cell;*/
+    vertical-align: middle;
+    text-align:center;
+    float: none;
+}
+
+#base img{
+    width: 100%;
+    height: 100%;
+}
+
+#machine img{
+    width: 100%;
+    height: auto;
+}
+
+#slotmachine {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+
+}
+
+#machine {
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+#freespins {
+    background: rgba(1,1,1,0.5);
+    width: 10%;
+    height: 15%;
+    left: 84%;
+    top: 10%;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    text-shadow: 2px 1px #000;
+    position: absolute;
+}
+
+#freespins span:last-child { font-size:32px;}
+#freespins span:first-child { font-size:11px;}
+
+#displaybox {
+    width: 71.5%;
+    height: 7%;
+    top: 90%;
+    left: 13%;
+    padding: 3px;
+    text-align: center;
+    background: rgba(1,1,1,0.8);
+    text-shadow: 2px 1px #000;
+    display: table;
+    box-shadow: 1px 1px 5px gold;
+    position: absolute;
+}
+
+#displaybox span { display: table-cell; vertical-align: middle;}
+
+#slots {
+    width: 100%;
+    height: auto;
+    top: 42.35%;
+    left: 0;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    position: absolute;
+    text-align: center;
+}
+
+#slot1, #slot2, #slot3 {
+    position: static;
+    width: 14%;
+    height: 35px;
+    padding: 5px;
+    margin: 3px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#slot1 img, #slot2 img, #slot3 img {
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+#slot2 { border-left: 1px solid #111; border-right: 1px solid #111; }
+
+#handle {
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+    top: 40%;
+    position: absolute;
+    left: 88%;
+    width: 13%;
+    height: 29%;
+    z-index: 1;
+}
+
+#handle img {
+    width: 500px;
+    height: 100%;
+}
+
+#quiz {
+    display: none;
+    vertical-align: middle;
+    background: rgba(1,1,1,0.7);
+    text-align: center;
+    z-index: 3;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+#statement-area {
+    display: block;
+    vertical-align: middle;
+    width: 100%%;
+    background: rgba(1,1,1,0.5);
+    height: auto;
+    position: relative;
+} 
+
+#quizinnerwrapper {
+    display: table-cell;
+    width: 100%;
+    padding: 5%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+#options {
+    width: 100% !important;
+    height: auto !important;
+    display:block;
+    vertical-align: middle;
+    position: relative;
+}
+
+#options ul { margin: 0; padding: 0; }
+
+#options li {
+    list-style-type: none;
+    display: block;
+    padding: 5px 0px 5px 5px;
+    background-color: gold;
+    color: #111;
+    margin-top: 5px;
+}
+
+#knowmore {
+    float: right;
+    width: 30%;
+    margin: 2% 0;
+    position: relative;
+    display: table;
+    height: 10%;
+    display: none;
+}
+
+.option-block {
+    cursor: pointer;
+}
+
+#messages {
+    display: table;
+    position:absolute;
+    background: rgba(1,1,1,0.7);
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    top: 0;
+}
+
+#messageBox {
+    display: table-cell;
+    vertical-align: middle;
+    color: whitesmoke;
+    position: static;
+    padding: 5px;
+    border-radius: 7px;
+    width: 100%;
+    text-align: center;
+    background: rgba(1,1,1,0.7);
+    font-size: 30px;
+}
+
+#messageBox img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}

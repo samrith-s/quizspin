@@ -4,6 +4,25 @@ var player = new Entity("player");
 
 var coins = new Currency("coins");
 
+var Score = function(totalQuestions) {
+    this.correct = 0;
+    this.incorrect = 0;
+    this.total = totalQuestions;
+    this.questionsAnswered = [];
+    this.sum= 0;
+};
+Score.prototype.addCorrect = function(question) {
+    this.correct++;
+    this.questionsAnswered.push(question);
+};
+Score.prototype.addIncorrect = function(question) {
+    this.incorrect++;
+    this.questionsAnswered.push(question);
+}
+Score.prototype.getScore = function() {
+    return Math.round((this.correct/this.total)*100);
+}
+var quizScore = new Score(questionbank.questions.length);
 player.createWallet(coins, 0, 9999999999, config.coins());
 
 var quesbank = [];
@@ -26,11 +45,14 @@ function initGame() {
     $("#currencyholder span").eq(1).text(player.coins.is());
     $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
     quesbank = Question.getAllByWeight(1);
-    quesbank = shuffle(quesbank);
+    // quesbank = shuffle(quesbank);
+    quesbank = shuffleQuestions(quesbank);
 }
 
 function observers() {
     $("#handle img").unbind('click').on('click', pullHandle);
+    $('#info-btn').unbind('click').on('click',display_payoff);
+    // $('#info-btn').addClass('active-info-btn');
 }
 
 function initBase() {
@@ -127,18 +149,18 @@ function pullHandle() {
     var m = $("#handle img");
 
     var machine1 = $("#slot1").slotMachine({
-        active	: 1,
-        delay	: 450
+        active  : 1,
+        delay   : 450
     });
 
     var machine2 = $("#slot2").slotMachine({
-        active	: 1,
-        delay	: 650
+        active  : 1,
+        delay   : 650
     });
 
     var machine3 = $("#slot3").slotMachine({
-        active	: 1,
-        delay	: 850
+        active  : 1,
+        delay   : 850
     });
 
     machine1.shuffle(5);
@@ -208,7 +230,7 @@ function processCombo(machine1, machine2, machine3) {
 
 function playQuiz() {
     var question = quesbank.pop();
-    console.log(quesbank)
+    console.log(question)
 
 
     $("#quiz").css({display:"table"}); Question.showQuizPanel(quiz, question);
@@ -216,8 +238,12 @@ function playQuiz() {
 
     $(question).unbind('answered').on('answered', function(e, data) {
         if(data.correct) {
-            if(quesbank.length==0)
+            quizScore.addCorrect(question);
+            //increment score in scorm and commit
+            if(quesbank.length==0) {
                 victory();
+                // set completion, set score and commit
+            }
             else {
                 free = true;
                 freeSpin(5);
@@ -233,6 +259,7 @@ function playQuiz() {
         else {
             free = false;
             quesbank.unshift(question);
+            quizScore.addIncorrect(question);
             $("#quiz").fadeOut(500);
         }
     });
@@ -372,4 +399,32 @@ function commaSeparateNumber (val){
 function shuffle(array) {
     for (var j, x, i = array.length; i; j = Math.floor(Math.random() * i), x = array[--i], array[i] = array[j], array[j] = x);
     return array;
+}
+
+function shuffleQuestions(array) {
+    var seq = array.slice(0, questionbank.sequentialQuestions);
+    var nonSeq = shuffle(array.slice(questionbank.sequentialQuestions));
+    return seq.concat(nonSeq).reverse();
+}
+
+function display_payoff() {
+    // $('#payoffs').show();
+    // $('#botPanel').show();
+    var info = $('#info-btn')
+    if(info.hasClass('info-active')) {
+        $('#payoffs').fadeOut();
+        $('#botPanel').fadeOut();
+        info.removeClass('info-active');
+        $('#handle').css('z-index',1);
+        $('#info-btn span').html('Info');
+        $('#handle, #displaybox, #slots, #freespins, #currencyholder, #slotmachineimg').css('opacity', 1)
+    }
+    else {
+        $('#payoffs').fadeIn();
+        $('#botPanel').fadeIn();
+        info.addClass('info-active');
+        $('#handle').css('z-index',0);
+        $('#info-btn span').html('Exit');
+        $('#handle, #displaybox, #slots, #freespins, #currencyholder, #slotmachineimg').css('opacity', 0.2)
+    }
 }
