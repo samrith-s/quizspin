@@ -21,7 +21,7 @@ function initCourse(min, max){
       handleError("Error: Course could not connect with the LMS");
    }
 };
-initCourse(0, 10000);
+initCourse(0, 100);
 
 function setScore(score) {
   console.log('score is ',score);
