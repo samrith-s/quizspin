@@ -22,7 +22,7 @@ Score.prototype.addIncorrect = function(question) {
 Score.prototype.getScore = function() {
     return Math.round((this.correct/this.total)*100);
 }
-var quizScore = new Score(questionbank.questions.length);
+// var quizScore = new Score(questionbank.questions.length);
 player.createWallet(coins, 0, 9999999999, config.coins());
 
 var quesbank = [];
@@ -44,8 +44,9 @@ function initGame() {
 
     $("#currencyholder span").eq(1).text(player.coins.is());
     $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
-    quesbank = Question.getTopicWiseRandomQuestions(1);
+    quesbank = Question.getTopicWiseRandomQuestions(questionbank.questionsFromTopic);
     quesbank = shuffle(quesbank);
+    quizScore = new Score(quesbank.length);
     // quesbank = shuffleQuestions(quesbank);
 }
 
@@ -244,14 +245,16 @@ function playQuiz() {
             if(quesbank.length==0) {
                 victory();
                 // set completion, set score and commit
+                setComplete()
+
             }
             else {
                 free = true;
-                freeSpin(5);
+                freeSpin(1);
                 $("#quiz").fadeOut(500);
                 $("#messages").css("display", "table");
                 $("#messages").removeClass("environment");
-                $("#messageBox").html("<p>You have won 5 free spins!</p>" +
+                $("#messageBox").html("<p>You have won 1 free spin!</p>" +
                     "<p>The <img src='assets/img/slotitems/7.png' /> gives you 50 bonus per slot!</p>")
                 $("#messages").fadeIn(500);
                 setTimeout(function() { $("#messages").fadeOut(500);}, 5000);
@@ -353,7 +356,7 @@ function updateCoins(coins, change) {
         },
         complete:function(){
             $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
-            setScore(change);
+            // setScore(change);
         }
     });
 }
@@ -430,3 +433,5 @@ function display_payoff() {
         $('#handle, #displaybox, #slots, #freespins, #currencyholder, #slotmachineimg').css('opacity', 0.2)
     }
 }
+
+

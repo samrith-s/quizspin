@@ -25,10 +25,15 @@ initCourse(0, 100);
 
 function setScore(score) {
   console.log('score is ',score);
-  scorm.set('cmi.score.raw', score);
-  scorm.commit();
+  scorm.set('cmi.core.score.raw', score);
+  scorm.save();
 };
 
 function handleError(error) {
   console.error(error);
 };
+
+function setComplete(){
+    scorm.set('cmi.core.lesson_status','completed');
+    scorm.save();
+}

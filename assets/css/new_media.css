@@ -1,4 +1,4 @@
-/* ----------- iPhone 4 and 4S ----------- */
+ ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait */
 @media screen 
@@ -39,7 +39,21 @@
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }   
 }
 
 /* Landscape */
@@ -59,7 +73,21 @@
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
-         
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }            
 }
 
 /* Landscape */
@@ -79,7 +107,21 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-           
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }              
 }
 
 /* Landscape */
@@ -99,7 +141,21 @@
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) 
   and (orientation: portrait) {
-               
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }                  
 }
 
 /* Landscape */
@@ -119,7 +175,21 @@
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 2) 
   and (orientation: portrait) {
-           
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }              
 }
 
 /* Landscape */
@@ -139,7 +209,21 @@
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) 
   and (orientation: portrait) {
-                    
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }                       
 }
 
 /* Landscape */
@@ -159,7 +243,21 @@
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) 
   and (orientation: portrait) {
-                 
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }                    
 }
 
 /* Landscape */
@@ -244,4 +342,147 @@
   and (min-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
    
+}
+
+
+
+/*---------------- Extra Media Query  ------------------------------*/
+
+@media only screen 
+  and (min-device-width: 800px) 
+  and (max-device-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    body{
+      font-size: 2.2em !important;
+    }
+    #slot1, #slot2, #slot3 {
+      height: 100px !important;
+    }
+    #slot1 img, #slot2 img, #slot3 img {
+      width: 95px !important;
+    }
+    #handle{
+      width: 6.8% !important;
+      left: 87.5% !important;
+    }
+
+}
+
+/* ---------------- Extra Media Query ------------------------------*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 1)
+  and (orientation: portrait) {
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }   
+}
+
+
+
+/* ---------------- Extra Media Query ------------------------------*/
+@media only screen 
+  and (min-device-width: 600px) 
+  and (max-device-width: 960px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    body{
+      font-size: 1.8em !important;
+    }
+    #ptotemy-game{
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #machine {
+      width: 100% !important;;
+      margin-left: -10px !important;;
+    }
+    #freespins{
+      left: 84% !important;
+      width: 10% !important;
+    }   
+    #freespins span:first-child{
+      font-size: 0.8em !important;
+    }
+    #slot1, #slot2, #slot3 {
+      height: 75px !important;
+    }
+    #slot1 img, #slot2 img, #slot3 img {
+      width: 75px !important;
+    } 
+    #handle{
+      left: 88.5% !important;
+      width: 7.5% !important;
+    }
+    #payoffs img{
+      width: 45px !important;
+      height: 45px !important;
+    }
+    #botPanel img{
+      height: 75px !important;
+      width: 75px !important;
+    }
+    #payoffs div{
+      line-height: 45px !important;
+    }
+
+}
+
+
+
+
+
+/*---------------- Extra Media Query  ------------------------------*/
+
+@media only screen 
+  and (min-device-width: 600px) 
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1)
+  and (orientation: portrait) {
+    body{
+      font-size: 1.8em !important
+    }
+    #freespins span:first-child {
+      font-size: 0.8em !important;
+    }
+    #slots{
+      height: 10% !important;
+    }
+    #slot1, #slot2, #slot3{
+      height: 90px !important;
+    }
+    #slot1 img, #slot2 img, #slot3 img {
+      width: 85px !important;
+    }
+    #handle{
+      left: 88.5% !important;
+      width: 8.5% !important;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 1)
+  and (orientation: landscape) {
+
 }
