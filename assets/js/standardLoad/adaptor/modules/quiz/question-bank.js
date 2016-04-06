@@ -159,7 +159,6 @@ questionbank.questions = [
 
        slide_id:321
    },
->>>>>>> c8f217782816d8e25ebd3a52b2c6601c975d4137
 //    {
 //        statement: "Who is the Father of Our Nation?",
 //        weight: 1,

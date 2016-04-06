@@ -402,11 +402,11 @@ function shuffle(array) {
     return array;
 }
 
-function shuffleQuestions(array) {
-    var seq = array.slice(0, questionbank.sequentialQuestions);
-    var nonSeq = shuffle(array.slice(questionbank.sequentialQuestions));
-    return seq.concat(nonSeq).reverse();
-}
+// function shuffleQuestions(array) {
+//     var seq = array.slice(0, questionbank.sequentialQuestions);
+//     var nonSeq = shuffle(array.slice(questionbank.sequentialQuestions));
+//     return seq.concat(nonSeq).reverse();
+// }
 
 function display_payoff() {
     // $('#payoffs').show();
