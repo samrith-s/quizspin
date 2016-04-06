@@ -42,7 +42,7 @@ function loadQuestionBank() {
             options.push(optiones);
             optiones = {}
         }
-        new Question(q.statement, q.image, q.weight, options, q.help, q.slide_id, q.id);
+        new Question(q.statement, q.image, q.weight, q.topic, options, q.help, q.slide_id, q.id);
     }
     return true;
 }
@@ -50,10 +50,11 @@ function loadQuestionBank() {
 
 var Question = Fiber.extend(function () {
     return {
-        init: function (name, image, weight, options, help) {
+        init: function (name, image, weight, topic, options, help) {
             this.name = name;
             this.image = image;
             this.weight = weight || 1;
+            this.topic = topic;
             this.options = options;
             this.help = help;
             Question.all.push(this);
@@ -83,6 +84,30 @@ Question.getAllByWeight = function(weight) {
     });
     console.log(questions);
     return questions;
+}
+
+/**
+ * Returns a number of questions(specified by the count argument) from each topic
+ */
+Question.getTopicWiseRandomQuestions = function(count) {
+  var topicCounts = {};
+  var allQuestions = [];
+  Question.all.forEach(function(question) {
+    if (!question || !question.topic) {
+      return;
+    }
+    var topic = question.topic;
+    if (!topicCounts[topic] && count >= 1) {
+      topicCounts[topic] = 1;
+      allQuestions.push(question);
+    }
+    else if(topicCounts[topic] < count) {
+      //add the question to the topic lookup only if there's more than count questions of the topic
+      topicCounts[topic]++;
+      allQuestions.push(question);
+    }
+  });
+  return allQuestions;
 }
 
 Question.showQuizPanel = function (obj, question) {

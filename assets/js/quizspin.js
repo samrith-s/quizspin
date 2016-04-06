@@ -44,9 +44,9 @@ function initGame() {
 
     $("#currencyholder span").eq(1).text(player.coins.is());
     $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
-    quesbank = Question.getAllByWeight(1);
-    // quesbank = shuffle(quesbank);
-    quesbank = shuffleQuestions(quesbank);
+    quesbank = Question.getTopicWiseRandomQuestions(1);
+    quesbank = shuffle(quesbank);
+    // quesbank = shuffleQuestions(quesbank);
 }
 
 function observers() {

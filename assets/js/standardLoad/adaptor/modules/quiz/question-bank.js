@@ -2,6 +2,7 @@ var questionbank = {};
 questionbank.questions = [
     {
         statement: "What's the capital of India?",
+        topic: 'general',
         weight: 1,
 
         opta: "Delhi",
@@ -24,6 +25,7 @@ questionbank.questions = [
     },
     {
         statement: "Where is Gateway of India Located?",
+        topic: 'general',
         weight: 1,
 
         opta: "Delhi",
@@ -44,50 +46,52 @@ questionbank.questions = [
 
         slide_id:321
     },
-//    {
-//        statement: "Where is India Gate located?",
-//        weight: 1,
-//
-//        opta: "Delhi",
-//        optacorrect: true,
-//        optapoints: "10",
-//
-//        optb: "Agra",
-//        optbcorrect: false,
-//        optbpoints: "0",
-//
-//        optc: "Patna",
-//        optccorrect: false,
-//        optcpoints: "0",
-//
-//        optd: "Shimla",
-//        optdcorrect: false,
-//        optdpoints: "0",
-//
-//        slide_id:321
-//    },
-//    {
-//        statement: "Where is the Bay of Bengal?",
-//        weight: 1,
-//
-//        opta: "East of India",
-//        optacorrect: true,
-//        optapoints: "10",
-//
-//        optb: "West of India",
-//        optbcorrect: false,
-//        optbpoints: "0",
-//
-//        optc: "North of India",
-//        optccorrect: false,
-//        optcpoints: "0",
-//
-//        optd: "South of India",
-//        optdcorrect: false,
-//        optdpoints: "0",
-//
-//        slide_id:321
-//    },
+    {
+        statement: "Where is India Gate located?",
+        topic: 'specific',
+        weight: 1,
+
+        opta: "Delhi",
+        optacorrect: true,
+        optapoints: "10",
+
+        optb: "Agra",
+        optbcorrect: false,
+        optbpoints: "0",
+
+        optc: "Patna",
+        optccorrect: false,
+        optcpoints: "0",
+
+        optd: "Shimla",
+        optdcorrect: false,
+        optdpoints: "0",
+
+        slide_id:321
+    },
+    {
+        statement: "Where is the Bay of Bengal?",
+        topic: 'specific',
+        weight: 1,
+
+        opta: "East of India",
+        optacorrect: true,
+        optapoints: "10",
+
+        optb: "West of India",
+        optbcorrect: false,
+        optbpoints: "0",
+
+        optc: "North of India",
+        optccorrect: false,
+        optcpoints: "0",
+
+        optd: "South of India",
+        optdcorrect: false,
+        optdpoints: "0",
+
+        slide_id:321
+    },
 //    {
 //        statement: "Where is Charminar located?",
 //        weight: 1,
