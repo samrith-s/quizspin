@@ -92,7 +92,7 @@ Question.getAllByWeight = function(weight) {
 Question.getTopicWiseRandomQuestions = function(count) {
   var topicCounts = {};
   var allQuestions = [];
-  Question.all.forEach(function(question) {
+  shuffle(Question.all).forEach(function(question) {
     if (!question || !question.topic) {
       return;
     }

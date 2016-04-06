@@ -239,6 +239,7 @@ function playQuiz() {
     $(question).unbind('answered').on('answered', function(e, data) {
         if(data.correct) {
             quizScore.addCorrect(question);
+            setScore(quizScore.getScore());
             //increment score in scorm and commit
             if(quesbank.length==0) {
                 victory();
