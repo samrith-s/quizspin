@@ -352,6 +352,7 @@ function updateCoins(coins, change) {
         },
         complete:function(){
             $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
+            setScore(change);
         }
     });
 }
