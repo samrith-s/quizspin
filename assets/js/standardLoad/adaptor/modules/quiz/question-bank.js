@@ -1,4 +1,5 @@
 var questionbank = {};
+questionbank.sequentialQuestions = 4;
 questionbank.questions = [
     {
         statement: "What's the capital of India?",
@@ -46,118 +47,119 @@ questionbank.questions = [
 
         slide_id:321
     },
-    {
-        statement: "Where is India Gate located?",
-        topic: 'specific',
-        weight: 1,
+   {
+       statement: "Where is India Gate located?",
+       topic: 'specific',
+       weight: 1,
 
-        opta: "Delhi",
-        optacorrect: true,
-        optapoints: "10",
+       opta: "Delhi",
+       optacorrect: true,
+       optapoints: "10",
 
-        optb: "Agra",
-        optbcorrect: false,
-        optbpoints: "0",
+       optb: "Agra",
+       optbcorrect: false,
+       optbpoints: "0",
 
-        optc: "Patna",
-        optccorrect: false,
-        optcpoints: "0",
+       optc: "Patna",
+       optccorrect: false,
+       optcpoints: "0",
 
-        optd: "Shimla",
-        optdcorrect: false,
-        optdpoints: "0",
+       optd: "Shimla",
+       optdcorrect: false,
+       optdpoints: "0",
 
-        slide_id:321
-    },
-    {
-        statement: "Where is the Bay of Bengal?",
-        topic: 'specific',
-        weight: 1,
+       slide_id:321
+   },
+   {
+       statement: "Where is the Bay of Bengal?",
+       topic: 'specific',
+       weight: 1,
 
-        opta: "East of India",
-        optacorrect: true,
-        optapoints: "10",
+       opta: "East of India",
+       optacorrect: true,
+       optapoints: "10",
 
-        optb: "West of India",
-        optbcorrect: false,
-        optbpoints: "0",
+       optb: "West of India",
+       optbcorrect: false,
+       optbpoints: "0",
 
-        optc: "North of India",
-        optccorrect: false,
-        optcpoints: "0",
+       optc: "North of India",
+       optccorrect: false,
+       optcpoints: "0",
 
-        optd: "South of India",
-        optdcorrect: false,
-        optdpoints: "0",
+       optd: "South of India",
+       optdcorrect: false,
+       optdpoints: "0",
 
-        slide_id:321
-    },
-//    {
-//        statement: "Where is Charminar located?",
-//        weight: 1,
-//
-//        opta: "Hyderabad",
-//        optacorrect: true,
-//        optapoints: "10",
-//
-//        optb: "Chennai",
-//        optbcorrect: false,
-//        optbpoints: "0",
-//
-//        optc: "Mysore",
-//        optccorrect: false,
-//        optcpoints: "0",
-//
-//        optd: "Patna",
-//        optdcorrect: false,
-//        optdpoints: "0",
-//
-//        slide_id:321
-//    },
-//    {
-//        statement: "Where is Kamatipura?",
-//        weight: 1,
-//
-//        opta: "Delhi",
-//        optacorrect: false,
-//        optapoints: "0",
-//
-//        optb: "Pune",
-//        optbcorrect: false,
-//        optbpoints: "0",
-//
-//        optc: "Mumbai",
-//        optccorrect: true,
-//        optcpoints: "10",
-//
-//        optd: "Goa",
-//        optdcorrect: false,
-//        optdpoints: "0",
-//
-//        slide_id:321
-//    },
-//    {
-//        statement: "Where are the Sunderbans located?",
-//        weight: 1,
-//
-//        opta: "West Bengal",
-//        optacorrect: true,
-//        optapoints: "10",
-//
-//        optb: "Tamil Nadu",
-//        optbcorrect: false,
-//        optbpoints: "0",
-//
-//        optc: "Gujarat",
-//        optccorrect: false,
-//        optcpoints: "0",
-//
-//        optd: "Himachal Pradesh",
-//        optdcorrect: false,
-//        optdpoints: "0",
-//
-//        slide_id:321
-//    },
+       slide_id:321
+   },
+   {
+       statement: "Where is Charminar located?",
+       weight: 1,
+
+       opta: "Hyderabad",
+       optacorrect: true,
+       optapoints: "10",
+
+       optb: "Chennai",
+       optbcorrect: false,
+       optbpoints: "0",
+
+       optc: "Mysore",
+       optccorrect: false,
+       optcpoints: "0",
+
+       optd: "Patna",
+       optdcorrect: false,
+       optdpoints: "0",
+
+       slide_id:321
+   },
+   {
+       statement: "Where is Kamatipura?",
+       weight: 1,
+
+       opta: "Delhi",
+       optacorrect: false,
+       optapoints: "0",
+
+       optb: "Pune",
+       optbcorrect: false,
+       optbpoints: "0",
+
+       optc: "Mumbai",
+       optccorrect: true,
+       optcpoints: "10",
+
+       optd: "Goa",
+       optdcorrect: false,
+       optdpoints: "0",
+
+       slide_id:321
+   },
+   {
+       statement: "Where are the Sunderbans located?",
+       weight: 1,
+
+       opta: "West Bengal",
+       optacorrect: true,
+       optapoints: "10",
+
+       optb: "Tamil Nadu",
+       optbcorrect: false,
+       optbpoints: "0",
+
+       optc: "Gujarat",
+       optccorrect: false,
+       optcpoints: "0",
+
+       optd: "Himachal Pradesh",
+       optdcorrect: false,
+       optdpoints: "0",
+
+       slide_id:321
+   },
+>>>>>>> c8f217782816d8e25ebd3a52b2c6601c975d4137
 //    {
 //        statement: "Who is the Father of Our Nation?",
 //        weight: 1,
