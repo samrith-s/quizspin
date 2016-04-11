@@ -42,7 +42,7 @@ function loadQuestionBank() {
             options.push(optiones);
             optiones = {}
         }
-        new Question(q.statement, q.image, q.weight, q.topic, options, q.help, q.slide_id, q.id);
+        new Question(q.statement, q.image, q.weight, q.topic, q.seq ,options, q.help, q.slide_id, q.id);
     }
     return true;
 }
@@ -50,11 +50,12 @@ function loadQuestionBank() {
 
 var Question = Fiber.extend(function () {
     return {
-        init: function (name, image, weight, topic, options, help) {
+        init: function (name, image, weight, topic, seq ,options, help) {
             this.name = name;
             this.image = image;
             this.weight = weight || 1;
             this.topic = topic;
+            this.seq = seq;
             this.options = options;
             this.help = help;
             Question.all.push(this);
@@ -98,15 +99,19 @@ Question.getTopicWiseRandomQuestions = function(count) {
     }
     var topic = question.topic;
     if (!topicCounts[topic] && count >= 1) {
-      topicCounts[topic] = 1;
+      topicCounts[topic] = 1;      
       allQuestions.push(question);
+      // console.log(question.seq);
     }
     else if(topicCounts[topic] < count) {
       //add the question to the topic lookup only if there's more than count questions of the topic
-      topicCounts[topic]++;
+      topicCounts[topic]++;      
       allQuestions.push(question);
+      // console.log(question.seq);
     }
   });
+  allQuestions = _.sortBy(allQuestions, function(ques) { return ques.seq; });
+  // console.log(allQuestions);
   return allQuestions;
 }
 

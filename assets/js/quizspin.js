@@ -45,7 +45,8 @@ function initGame() {
     $("#currencyholder span").eq(1).text(player.coins.is());
     $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
     quesbank = Question.getTopicWiseRandomQuestions(questionbank.questionsFromTopic);
-    quesbank = shuffle(quesbank);
+    // quesbank = shuffle(quesbank);
+    // console.log(quesbank);
     quizScore = new Score(quesbank.length);
     // quesbank = shuffleQuestions(quesbank);
 }
@@ -230,8 +231,8 @@ function processCombo(machine1, machine2, machine3) {
 }
 
 function playQuiz() {
-    var question = quesbank.pop();
-    console.log(question)
+    var question = quesbank.shift();
+    // console.log(question)
 
 
     $("#quiz").css({display:"table"}); Question.showQuizPanel(quiz, question);
@@ -240,12 +241,12 @@ function playQuiz() {
     $(question).unbind('answered').on('answered', function(e, data) {
         if(data.correct) {
             quizScore.addCorrect(question);
-            setScore(quizScore.getScore());
+            // setScore(quizScore.getScore());
             //increment score in scorm and commit
             if(quesbank.length==0) {
                 victory();
                 // set completion, set score and commit
-                setComplete()
+                // setComplete()
 
             }
             else {
@@ -368,7 +369,7 @@ function handleIcons() {
 
     $("#botPanel img").eq(0).unbind('click').on('click', function() {
         initPayOffTable();
-        console.log("CLICKED!");
+        // console.log("CLICKED!");
     });
     $("#botPanel img").eq(1).unbind('click').on('click', function() {
         $("#payoffs h3").text("Instructions");
