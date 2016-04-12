@@ -27,6 +27,8 @@ player.createWallet(coins, 0, 9999999999, config.coins());
 
 var quesbank = [];
 
+
+
 $(function() {
     initGame();
 });
@@ -42,18 +44,21 @@ function initGame() {
     handleIcons();
     initPayOffTable();
 
-    $("#currencyholder span").eq(1).text(player.coins.is());
+    
     $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
     quesbank = Question.getTopicWiseRandomQuestions(questionbank.questionsFromTopic);
+    totalQue = Question.getTopicWiseRandomQuestions(questionbank.questionsFromTopic);
     // quesbank = shuffle(quesbank);
     // console.log(quesbank);
     quizScore = new Score(quesbank.length);
     // quesbank = shuffleQuestions(quesbank);
+    $("#currencyholder span").eq(1).text('0/' + quesbank.length);
 }
 
 function observers() {
     $("#handle img").unbind('click').on('click', pullHandle);
     $('#info-btn').unbind('click').on('click',display_payoff);
+    
     // $('#info-btn').addClass('active-info-btn');
 }
 
@@ -263,7 +268,7 @@ function playQuiz() {
         }
         else {
             free = false;
-            quesbank.unshift(question);
+            // quesbank.unshift(question);
             quizScore.addIncorrect(question);
             $("#quiz").fadeOut(500);
         }
@@ -353,10 +358,12 @@ function updateCoins(coins, change) {
         easing:'swing', // can be anything
         step: function() { // called on every step
             // Update the element's text with rounded-up value:
-            $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
+            // $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
+            $('#currencyholder span').eq(1).text(quizScore.correct + '/' + totalQue.length);
         },
         complete:function(){
-            $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
+            // $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
+            $('#currencyholder span').eq(1).text(quizScore.correct + '/' + totalQue.length);
             // setScore(change);
         }
     });
@@ -388,11 +395,16 @@ function handleIcons() {
 }
 
 function victory() {
+    percentage = (quizScore.correct/totalQue.length)*100
     $("#quiz").fadeOut();
-    $("#messageBox").html("YOU WIN!<br />You've answered all questions correctly!");
+    $("#messageBox").html("<h6 class='adjust-font'>Game Over</h6>" +
+        "<h4 class='adjust-font'>Congratulations!<br/>You scored "+ percentage + "%</h4>" +
+        "<h6 class='adjust-font'>Correct: "+ quizScore.correct +"<br/>Incorrect: "+ quizScore.incorrect +"</h6>" +
+        "<div id='retry-btn'><span>Retry</span></div>");
     $("#messages").css("display", "table");
     $("#messages").removeClass("environment");
     $("#messages").fadeIn();
+    $('#retry-btn').unbind('click').on('click',retryGame);
 }
 
 function commaSeparateNumber (val){
@@ -436,3 +448,6 @@ function display_payoff() {
 }
 
 
+function retryGame(){
+    location.reload();
+}

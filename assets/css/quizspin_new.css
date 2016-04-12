@@ -75,6 +75,24 @@ html, body {
     cursor: pointer;
 }
 
+#retry-btn{
+    display: block;
+    text-align: center;
+    background: rgba(225, 228, 20, 0.8);
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 75%;
+    cursor: pointer;
+    left: 12%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 0.8em;
+}
+
 
 #currencyholder span {
     width: 46%;
@@ -358,4 +376,8 @@ html, body {
     width: 25px;
     height: 25px;
     vertical-align: middle;
+}
+
+.adjust-font{
+    font-weight: normal;
 }

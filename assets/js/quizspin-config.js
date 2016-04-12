@@ -1,7 +1,7 @@
 
 var config = {};
 
-config.currencyName = "Coins"
+config.currencyName = "Questions"
 config.coins = function() {
     return 100; //value to be returned
 }
