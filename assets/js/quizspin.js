@@ -43,6 +43,7 @@ function initGame() {
     observers();
     handleIcons();
     initPayOffTable();
+    initInstructions();
 
     
     $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
@@ -244,6 +245,8 @@ function playQuiz() {
         if (quesbank.length==0) {
             if (data.correct){
                 quizScore.addCorrect(question)
+                setScore(quizScore.getScore());
+                //increment score in scorm and commit
             }
             else{
                 quizScore.addIncorrect(question)
@@ -253,12 +256,11 @@ function playQuiz() {
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
             },1500)   
             // set completion, set score and commit
-            // setComplete()            
+            setComplete()            
         }
         else if(data.correct) {
             quizScore.addCorrect(question);
-
-            // setScore(quizScore.getScore());
+            setScore(quizScore.getScore());
             //increment score in scorm and commit
             if(quesbank.length==0) {
                 if (data.correct){
@@ -274,7 +276,7 @@ function playQuiz() {
                 
 
                 // set completion, set score and commit
-                // setComplete()
+                setComplete()
 
             }
             else {
@@ -310,7 +312,7 @@ function playQuiz() {
 function freeSpin(n) {
     $("#blank").remove();
     $("#ptotemy-game").append("<div id='blank' class='environment'></div>");
-    $("#freespins span").eq(1).fadeOut().text(n);
+    $('#freespins span').eq(1).text(quizScore.correct)
     setTimeout(function() {$("#freespins span").eq(1).fadeIn()}, 400);
     $(".slot-item-6 img").effect("pulsate");
 
@@ -428,8 +430,14 @@ function handleIcons() {
 function victory() {
     percentage = Math.round((quizScore.correct/quizScore.total)*100)
     $("#quiz").fadeOut();
+    if (percentage > 80){
+        finalText = "You scored "+ percentage + "% <br>Congratulations! "
+    }
+    else{
+        finalText = "You scored "+ percentage + "% <br>Sorry, you haven't met the minimum score. Please try again."
+    }
     $("#messageBox").html("<h6 class='adjust-font'>Game Over</h6>" +
-        "<h4 class='adjust-font'>Congratulations!<br/>You scored "+ percentage + "%</h4>" +
+        "<h5 class='adjust-font'>" + finalText + "</h5>" +
         "<h6 class='adjust-font'>Correct: "+ quizScore.correct +"<br/>Incorrect: "+ quizScore.incorrect +"</h6>" +
         "<div id='retry-btn'><span>Retry</span></div>");
     $("#messages").css("display", "table");
@@ -482,4 +490,16 @@ function display_payoff() {
 
 function retryGame(){
     location.reload();
+}
+ 
+function initInstructions(){
+    $("#messages").css("display", "table");
+    $("#messages").removeClass("environment");
+    $("#messageBox").html("<p style='font-size:0.8em;padding: 5px;'>Click on the handle to play</p><div id='start-btn'><span>Start</span></div>")
+    $("#messages").fadeIn(500);
+    $('#start-btn').unbind('click').on('click',closeStartModal);
+} 
+
+function closeStartModal(){
+    $("#messages").fadeOut(500);
 }

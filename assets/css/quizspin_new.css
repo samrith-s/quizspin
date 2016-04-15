@@ -93,6 +93,25 @@ html, body {
     font-size: 0.8em;
 }
 
+#start-btn{
+    display: block;
+    text-align: center;
+    background: rgba(225, 228, 20, 0.8);
+    height: auto;
+    z-index: 1;
+    position: relative;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 30%;
+    cursor: pointer;
+    /* left: 12%; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 0.7em;
+    margin: 0 auto;
+}
+
 
 #currencyholder span {
     width: 46%;
@@ -199,8 +218,8 @@ html, body {
 
 #freespins {
     background: rgba(1,1,1,0.5);
-    width: 10%;
-    height: 15%;
+    width: 14%;
+    height: 13%;
     left: 84%;
     top: 10%;
     border-radius: 5px;

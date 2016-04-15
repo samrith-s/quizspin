@@ -877,11 +877,11 @@ questionbank.questions = [
       seq: 2,
       weight: 1,
 
-      opta: "1",
+      opta: "True",
       optacorrect: true,
       optapoints: "10",
 
-      optb: "0",
+      optb: "False",
       optbcorrect: false,
       optbpoints: "0"
     },   
