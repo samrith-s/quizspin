@@ -430,7 +430,7 @@ function handleIcons() {
 function victory() {
     percentage = Math.round((quizScore.correct/quizScore.total)*100)
     $("#quiz").fadeOut();
-    if (percentage > 80){
+    if (percentage >= 80){
         finalText = "You scored "+ percentage + "% <br>Congratulations! "
     }
     else{
