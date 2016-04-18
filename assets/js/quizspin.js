@@ -245,7 +245,7 @@ function playQuiz() {
         if (quesbank.length==0) {
             if (data.correct){
                 quizScore.addCorrect(question)
-                setScore(quizScore.getScore());
+                // setScore(quizScore.getScore());
                 //increment score in scorm and commit
             }
             else{
@@ -256,11 +256,11 @@ function playQuiz() {
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
             },1500)   
             // set completion, set score and commit
-            setComplete()            
+            // setComplete()            
         }
         else if(data.correct) {
             quizScore.addCorrect(question);
-            setScore(quizScore.getScore());
+            // setScore(quizScore.getScore());
             //increment score in scorm and commit
             if(quesbank.length==0) {
                 if (data.correct){
@@ -276,7 +276,7 @@ function playQuiz() {
                 
 
                 // set completion, set score and commit
-                setComplete()
+                // setComplete()
 
             }
             else {

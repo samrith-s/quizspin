@@ -27,7 +27,7 @@ function initQuiz() {
 function loadQuestionBank() {
     for (var i in questionbank.questions) {
         var q = questionbank.questions[i];
-        var opts = ["a", "b", "c", "d"];
+        var opts = ["a", "b", "c", "d","e"];
         var optsz = ["", "correct", "points"];
         var options = [];
         var optiones = {};
