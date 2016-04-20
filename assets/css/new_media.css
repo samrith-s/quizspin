@@ -87,7 +87,10 @@
     #freespins{
       left: 84% !important;
       width: 14% !important;
-    }            
+    }   
+    #handle{
+      width: 13.5% !important
+    }          
 }
 
 /* Landscape */
@@ -121,7 +124,10 @@
     #freespins{
       left: 84% !important;
       width: 14% !important;
-    }              
+    }          
+    #handle{
+      width: 13% !important;
+    }    
 }
 
 /* Landscape */
@@ -484,5 +490,37 @@
   and (max-device-width: 640px)
   and (-webkit-min-device-pixel-ratio: 1)
   and (orientation: landscape) {
+
+}
+
+
+@media only screen 
+  and (min-device-width: 384px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 1.2)
+  and (orientation: portrait) {
+    #handle{
+      width: 14% !important;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 1)
+  and (orientation: landscape) {
+
+}
+
+@media only screen 
+  and (min-device-width: 412px) 
+  and (max-device-width: 659px)
+  and (-webkit-min-device-pixel-ratio: 3.5)
+  and (orientation: portrait) {
+    #handle{
+      width: 13.5% !important;
+    }
 
 }
