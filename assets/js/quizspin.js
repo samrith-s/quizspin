@@ -42,7 +42,7 @@ function initGame() {
     initQuiz();
     observers();
     handleIcons();
-    initPayOffTable();
+    // initPayOffTable();
     initInstructions();
 
     
@@ -95,7 +95,7 @@ function initSlotMachine() {
 function initPayOffArea() {
     var payofftable = new Environment("payofftable");
     loadConfig(payofftable);
-    initPayOffTable();
+    // initPayOffTable();
 }
 
 function initPayOffTable() {
@@ -290,7 +290,7 @@ function playQuiz() {
                 //     "<p>The <img src='assets/img/slotitems/7.png' /> gives you 50 bonus per slot!</p>")
                 $("#messageBox").html("<p>Yeah! That was correct</p>")
                 $("#messages").fadeIn(500);
-                setTimeout(function() { $("#messages").fadeOut(500);}, 5000);
+                setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
             }
         }
@@ -303,7 +303,7 @@ function playQuiz() {
             $("#messages").removeClass("environment");
             $("#messageBox").html("<p>Oops! That was incorrect</p>")
             $("#messages").fadeIn(500);
-            setTimeout(function() { $("#messages").fadeOut(500);}, 5000);
+            setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
 
         }
@@ -408,10 +408,13 @@ function handleIcons() {
 
     $("#payoffs h3").empty();
     $("#payoffs div").empty();
+    $("#botPanel img").eq(0).css('display','none');
+    $("#botPanel img").eq(2).css('display','none');
 
-    $("#botPanel img").eq(0).unbind('click').on('click', function() {
-        initPayOffTable();
-    });
+    // $("#botPanel img").eq(0).unbind('click').on('click', function() {
+    //     initPayOffTable();
+    // });
+
     $("#botPanel img").eq(1).unbind('click').on('click', function() {
         $("#payoffs h3").text("Instructions");
         $("#payoffs div").text("The main aim of the game is to spin the slot machine and get points." +
@@ -419,12 +422,12 @@ function handleIcons() {
                         "Free spins are awarded for every correct answer."
         )
     });
-    $("#botPanel img").eq(2).unbind('click').on('click', function() {
-        $("#payoffs h3").text("Story");
-        $("#payoffs div").text("Welcome to Quiz Spin. " +
-        "Spin the slots to try your luck. But as they say, you can make your own luck. " +
-        "Can you? Answer the questions to win big and leave lady luck gasping... ");
-    });
+    // $("#botPanel img").eq(2).unbind('click').on('click', function() {
+    //     $("#payoffs h3").text("Story");
+    //     $("#payoffs div").text("Welcome to Quiz Spin. " +
+    //     "Spin the slots to try your luck. But as they say, you can make your own luck. " +
+    //     "Can you? Answer the questions to win big and leave lady luck gasping... ");
+    // });
 
 }
 
@@ -481,6 +484,7 @@ function display_payoff() {
     else {
         $('#payoffs').fadeIn();
         $('#botPanel').fadeIn();
+        $("#botPanel img").eq(1).trigger('click');
         info.addClass('info-active');
         $('#handle').css('z-index',0);
         $('#info-btn span').html('Exit');

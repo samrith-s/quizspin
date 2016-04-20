@@ -125,11 +125,11 @@ html, body {
 }
 
 #payoffs div {
-    text-align: left;
-    /*background: rgba(1,1,1,0.5);*/
-    padding: 5px;
+    text-align: justify;
+    /* background: rgba(1,1,1,0.5); */
+    padding: 10px;
     border-radius: 7px;
-    width: 90%;
+    width: 85%;
     margin: 0 5%;
     margin-top: -6%;
     float: none;
@@ -149,7 +149,8 @@ html, body {
     bottom: 0;
     display: none;
     top: 68%;
-    cursor: pointer;
+    /*cursor: pointer;*/
+    pointer-events: none;
 }
 
 #botPanel img {
@@ -159,6 +160,7 @@ html, body {
     width: 50px !important;
     border-radius: 7px;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 #botPanel div {
@@ -226,6 +228,7 @@ html, body {
     display: table;
     box-shadow: 1px 1px 5px gold;
     position: absolute;
+    display: none;
 }
 
 #displaybox span { display: table-cell; vertical-align: middle;}
@@ -304,6 +307,8 @@ html, body {
     background: rgba(1,1,1,0.5);
     height: auto;
     position: relative;
+    padding: 10px;
+    text-align: left;
 } 
 
 #quizinnerwrapper {
@@ -329,7 +334,7 @@ html, body {
     list-style-type: none;
     display: block;
     padding: 5px 0px 5px 5px;
-    background-color: gold;
+    /*background-color: gold;*/
     color: #111;
     margin-top: 5px;
 }
@@ -346,6 +351,26 @@ html, body {
 
 .option-block {
     cursor: pointer;
+}
+
+#option-block-0{
+    background-color:rgb(189,140,191);
+}
+
+#option-block-1{
+    background-color:rgb(255,203,5);
+}
+
+#option-block-2{
+    background-color:rgb(241,102,106);
+}
+
+#option-block-3{
+    background-color:rgb(247,149,72);
+}
+
+#option-block-4{
+    background-color:rgb(189,140,191);
 }
 
 #messages {
