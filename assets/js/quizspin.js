@@ -409,6 +409,7 @@ function handleIcons() {
     $("#payoffs h3").empty();
     $("#payoffs div").empty();
     $("#botPanel img").eq(0).css('display','none');
+    $("#botPanel img").eq(1).css('display','none');
     $("#botPanel img").eq(2).css('display','none');
 
     // $("#botPanel img").eq(0).unbind('click').on('click', function() {
