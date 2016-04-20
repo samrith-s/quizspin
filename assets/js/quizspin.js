@@ -81,8 +81,8 @@ function initSlots() {
         $("#slots").append("<div id='" + thisSlot + "'></div>");
 
         for(var j=0; j<6; j++) {
-            $("#" + thisSlot).append("<div class='slots slot-item-" + (j+1) + "'>" +
-                "<img src='assets/img/slotitems/" + (j+1) + ".png' /></div>");
+            $("#" + thisSlot).append("<div class='slots slot-item-" + 6 + "'>" +
+                "<img src='assets/img/slotitems/" + 6 + ".png' /></div>");
         }
     }
 }
@@ -154,17 +154,17 @@ function pullHandle() {
 
     var m = $("#handle img");
 
-    var machine1 = $("#slot1").slotMachine({
+    machine1 = $("#slot1").slotMachine({
         active  : 1,
         delay   : 450
     });
 
-    var machine2 = $("#slot2").slotMachine({
+    machine2 = $("#slot2").slotMachine({
         active  : 1,
         delay   : 650
     });
 
-    var machine3 = $("#slot3").slotMachine({
+    machine3 = $("#slot3").slotMachine({
         active  : 1,
         delay   : 850
     });
@@ -223,12 +223,13 @@ function pullHandle() {
 }
 
 function processCombo(machine1, machine2, machine3) {
-    var combo = machine1.active + "" + machine2.active + "" + machine3.active;
+    var combo = '555';// machine1.active + "" + machine2.active + "" + machine3.active;
     rewards(combo);
 
     if(!free)
     {
-        if(machine1.active == 5 || machine2.active == 5 || machine3.active == 5) {
+        if(combo[0] == '5' || combo[1] == '5' || combo[2] == '5') {
+        // if(machine1.active == 5 || machine2.active == 5 || machine3.active == 5) {
                 playQuiz();
         }
     }
