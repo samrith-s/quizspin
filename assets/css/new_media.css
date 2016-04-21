@@ -89,8 +89,17 @@
       width: 14% !important;
     }   
     #handle{
-      width: 13.5% !important
-    }          
+      width: 13.5% !important;
+    }        
+    #payoffs div{
+      margin-top: 0 !important;
+    }  
+    #currencyholder{
+      top:2% !important;
+    }
+    #info-btn{
+      bottom: -3.5% !important;
+    }
 }
 
 /* Landscape */
@@ -128,6 +137,15 @@
     #handle{
       width: 13% !important;
     }    
+    #payoffs div{
+      margin-top: 0 !important;
+    }  
+    #info-btn{
+      bottom: -3.5% !important;
+    }
+    #currencyholder{
+      top: 2.7% !important;
+    }
 }
 
 /* Landscape */
@@ -500,7 +518,7 @@
   and (-webkit-min-device-pixel-ratio: 1.2)
   and (orientation: portrait) {
     #handle{
-      width: 14% !important;
+      width: 13% !important;
     }
 
 }

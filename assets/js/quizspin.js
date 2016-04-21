@@ -418,9 +418,11 @@ function handleIcons() {
 
     $("#botPanel img").eq(1).unbind('click').on('click', function() {
         $("#payoffs h3").text("Instructions");
-        $("#payoffs div").text("The main aim of the game is to spin the slot machine and get points." +
-                        " Earn more points if you answer questions right. " +
-                        "Free spins are awarded for every correct answer."
+        $("#payoffs div").text("Your goal is to answer all the 35 questions the machine throws at you." +
+                        " To get to a question, it is mandatory to pull the lever.  " +
+                        "Every correct attempt earns you 1 point." +
+                        "You need a minimal score of 80% to clear this test. If not, you can always take the test again." +
+                        "Best of luck!"
         )
     });
     // $("#botPanel img").eq(2).unbind('click').on('click', function() {
@@ -479,7 +481,7 @@ function display_payoff() {
         $('#botPanel').fadeOut();
         info.removeClass('info-active');
         $('#handle').css('z-index',1);
-        $('#info-btn span').html('Info');
+        $('#info-btn span').html('Instructions');
         $('#handle, #displaybox, #slots, #freespins, #currencyholder, #slotmachineimg').css('opacity', 1)
     }
     else {
