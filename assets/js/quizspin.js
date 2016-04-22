@@ -169,9 +169,9 @@ function pullHandle() {
         delay   : 850
     });
 
-    machine1.shuffle(5);
-    machine2.shuffle(5);
-    machine3.shuffle(5, function() {
+    machine1.shuffle(2);
+    machine2.shuffle(2);
+    machine3.shuffle(2, function() {
         processCombo(machine1, machine2, machine3);
         $("#handle img").removeClass("no-click");
     });
@@ -288,7 +288,7 @@ function playQuiz() {
                 $("#messages").removeClass("environment");
                 // $("#messageBox").html("<p>You have won 1 free spin!</p>" +
                 //     "<p>The <img src='assets/img/slotitems/7.png' /> gives you 50 bonus per slot!</p>")
-                $("#messageBox").html("<p>Yeah! That was correct</p>")
+                $("#messageBox").html("<p>Yes! That was correct</p>")
                 $("#messages").fadeIn(500);
                 setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
@@ -418,10 +418,10 @@ function handleIcons() {
 
     $("#botPanel img").eq(1).unbind('click').on('click', function() {
         $("#payoffs h3").text("Instructions");
-        $("#payoffs div").text("Your goal is to answer all the 35 questions the machine throws at you." +
-                        " To get to a question, it is mandatory to pull the lever.  " +
-                        "Every correct attempt earns you 1 point." +
-                        "You need a minimal score of 80% to clear this test. If not, you can always take the test again." +
+        $("#payoffs div").text("Your goal is to answer all the 35 questions the machine throws at you. " +
+                        "To get to a question, it is mandatory to pull the lever. " +
+                        "Every correct attempt earns you 1 point. " +
+                        "You need a minimal score of 80% to clear this test. If not, you can always take the test again. " +
                         "Best of luck!"
         )
     });
