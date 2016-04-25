@@ -502,7 +502,8 @@ function display_payoff() {
 
 
 function retryGame(){
-    location.reload();
+    // location.reload();
+    initGame();
 }
  
 function initInstructions(){
