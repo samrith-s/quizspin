@@ -442,8 +442,11 @@ function handleIcons() {
 function victory() {
     percentage = Math.round((quizScore.correct/quizScore.total)*100)
     $("#quiz").fadeOut();
+    retry_class = "";
     if (percentage >= 80){
         finalText = "You scored "+ percentage + "% <br>Congratulations! "
+        retry_class = "hide"; 
+
     }
     else{
         finalText = "You scored "+ percentage + "% <br>Sorry, you haven't met the minimum score. Please try again."
@@ -451,7 +454,7 @@ function victory() {
     $("#messageBox").html("<h6 class='adjust-font'>Game Over</h6>" +
         "<h5 class='adjust-font'>" + finalText + "</h5>" +
         "<h6 class='adjust-font'>Correct: "+ quizScore.correct +"<br/>Incorrect: "+ quizScore.incorrect +"</h6>" +
-        "<div id='retry-btn'><span>Retry</span></div>");
+        "<div id='retry-btn' class='"+ retry_class +"'><span>Retry</span></div>");
     $("#messages").css("display", "table");
     $("#messages").removeClass("environment");
     $("#messages").fadeIn();
@@ -503,6 +506,7 @@ function display_payoff() {
 
 function retryGame(){
     // location.reload();
+    setScore(0);
     initGame();
 }
  
