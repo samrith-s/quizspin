@@ -408,3 +408,7 @@ html, body {
 .adjust-font{
     font-weight: normal;
 }
+
+.hide{
+    display: none;
+}
