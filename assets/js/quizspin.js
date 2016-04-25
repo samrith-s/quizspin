@@ -255,6 +255,7 @@ function playQuiz() {
              setTimeout(function(){
                 victory();
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
+                $('#freespins span').eq(1).text(quizScore.correct);
             },1500)   
             // set completion, set score and commit
             setComplete()            
@@ -266,6 +267,7 @@ function playQuiz() {
             if(quesbank.length==0) {
                 if (data.correct){
                    quizScore.addCorrect(question)
+                   setScore(quizScore.getScore());
                 }
                 else{
                     quizScore.addIncorrect(question)
@@ -273,6 +275,7 @@ function playQuiz() {
                 setTimeout(function(){
                     victory();
                     $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
+                    $('#freespins span').eq(1).text(quizScore.correct);
                 },1500)
                 
 
@@ -292,6 +295,7 @@ function playQuiz() {
                 $("#messages").fadeIn(500);
                 setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
+                $('#freespins span').eq(1).text(quizScore.correct);
             }
         }
         else {
@@ -305,6 +309,7 @@ function playQuiz() {
             $("#messages").fadeIn(500);
             setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
+            $('#freespins span').eq(1).text(quizScore.correct);
 
         }
     });
@@ -313,7 +318,7 @@ function playQuiz() {
 function freeSpin(n) {
     $("#blank").remove();
     $("#ptotemy-game").append("<div id='blank' class='environment'></div>");
-    $('#freespins span').eq(1).text(quizScore.correct)
+    $('#freespins span').eq(1).text(quizScore.correct);
     setTimeout(function() {$("#freespins span").eq(1).fadeIn()}, 400);
     $(".slot-item-6 img").effect("pulsate");
 

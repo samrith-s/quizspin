@@ -2129,7 +2129,7 @@ questionbank.questions = [
       optdpoints: "10"
     },
     {
-      statement: "Culture Questions<br/>There is a potentially big opportunity that could alone meet your target. You discovered this opportunity via your network. However, you are currently under-staffed and there may be a delay in hiring for your team. The project can be taken up by another team who is well-staffed. Do you pass on the lead? Which value/s does this situation affect?",
+      statement: "Culture Questions<br/>There is a potentially big opportunity that could alone meet your target. You discovered this opportunity via your network. However, you are currently under-staffed and there may be a delay in hiring for your team. The project can be taken up by another team who is well-staffed. Do you pass on the lead? Which values does this situation affect?",
       topic: 'Culture - Value Situations',
       seq: 7,
       weight: 1,
