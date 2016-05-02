@@ -5,24 +5,34 @@ var player = new Entity("player");
 var coins = new Currency("coins");
 
 var Score = function(totalQuestions) {
+    console.log(totalQuestions);
     this.correct = 0;
     this.incorrect = 0;
     this.total = totalQuestions;
     this.questionsAnswered = [];
     this.sum= 0;
+    this.userScored= 0;
+    this.totalPoints= 0;
 };
 Score.prototype.addCorrect = function(question) {
     this.correct++;
     this.questionsAnswered.push(question);
-};
+}
 Score.prototype.addIncorrect = function(question) {
     this.incorrect++;
     this.questionsAnswered.push(question);
 }
-Score.prototype.getScore = function() {
-    return Math.round((this.correct/this.total)*100);
+Score.prototype.pointsScored = function(count) {
+    this.userScored += count;
 }
-// var quizScore = new Score(questionbank.questions.length);
+
+Score.prototype.totalScoring = function(count) {
+    this.totalPoints += count;
+}
+
+Score.prototype.getScore = function() {
+    return Math.round((this.pointsScored/this.totalScoring)*100);
+}
 player.createWallet(coins, 0, 9999999999, config.coins());
 
 var quesbank = [];
@@ -30,6 +40,7 @@ var quesbank = [];
 
 
 $(function() {
+    // setScore(0);
     initGame();
 });
 
@@ -42,23 +53,18 @@ function initGame() {
     initQuiz();
     observers();
     handleIcons();
-    // initPayOffTable();
     initInstructions();
 
     
     $("#statement-area, #options, #knowmore").wrapAll("<div id='quizinnerwrapper'></div>");
     quesbank = Question.getTopicWiseRandomQuestions(questionbank.questionsFromTopic);
-    // quesbank = shuffle(quesbank);
     quizScore = new Score(quesbank.length);
-    // quesbank = shuffleQuestions(quesbank);
     $("#currencyholder span").eq(1).text('0/' + quesbank.length);
 }
 
 function observers() {
     $("#handle img").unbind('click').on('click', pullHandle);
     $('#info-btn').unbind('click').on('click',display_payoff);
-    
-    // $('#info-btn').addClass('active-info-btn');
 }
 
 function initBase() {
@@ -73,6 +79,30 @@ function initMessages() {
     $("#messageBox").removeClass("location");
 }
 
+function isQuestion(slotIndex) {
+    if (slotIndex == 0){
+        return true;
+    }
+    else if(slotIndex == 1){
+        return true;
+    }
+    else if(slotIndex == 2){
+        return false;
+    }
+    else if(slotIndex == 3){
+        return true;
+    }
+    else if(slotIndex == 4){
+        return true;
+    }
+    else if(slotIndex == 5){
+        return false;
+    }
+    else if(slotIndex == 6){
+        return true;
+    }
+}
+
 function initSlots() {
 
     for(var i=0; i<3; i++) {
@@ -81,8 +111,8 @@ function initSlots() {
         $("#slots").append("<div id='" + thisSlot + "'></div>");
 
         for(var j=0; j<6; j++) {
-            $("#" + thisSlot).append("<div class='slots slot-item-" + 6 + "'>" +
-                "<img src='assets/img/slotitems/" + 6 + ".png' /></div>");
+            $("#" + thisSlot).append("<div class='slots slot-item-" + (j+1) + "'>" +
+                "<img src='assets/img/slotitems/" + (j+1) + ".png' /></div>");
         }
     }
 }
@@ -95,51 +125,6 @@ function initSlotMachine() {
 function initPayOffArea() {
     var payofftable = new Environment("payofftable");
     loadConfig(payofftable);
-    // initPayOffTable();
-}
-
-function initPayOffTable() {
-    $("#payoffs h3").empty();
-    $("#payoffs h3").text("Payoff Table");
-    $("#payoffs div").empty();
-
-    for(var i=5; i>=1; i--) {
-        var rwd;
-
-        if(i==5) rwd = 60;
-        else if(i==4) rwd = 40;
-        else if(i==3) rwd = 30;
-        else if(i==2) rwd = 20;
-        else rwd = 10;
-
-        if(i==4 || i ==5) {
-            for(var j=3; j>=1; j--) {
-                $("#payoffs div").append("<img src='assets/img/slotitems/" + i + ".png' />");
-            }
-            $("#payoffs div").append(" " + rwd + " ");
-
-            for(var j=2; j>=1; j--) {
-                $("#payoffs div").append("<img src='assets/img/slotitems/" + i + ".png' />");
-            }
-            $("#payoffs div").append(" " + (rwd/2) + " ");
-            $("#payoffs div").append("<img src='assets/img/slotitems/" + i + ".png' />");
-            $("#payoffs div").append(" " + Math.floor(rwd/4));
-        }
-        else {
-            for(var j=3; j>=1; j--) {
-                $("#payoffs div").append("<img src='assets/img/slotitems/" + i + ".png' />");
-            }
-            $("#payoffs div").append(" " + rwd + " ");
-
-            for(var j=2; j>=1; j--) {
-                $("#payoffs div").append("<img src='assets/img/slotitems/" + i + ".png' />");
-            }
-            $("#payoffs div").append(" " + Math.floor(rwd/2));
-        }
-        $("#payoffs div").append("<br />");
-    }
-
-    $("#payoffs div").append("<span><img src='assets/img/slotitems/6.png' /> Answer questions to win big!</span>");
 }
 
 function pullHandle() {
@@ -223,20 +208,50 @@ function pullHandle() {
 }
 
 function processCombo(machine1, machine2, machine3) {
-    var combo = '555';// machine1.active + "" + machine2.active + "" + machine3.active;
+    var combo = machine1.active + "" + machine2.active + "" + machine3.active;
     rewards(combo);
 
     if(!free)
     {
-        if(combo[0] == '5' || combo[1] == '5' || combo[2] == '5') {
-        // if(machine1.active == 5 || machine2.active == 5 || machine3.active == 5) {
-                playQuiz();
+        if((!isQuestion(machine1.active) && !isQuestion(machine2.active) && isQuestion(machine3.active)) || (!isQuestion(machine1.active) && isQuestion(machine2.active) && !isQuestion(machine3.active)) || (isQuestion(machine1.active) && !isQuestion(machine2.active) && !isQuestion(machine3.active))){
+            playQuiz(1);
+        }
+        else if((!isQuestion(machine1.active) && isQuestion(machine2.active) && isQuestion(machine3.active)) || (isQuestion(machine1.active) && !isQuestion(machine2.active) && isQuestion(machine3.active)) || (isQuestion(machine1.active) && isQuestion(machine2.active) && !isQuestion(machine3.active))){
+            playQuiz(2)
+
+        }
+        else if(isQuestion(machine1.active) && isQuestion(machine2.active) && isQuestion(machine3.active)){
+            playQuiz(3)
         }
     }
 }
 
-function playQuiz() {
-    var question = quesbank.shift();
+function playQuiz(qCount) {
+    var question;
+    if (qCount == 1){
+        question = _.sample(_.filter(quesbank,{topic:'Basic'}));
+        console.log(question);
+    }
+    else if (qCount == 2){
+        question = _.sample(_.filter(quesbank,{topic:'Intermediate'})); 
+        console.log(question); 
+    } 
+    else if(qCount == 3){
+        question = _.sample(_.filter(quesbank,{topic:'Advanced'}));   
+        console.log(question); 
+    }
+    if(!question){
+        $("#messages").css("display", "table");
+        $("#messages").removeClass("environment");
+        $("#messageBox").html("<p>No Questions</p>")
+        $("#messages").fadeIn(500);
+        setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
+        return;
+    }
+    quizScore.totalScoring(question.seq)
+    if(quesbank.indexOf(question) != -1){
+        quesbank.splice(quesbank.indexOf(question), 1);
+    }
 
 
     $("#quiz").css({display:"table"}); Question.showQuizPanel(quiz, question);
@@ -246,7 +261,8 @@ function playQuiz() {
         if (quesbank.length==0) {
             if (data.correct){
                 quizScore.addCorrect(question)
-                setScore(quizScore.getScore());
+                quizScore.pointsScored(qCount)
+                // setScore(quizScore.getScore());
                 //increment score in scorm and commit
             }
             else{
@@ -257,17 +273,17 @@ function playQuiz() {
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
                 $('#freespins span').eq(1).text(quizScore.correct);
             },1500)   
-            // set completion, set score and commit
-            setComplete()            
         }
         else if(data.correct) {
             quizScore.addCorrect(question);
-            setScore(quizScore.getScore());
+            quizScore.pointsScored(qCount)
+            // setScore(quizScore.getScore());
             //increment score in scorm and commit
             if(quesbank.length==0) {
                 if (data.correct){
                    quizScore.addCorrect(question)
-                   setScore(quizScore.getScore());
+                   quizScore.pointsScored(qCount)
+                   // setScore(quizScore.getScore());
                 }
                 else{
                     quizScore.addIncorrect(question)
@@ -277,11 +293,6 @@ function playQuiz() {
                     $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
                     $('#freespins span').eq(1).text(quizScore.correct);
                 },1500)
-                
-
-                // set completion, set score and commit
-                setComplete()
-
             }
             else {
                 free = true;
@@ -289,8 +300,6 @@ function playQuiz() {
                 $("#quiz").fadeOut(500);
                 $("#messages").css("display", "table");
                 $("#messages").removeClass("environment");
-                // $("#messageBox").html("<p>You have won 1 free spin!</p>" +
-                //     "<p>The <img src='assets/img/slotitems/7.png' /> gives you 50 bonus per slot!</p>")
                 $("#messageBox").html("<p>Yes! That was correct</p>")
                 $("#messages").fadeIn(500);
                 setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
@@ -300,7 +309,6 @@ function playQuiz() {
         }
         else {
             free = false;
-            // quesbank.unshift(question);
             quizScore.addIncorrect(question);
             $("#quiz").fadeOut(500);
             $("#messages").css("display", "table");
@@ -343,9 +351,6 @@ function freeSpin(n) {
 function rewards(combo) {
 
     var rwd=0;
-
-//    rwd = machine1.active + "" + machine2.active + "" + machine3.active;
-
     if(/000/.test(combo))
         rwd += 10;
     else if(/00./.test(combo) || /.00/.test(combo) || /0.0/.test(combo))
@@ -397,14 +402,10 @@ function updateCoins(coins, change) {
         duration: 500,
         easing:'swing', // can be anything
         step: function() { // called on every step
-            // Update the element's text with rounded-up value:
-            // $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
         },
         complete:function(){
-            // $('#currencyholder span').eq(1).text(commaSeparateNumber(Math.round(this.someValue)));
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-            // setScore(change);
         }
     });
 }
@@ -417,10 +418,6 @@ function handleIcons() {
     $("#botPanel img").eq(1).css('display','none');
     $("#botPanel img").eq(2).css('display','none');
 
-    // $("#botPanel img").eq(0).unbind('click').on('click', function() {
-    //     initPayOffTable();
-    // });
-
     $("#botPanel img").eq(1).unbind('click').on('click', function() {
         $("#payoffs h3").text("Instructions");
         $("#payoffs div").text("Your goal is to answer all the 35 questions the machine throws at you. " +
@@ -430,23 +427,18 @@ function handleIcons() {
                         "Best of luck!"
         )
     });
-    // $("#botPanel img").eq(2).unbind('click').on('click', function() {
-    //     $("#payoffs h3").text("Story");
-    //     $("#payoffs div").text("Welcome to Quiz Spin. " +
-    //     "Spin the slots to try your luck. But as they say, you can make your own luck. " +
-    //     "Can you? Answer the questions to win big and leave lady luck gasping... ");
-    // });
-
 }
 
 function victory() {
-    percentage = Math.round((quizScore.correct/quizScore.total)*100)
+    percentage = Math.round((quizScore.userScored/quizScore.totalPoints)*100)
     $("#quiz").fadeOut();
     retry_class = "";
     if (percentage >= 80){
         finalText = "You scored "+ percentage + "% <br>Congratulations! "
         retry_class = "hide"; 
-
+        setScore(quizScore.getScore());
+        // console.log('setComplete is called')
+        // setComplete();
     }
     else{
         finalText = "You scored "+ percentage + "% <br>Sorry, you haven't met the minimum score. Please try again."
@@ -474,15 +466,7 @@ function shuffle(array) {
     return array;
 }
 
-// function shuffleQuestions(array) {
-//     var seq = array.slice(0, questionbank.sequentialQuestions);
-//     var nonSeq = shuffle(array.slice(questionbank.sequentialQuestions));
-//     return seq.concat(nonSeq).reverse();
-// }
-
 function display_payoff() {
-    // $('#payoffs').show();
-    // $('#botPanel').show();
     var info = $('#info-btn')
     if(info.hasClass('info-active')) {
         $('#payoffs').fadeOut();
@@ -506,7 +490,7 @@ function display_payoff() {
 
 function retryGame(){
     // location.reload();
-    setScore(0);
+    // setScore(0);
     initGame();
 }
  

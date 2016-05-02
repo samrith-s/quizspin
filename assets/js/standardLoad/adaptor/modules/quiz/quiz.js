@@ -101,17 +101,14 @@ Question.getTopicWiseRandomQuestions = function(count) {
     if (!topicCounts[topic] && count >= 1) {
       topicCounts[topic] = 1;      
       allQuestions.push(question);
-      // console.log(question.seq);
     }
     else if(topicCounts[topic] < count) {
       //add the question to the topic lookup only if there's more than count questions of the topic
       topicCounts[topic]++;      
       allQuestions.push(question);
-      // console.log(question.seq);
     }
   });
   allQuestions = _.sortBy(allQuestions, function(ques) { return ques.seq; });
-  // console.log(allQuestions);
   return allQuestions;
 }
 

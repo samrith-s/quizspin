@@ -1,10 +1,10 @@
 var questionbank = {};
 questionbank.sequentialQuestions = 4;
-questionbank.questionsFromTopic = 2;
+questionbank.questionsFromTopic = 1;
 questionbank.questions = [
     {
         statement: "What's the capital of India?",
-        topic: 'Topic 1',
+        topic: 'Basic',
         seq: 1,
         weight: 1,
 
@@ -28,7 +28,7 @@ questionbank.questions = [
     },
     {
         statement: "Where is Gateway of India Located?",
-        topic: 'Topic 1',
+        topic: 'Basic',
         seq: 1,
         weight: 1,
 
@@ -52,7 +52,7 @@ questionbank.questions = [
     },
    {
        statement: "Where is India Gate located?",
-       topic: 'Topic 1',
+       topic: 'Basic',
        seq: 1,
        weight: 1,
 
@@ -76,7 +76,7 @@ questionbank.questions = [
    },
    {
        statement: "Where is the Bay of Bengal?",
-       topic: 'Topic 1',
+       topic: 'Basic',
        seq: 1,
        weight: 1,
 
@@ -101,7 +101,7 @@ questionbank.questions = [
    {
        statement: "Where is Charminar located?",
        weight: 1,
-       topic: 'Topic 2',
+       topic: 'Intermediate',
        seq: 2,
 
        opta: "Hyderabad",
@@ -125,7 +125,7 @@ questionbank.questions = [
    {
        statement: "Where is Kamatipura?",
        weight: 1,
-       topic: 'Topic 2',
+       topic: 'Intermediate',
        seq: 2,
 
        opta: "Delhi",
@@ -149,7 +149,7 @@ questionbank.questions = [
    {
        statement: "Where are the Sunderbans located?",
        weight: 1,
-       topic: 'Topic 2',
+       topic: 'Intermediate',
        seq: 2,
 
        opta: "West Bengal",
@@ -173,7 +173,7 @@ questionbank.questions = [
    {
        statement: "Who is the Father of Our Nation?",
        weight: 1,
-       topic: 'Topic 2',
+       topic: 'Intermediate',
        seq: 2,
 
        opta: "Mahatma Gandhi",
@@ -197,7 +197,7 @@ questionbank.questions = [
    {
        statement: "Highest Peak in India?",
        weight: 1,
-       topic: 'Topic 3',
+       topic: 'Advanced',
        seq: 3,
 
        opta: "Mount Everest",
@@ -221,7 +221,7 @@ questionbank.questions = [
    {
        statement: "What is the traditional Drink of Goa?",
        weight: 1,
-       topic: 'Topic 3',
+       topic: 'Advanced',
        seq: 3,
 
        opta: "Penny",
@@ -245,7 +245,7 @@ questionbank.questions = [
    {
        statement: "Who was called the Nightingale of India?",
        weight: 1,
-       topic: 'Topic 3',
+       topic: 'Advanced',
        seq: 3,
 
        opta: "Asha Bhosle",

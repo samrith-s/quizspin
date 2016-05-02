@@ -279,11 +279,8 @@
   </metadata>
   <organizations default="ORG-6ABFDA26-7747-49B2-B7A2-2688145B3E59">
     <organization identifier="ORG-6ABFDA26-7747-49B2-B7A2-2688145B3E59" structure="hierarchical">
-      <title>Ptotem</title>
-      <item identifier="ITEM-8FFEFFA2-935F-4847-9D13-4DB33ADBF73E" identifierref="RES-AE5F62C6-5427-4C16-92F2-CFC9DBBB0582" isvisible="true">
-        <title>Index</title>
-      </item>
-      <item identifier="ITEM-7BF7645E-025A-4BD0-B81E-3A36FAF03F5C" identifierref="RES-10AADA0F-B25C-4E1A-89D6-34611D7B4E26" isvisible="true">
+      <title>Ptotem</title>      
+      <item identifier="ITEM-7BF7645E-025A-4BD0-B81E-3A36FAF03F5C" identifierref="RES-AE5F62C6-5427-4C16-92F2-CFC9DBBB0582" isvisible="true">
         <title>QuizSpin</title>
       </item>
      </organization>
@@ -291,14 +288,6 @@
   <resources>
     <resource identifier="RES-AE5F62C6-5427-4C16-92F2-CFC9DBBB0582" type="webcontent" adlcp:scormtype="asset" href="index.html">
       <file href="index.html" />
-    </resource>
-    <resource identifier="RES-10AADA0F-B25C-4E1A-89D6-34611D7B4E26" type="webcontent" adlcp:scormtype="sco"  href="actual_quiz.html">
-      <file href="actual_quiz.html" />
-<adlcp:datafromlms>
-hello world
-</adlcp:datafromlms>
-
-    </resource>
-
+    </resource>    
   </resources>
 </manifest>

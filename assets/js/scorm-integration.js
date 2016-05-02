@@ -7,8 +7,14 @@ function initCourse(min, max){
    //If the scorm.init function succeeded...
    if(lmsConnected){
       //Now let's get the username from the LMS
-      scorm.set('cmi.score.min', min);
-      scorm.set('cmi.score.max', max);
+      scorm.set('cmi.core.score.min', min);
+      scorm.set('cmi.core.score.max', max);
+      var isCompleted = (scorm.get('cmi.core.lesson_status') == 'completed');
+      if (!isCompleted) {
+        scorm.set('cmi.core.lesson_status','failed');
+      }
+      // scorm.set("cmi.completion_status", "incomplete");
+      // scorm.set("cmi.success_status", "failed");
     } else {
       //... let's alert the user then close the window.
       handleError("Error: Course could not connect with the LMS");
@@ -26,7 +32,7 @@ function handleError(error) {
   console.error(error);
 };
 
-function setComplete(){
+function setComplete(){    
     scorm.set('cmi.core.lesson_status','completed');
     scorm.save();
 }
