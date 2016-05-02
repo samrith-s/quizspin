@@ -5,7 +5,6 @@ var player = new Entity("player");
 var coins = new Currency("coins");
 
 var Score = function(totalQuestions) {
-    console.log(totalQuestions);
     this.correct = 0;
     this.incorrect = 0;
     this.total = totalQuestions;
@@ -230,15 +229,12 @@ function playQuiz(qCount) {
     var question;
     if (qCount == 1){
         question = _.sample(_.filter(quesbank,{topic:'Basic'}));
-        console.log(question);
     }
     else if (qCount == 2){
         question = _.sample(_.filter(quesbank,{topic:'Intermediate'})); 
-        console.log(question); 
     } 
     else if(qCount == 3){
         question = _.sample(_.filter(quesbank,{topic:'Advanced'}));   
-        console.log(question); 
     }
     if(!question){
         $("#messages").css("display", "table");
@@ -437,7 +433,6 @@ function victory() {
         finalText = "You scored "+ percentage + "% <br>Congratulations! "
         retry_class = "hide"; 
         setScore(quizScore.getScore());
-        // console.log('setComplete is called')
         // setComplete();
     }
     else{

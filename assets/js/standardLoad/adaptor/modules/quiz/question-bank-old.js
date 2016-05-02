@@ -1,6 +1,6 @@
 var questionbank = {};
 questionbank.sequentialQuestions = 4;
-questionbank.questionsFromTopic = 1;
+questionbank.questionsFromTopic = 2;
 questionbank.questions = [
     {
         statement: "What's the capital of India?",
