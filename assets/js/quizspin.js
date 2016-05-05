@@ -236,13 +236,16 @@ function playQuiz(qCount) {
     else if(qCount == 3){
         question = _.sample(_.filter(quesbank,{topic:'Advanced'}));   
     }
-    if(!question){
+    if(!question && qCount == 1){
         $("#messages").css("display", "table");
         $("#messages").removeClass("environment");
         $("#messageBox").html("<p>No Questions</p>")
         $("#messages").fadeIn(500);
         setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
         return;
+    }
+    else if(!question) {
+        return playQuiz(qCount - 1);
     }
     quizScore.totalScoring(question.seq)
     if(quesbank.indexOf(question) != -1){

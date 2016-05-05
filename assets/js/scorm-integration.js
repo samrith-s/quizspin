@@ -9,7 +9,7 @@ function initCourse(min, max){
       //Now let's get the username from the LMS
       scorm.set('cmi.core.score.min', min);
       scorm.set('cmi.core.score.max', max);
-      var isCompleted = (scorm.get('cmi.core.lesson_status') == 'completed');
+      var isCompleted = (scorm.get('cmi.core.lesson_status') == 'passed');
       if (!isCompleted) {
         scorm.set('cmi.core.lesson_status','failed');
       }
@@ -33,6 +33,6 @@ function handleError(error) {
 };
 
 function setComplete(){    
-    scorm.set('cmi.core.lesson_status','completed');
+    scorm.set('cmi.core.lesson_status','passed');
     scorm.save();
 }
