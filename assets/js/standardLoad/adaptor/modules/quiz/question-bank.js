@@ -1,10 +1,10 @@
 var questionbank = {};
 questionbank.sequentialQuestions = 4;
-questionbank.questionsFromTopic = 5;
+questionbank.questionsFromTopic = 12;
 questionbank.questions = [
     {
       statement: "Timeline Trivia<br/>The year IDFC is founded, under the Chairmanship of Dr. Rakesh Mohan, to channel private capital into commercially viable projects.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -23,7 +23,7 @@ questionbank.questions = [
     },
     {
       statement: "Timeline Trivia<br/>The year IDFC is notified as a Public Financial Institution under Section 4A of the Companies Act.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -41,7 +41,7 @@ questionbank.questions = [
     },    
     {
       statement: "Timeline Trivia<br/>The year IDFC sets up IDFC Private Equity as an investment manager for private equity funds...",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -59,7 +59,7 @@ questionbank.questions = [
     },        
     {
       statement: "Timeline Trivia<br/>The year IDFC becomes a public company after listing its shares on NSE and BSE. Public offering happens at INR 34 per share...",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -77,7 +77,7 @@ questionbank.questions = [
     },
     {
       statement: "Timeline Trivia<br/>The year IDFC enters into asset management by acquiring the AMC business of Standard Chartered Bank in India.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -95,7 +95,7 @@ questionbank.questions = [
     },                
     {
       statement: "Timeline Trivia<br/>The year IDFC forays into investment banking by acquiring a controlling stake in SSKI.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -113,7 +113,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Timeline Trivia<br/>The year IDFC establishes IDFC Foundation to focus on capacity building, policy advisory and sustainability initiatives.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -131,7 +131,7 @@ questionbank.questions = [
     },  
     {
       statement: "Timeline Trivia<br/>The year IDFC becomes part of the Nifty 50.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -149,7 +149,7 @@ questionbank.questions = [
     },  
     {
       statement: "Timeline Trivia<br/>The year IDFC became India's first NBFC to be classified as an Infrastructure Finance Company (IFC) by RBI.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -167,7 +167,7 @@ questionbank.questions = [
     },   
     {
       statement: "Timeline Trivia<br/>The year IDFC is classified as India's first 'Green Data Centre.'",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -185,7 +185,7 @@ questionbank.questions = [
     },  
     {
       statement: "Timeline Trivia<br/>The year IDFC set up IDFC Foundation as a Section 25 Company.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -203,7 +203,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Timeline Trivia<br/>The year IDFC enters into a strategic partnership with Natixis Global Asset Management.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -221,7 +221,7 @@ questionbank.questions = [
     },    
     {
       statement: "Timeline Trivia<br/>The year IDFC completes 15 years with over 1.5 million investors.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -239,7 +239,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Timeline Trivia<br/>The year IDFC became the first financial institution from India to sign up to the Equator Principles (EP)",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -257,7 +257,7 @@ questionbank.questions = [
     },
     {
       statement: "Timeline Trivia<br/>The year IDFC applied for a Banking License",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -275,7 +275,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Timeline Trivia<br/>The year IDFC receives an in-principle banking License",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -293,7 +293,7 @@ questionbank.questions = [
     },
     {
       statement: "Timeline Trivia<br/>The year IDFC launches its first two Bharat Branches under the NBFC banner, at Pipariya and Bankhedi (Hoshangabad Dist., MP)",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -311,7 +311,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Timeline Trivia<br/>The year IDFC opened its first Bharat Bank branch for Tier 6 unbanked villages of Paghdal and Sonkheda",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -329,7 +329,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Timeline Trivia<br/>The year IDFC receives its Final Bank approval. License no. 111.",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -347,7 +347,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Timeline Trivia<br/>The year IDFC launches its new logo and branding",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -365,7 +365,7 @@ questionbank.questions = [
     },   
     {
       statement: "Timeline Trivia<br/>The year IDFC launches its first retail branch in Mumbai",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -383,7 +383,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Timeline Trivia<br/>The month and year where the IDFC Bank was born",
-      topic: 'Timeline Trivia',
+      topic: 'Basic',
       seq: 1,
       weight: 1,
 
@@ -401,7 +401,7 @@ questionbank.questions = [
     },
     {
       statement: "Bank Trivia<br/>The number of companies under the IDFC group is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -419,7 +419,7 @@ questionbank.questions = [
     },   
     {
       statement: "Bank Trivia<br/>The full form of NOFHC is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -437,7 +437,7 @@ questionbank.questions = [
     },  
     {
       statement: "Bank Trivia<br/>The full form of IDFC AMC is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -455,7 +455,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>IDFC Securities comprises of:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -473,7 +473,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>The types of funds under IDFC Alternatives are:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -491,7 +491,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>The full form of IDF is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -509,7 +509,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>The number of countries IDFC is present in is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -527,7 +527,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>The percentage of Government stake in IDFC Limited is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -545,7 +545,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>The percentage of Government stake in IDFC Bank is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -563,7 +563,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>The full form of IDFC is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -581,7 +581,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>IDFC works on a Total Cost to Company (TCC) Philosophy, where TCC is:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -603,7 +603,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>Your medical Insurance covers the following people:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -625,7 +625,7 @@ questionbank.questions = [
     },  
     {
       statement: "Bank Trivia<br/>Life Insurance incase of death will be for what amount:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -647,7 +647,7 @@ questionbank.questions = [
     },
     {
       statement: "Bank Trivia<br/>Privilege Leave (PL) and Sick Leave (SL) amount to:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -665,7 +665,7 @@ questionbank.questions = [
     },  
     {
       statement: "Bank Trivia<br/>Maternity Leave (ML) and Paternity Leave amount to:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -683,7 +683,7 @@ questionbank.questions = [
     },  
     {
       statement: "Bank Trivia<br/>Deadline to submit any salary (FBP) reimbursements is the:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -701,7 +701,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>Eligibility to claim Car Reimbursement (fuel bills / maintenance bills / driver salary / parking bills / toll bills / etc.) is for:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -723,7 +723,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Bank Trivia<br/>The Company Car Scheme is available to:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -745,7 +745,7 @@ questionbank.questions = [
     },
     {
       statement: "Bank Trivia<br/>IDFC has zero tolerance for:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -767,7 +767,7 @@ questionbank.questions = [
     },  
     {
       statement: "Bank Trivia<br/>As per IDFC's corporate communication policy, people who are authorized to speak to the media are:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -789,7 +789,7 @@ questionbank.questions = [
     },    
     {
       statement: "Bank Trivia<br/>The IDFC Learning Portal is called:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -807,7 +807,7 @@ questionbank.questions = [
     },  
     {
       statement: "Bank Trivia<br/>The IDFC intranet is called:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -825,7 +825,7 @@ questionbank.questions = [
     },  
     {
       statement: "Bank Trivia<br/>The IDFC values can relate to:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -851,7 +851,7 @@ questionbank.questions = [
     },     
     {
       statement: "Bank Trivia<br/>The 2 pillars of the IDFC Bank are:",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -873,7 +873,7 @@ questionbank.questions = [
     },   
     {
       statement: "Bank Trivia<br/>The IDFC group is a professionally run board managed company.",
-      topic: 'Bank Trivia',
+      topic: 'Basic',
       seq: 2,
       weight: 1,
 
@@ -887,7 +887,7 @@ questionbank.questions = [
     },   
     {
       statement: "Culture Trivia : Balance<br/>Definition of the value - Balance is…",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -909,7 +909,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Culture Trivia : Balance<br/>Being Ambitious & Grounded is…",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -931,7 +931,7 @@ questionbank.questions = [
     },               
     {
       statement: "Culture Trivia : Balance<br/>In order to win a big business deal you…",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -953,7 +953,7 @@ questionbank.questions = [
     },          
     {
       statement: "Culture Trivia : Balance<br/>Ideation & execution is…",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -975,7 +975,7 @@ questionbank.questions = [
     },     
     {
       statement: "Culture Trivia : Balance<br/>Which of the following is not a behaviour of the value - Balance",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -997,7 +997,7 @@ questionbank.questions = [
     },    
     {
       statement: "Culture Trivia : Balance<br/>Owing to my previous experience I have a lot of great ideas. I…",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -1019,7 +1019,7 @@ questionbank.questions = [
     },        
     {
       statement: "Culture Trivia : Balance<br/>Being Risk Taking & Careful is……",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -1041,7 +1041,7 @@ questionbank.questions = [
     },             
     {
       statement: "Culture Trivia : Balance<br/>Insufficient paper work from the client is causing a delay in completing a transaction. You…  ",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -1063,7 +1063,7 @@ questionbank.questions = [
     },          
     {
       statement: "Culture Trivia : Balance<br/>Towards the end of the project, a key contributor falls sick. At the project inaugural, you… ",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -1085,7 +1085,7 @@ questionbank.questions = [
     },                 
     {
       statement: "Culture Trivia : Balance<br/>Being a good team member means ",
-      topic: 'Culture Trivia - Balance',
+      topic: 'Intermediate',
       seq: 3,
       weight: 1,
 
@@ -1107,7 +1107,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Culture Trivia: Honesty<br/>Definition of Honesty is:",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1129,7 +1129,7 @@ questionbank.questions = [
     }, 
     {
       statement: "Culture Trivia: Honesty<br/>When attempting to convince a potential buyer to purchase a product or service, the most important aspect of the interaction is:",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1151,7 +1151,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>You are concerned that a co-worker is lying on his/her reports. Even though it doesn’t impact you directly, it still makes you angry. You…",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1173,7 +1173,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>Your supervisor asks you to sign off on a report that you don’t really understand. You:",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1195,7 +1195,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>A potential client asks a question that if honestly answered will make you lose the sale. You:",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1217,7 +1217,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>Which one of the following is a behaviour of Honesty?",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1239,7 +1239,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>How would you display the behaviour - 'I pro-actively share bad news or if mistakes are made'",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1261,7 +1261,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>When a transaction needs to be completed I…",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1283,7 +1283,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>When things go wrong as they sometimes will, you…",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1305,7 +1305,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>Honouring Commitments,' a core part of honesty looks at:",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1331,7 +1331,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Honesty<br/>Right Selling, under the value of Honesty relates to:",
-      topic: 'Culture Trivia - Honesty',
+      topic: 'Intermediate',
       seq: 4,
       weight: 1,
 
@@ -1353,7 +1353,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>What is the definition of the value - Drive as per IDFC Bank?",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1375,7 +1375,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>When an unexpected event threatens or jeopardizes my goal,",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1397,7 +1397,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>When a project is about to begin…",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1419,7 +1419,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>When delivery needs to happen in stringent timelines, I…",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1441,7 +1441,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>While planning on strategy, I…",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1463,7 +1463,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>How would you display the behaviour 'First Time Right'?",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1485,7 +1485,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>Which of the following are behaviours of the value-Drive as per IDFC Bank?",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1507,7 +1507,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>Providing solutions is one of the behaviours under the value of Drive. This means:",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1529,7 +1529,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>Under the value of Drive, one of our key behaviours is to make things happen. This means:",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1551,7 +1551,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Drive<br/>Which of the following is a characteristic of 'Self Driven' people?",
-      topic: 'Culture Trivia - Drive',
+      topic: 'Intermediate',
       seq: 5,
       weight: 1,
 
@@ -1573,7 +1573,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>Definition of Collaboration is:",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1595,7 +1595,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>Which of the following behaviours are appropriate for collaboration?",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1617,7 +1617,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>When decisions need to be taken you…",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1639,7 +1639,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>If you finish a set of tasks assigned to you before the rest of the team, you should:",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1661,7 +1661,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>There is an urgent deliverable and the person responsible for the delivery is late due to some exigency, what should you do?",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1683,7 +1683,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>Which one of the following is NOT a behaviour of Collaboration?",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1705,7 +1705,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>The basic concepts of collaboration include:",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1727,7 +1727,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>Which of the following are barriers to collaboration with new team members?",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1749,7 +1749,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>One important rationale for collaboration is an enhanced ability to:",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1771,7 +1771,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>Under the value of Collaboration, one of our key behaviours is to show empathy. This means:",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1793,7 +1793,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>Under the value of Collaboration, one of our key behaviours is to listen. This means:",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1815,7 +1815,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Trivia: Collaboration<br/>Under the value of Collaboration, one of our key behaviours is We First. This means:",
-      topic: 'Culture Trivia - Collaboration',
+      topic: 'Intermediate',
       seq: 6,
       weight: 1,
 
@@ -1837,7 +1837,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>A crucial project you are executing needs a brilliant resource. The same resource is requested by another business unit for a project which could generate much more revenue than the one you are working on. However, this revenue will not be included in your targets. Which values does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -1863,7 +1863,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>A client complained about a subordinate and asked for a replacement. The team member is asking you for another chance. Giving him this chance will make you accountable for his actions and you may need to invest a lot of your time mentoring him. Do you want to allow this chance? Which values does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -1889,7 +1889,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>You have two equally competent employees - A and B - in your team. A has previously worked with a major client. You have put B on a project with the client. The client requests the replacement of B with A as he has a good rapport with A. There is nothing wrong in the B's performance. Do you give in to the client request? Which values does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -1915,7 +1915,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>A subordinate suggested an idea that you agreed to implement. In a casual conversation with your superior, you mention the idea but your superior doesn't like it because he has a prejudice against the team member. Your appraisal is due. Do you go ahead with the idea? Which values does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -1937,7 +1937,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>Infrastructure is usually about Government dealings. It is well known that you can't get any work done unless you keep them happy. Another team takes the initiative to set aside a standard set of rules and budgets for gratifications, under the heading of 'business development expenses'. Should you copy the 'great' example? Which values does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -1963,7 +1963,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>There is a project with 7 risk factors. You have mitigated 6 of the risks. However, the seventh risk may derail the project. Taking up the project will double the revenue that your company is making. Should you take up the project? Which values does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -1989,7 +1989,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>There is a poor performer in your team whom you need to let go. You send him to a client with a report that you drafted. The client complains about the report. You have to fire the employee anyway. Do you still declare that the report was your fault? Which value does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2011,7 +2011,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>Your best friend needs a housing loan. His credit rating is below the mark. You know he will repay it and can trust him. Do you ask your subordinate to sanction it and help him? Which value does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2033,7 +2033,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>Your car has gone to be serviced. You have a subordinate who loves to butter you up. He immediately offers to pick you up from home and drop you for those 3 days even though your house is out of his way. Do you accept the offer? Which values does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2059,7 +2059,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>There is a potential project opportunity. The risk team has evaluated the project and flags a recovery risk. This project can help you meet your revenue targets. Recovery is the portfolio team's responsibility and not yours. Should you take up the project? Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2086,7 +2086,7 @@ questionbank.questions = [
 
     {
       statement: "Culture Questions<br/>You can use your budget for either setting up an incubation centre where people are rewarded for new ideas OR for immediate distribution as bonus to your team. What do you do? Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2108,7 +2108,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>There's a high-tech software that needs to be launched before Christmas. The vendor asks you to push the launch date as a few checks are pending. Do you want to launch the software now? Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2130,7 +2130,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>There is a potentially big opportunity that could alone meet your target. You discovered this opportunity via your network. However, you are currently under-staffed and there may be a delay in hiring for your team. The project can be taken up by another team who is well-staffed. Do you pass on the lead? Which values does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2156,7 +2156,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>You did not factor that HR takes 60 days to hire a person after you submit a request. You have committed to starting off the person within one month and you have just a week left. Tomorrow is your status meeting. Should you just say that it is an HR delay? Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2178,7 +2178,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>At the common office printer, you notice some printouts which had confidential information that could result in cost saving for the client and a lot of revenue for your business unit. Should you inform the client? Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2204,7 +2204,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>You are currently working on two projects for two different clients. One of them, although of a smaller revenue is close to completion. The other project is yet to be signed and needs many more hours of your work and attention. Do you put the smaller project on  the back-burner and focus on the bigger revenue project? Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2230,7 +2230,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>You have a brilliant idea and need help implementing it. The only person who could help you is egoistic and someone who nobody wants to work with. He would surely take away the credit for the idea.  Would you still approach him? Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2256,7 +2256,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>'A' was introduced to 'B' s client during a casual dinner. 'A' took the liberty to discuss an idea with the client without telling 'B'. As you are the boss, the client is requesting that 'A' be made the account manager instead of 'B'. Do you oblige? Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2282,7 +2282,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>You go out of your way to deliver a good project and are recommended for the next available opportunity. Which value/s are you considering?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 
@@ -2304,7 +2304,7 @@ questionbank.questions = [
     },
     {
       statement: "Culture Questions<br/>You have an opportunity to snatch a project from another business unit and you go ahead and do it. Which value/s does this situation affect?",
-      topic: 'Culture - Value Situations',
+      topic: 'Advanced',
       seq: 7,
       weight: 1,
 

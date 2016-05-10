@@ -432,7 +432,7 @@ function victory() {
     percentage = Math.round((quizScore.userScored/quizScore.totalPoints)*100)
     $("#quiz").fadeOut();
     retry_class = "";
-    if (percentage >= 80){
+    if (percentage >= 40){
         finalText = "You scored "+ percentage + "% <br>Congratulations! "
         retry_class = "hide"; 
         setScore(quizScore.getScore());
