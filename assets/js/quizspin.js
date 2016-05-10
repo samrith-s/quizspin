@@ -30,7 +30,7 @@ Score.prototype.totalScoring = function(count) {
 }
 
 Score.prototype.getScore = function() {
-    return Math.round((this.pointsScored/this.totalScoring)*100);
+    return Math.round(this.userScored);
 }
 player.createWallet(coins, 0, 9999999999, config.coins());
 
@@ -256,55 +256,34 @@ function playQuiz(qCount) {
     $("#quiz").css({display:"table"}); Question.showQuizPanel(quiz, question);
     $("#quiz").fadeIn(1000);
 
-    $(question).unbind('answered').on('answered', function(e, data) {
-        if (quesbank.length==0) {
-            if (data.correct){
-                quizScore.addCorrect(question)
-                quizScore.pointsScored(qCount)
-                // setScore(quizScore.getScore());
-                //increment score in scorm and commit
-            }
-            else{
-                quizScore.addIncorrect(question)
-            }
-             setTimeout(function(){
+    function checkVictory() {
+        if(quizScore.getScore() >= 40) {
+            setTimeout(function(){
                 victory();
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-                $('#freespins span').eq(1).text(quizScore.correct);
-            },1500)   
+                $('#freespins span').eq(1).text(quizScore.getScore());
+            },1000)
         }
-        else if(data.correct) {
+    }
+    function processAnswer(e, data) {
+        if(data.correct) {
             quizScore.addCorrect(question);
             quizScore.pointsScored(qCount)
             // setScore(quizScore.getScore());
             //increment score in scorm and commit
-            if(quesbank.length==0) {
-                if (data.correct){
-                   quizScore.addCorrect(question)
-                   quizScore.pointsScored(qCount)
-                   // setScore(quizScore.getScore());
-                }
-                else{
-                    quizScore.addIncorrect(question)
-                }
-                setTimeout(function(){
-                    victory();
-                    $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-                    $('#freespins span').eq(1).text(quizScore.correct);
-                },1500)
-            }
-            else {
-                free = true;
-                freeSpin(0);
-                $("#quiz").fadeOut(500);
-                $("#messages").css("display", "table");
-                $("#messages").removeClass("environment");
-                $("#messageBox").html("<p>Yes! That was correct</p>")
-                $("#messages").fadeIn(500);
-                setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
-                $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-                $('#freespins span').eq(1).text(quizScore.correct);
-            }
+            free = true;
+            freeSpin(0);
+            $("#quiz").fadeOut(500);
+            $("#messages").css("display", "table");
+            $("#messages").removeClass("environment");
+            $("#messageBox").html("<p>Yes! That was correct</p>")
+            $("#messages").fadeIn(500);
+            setTimeout(function() {
+                $("#messages").fadeOut(500);
+                checkVictory();
+            }, 1000);
+            $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
+            $('#freespins span').eq(1).text(quizScore.getScore());
         }
         else {
             free = false;
@@ -314,18 +293,21 @@ function playQuiz(qCount) {
             $("#messages").removeClass("environment");
             $("#messageBox").html("<p>Oops! That was incorrect</p>")
             $("#messages").fadeIn(500);
-            setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
+            setTimeout(function() { 
+                $("#messages").fadeOut(500);
+                checkVictory();
+            }, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-            $('#freespins span').eq(1).text(quizScore.correct);
-
+            $('#freespins span').eq(1).text(quizScore.getScore());
         }
-    });
+    }
+    $(question).unbind('answered').on('answered', processAnswer);
 }
 
 function freeSpin(n) {
     $("#blank").remove();
     $("#ptotemy-game").append("<div id='blank' class='environment'></div>");
-    $('#freespins span').eq(1).text(quizScore.correct);
+    $('#freespins span').eq(1).text(quizScore.getScore());
     setTimeout(function() {$("#freespins span").eq(1).fadeIn()}, 400);
     $(".slot-item-6 img").effect("pulsate");
 
@@ -429,11 +411,11 @@ function handleIcons() {
 }
 
 function victory() {
-    percentage = Math.round((quizScore.userScored/quizScore.totalPoints)*100)
+    percentage = quizScore.getScore();
     $("#quiz").fadeOut();
-    retry_class = "";
+    retry_class = "hide";
     if (percentage >= 40){
-        finalText = "You scored "+ percentage + "% <br>Congratulations! "
+        finalText = "You scored "+ percentage + "<br>Congratulations! "
         retry_class = "hide"; 
         setScore(quizScore.getScore());
         // setComplete();

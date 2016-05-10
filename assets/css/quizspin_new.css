@@ -41,7 +41,7 @@ html, body {
 
 }
  #currencyholder{
-    display: block;
+    display: none;
     text-align: center;
     background: rgba(1,1,1,0.8);
     height: auto;
