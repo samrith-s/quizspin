@@ -401,11 +401,11 @@ function handleIcons() {
 
     $("#botPanel img").eq(1).unbind('click').on('click', function() {
         $("#payoffs h3").text("Instructions");
-        $("#payoffs div").text("Your goal is to answer all the 35 questions the machine throws at you. " +
-                        "To get to a question, it is mandatory to pull the lever. " +
-                        "Every correct attempt earns you 1 point. " +
-                        "You need a minimal score of 80% to clear this test. If not, you can always take the test again. " +
-                        "Best of luck!"
+        $("#payoffs div").text("Pull the lever to get a question. " +
+                        "The complexity of the question depends on the number of question marks that appear. " +
+                        "If you don't see a question mark, pull the lever again. " +
+                        "Answer a question correctly to earn points. Repeat until you reach a score of 40. " +
+                        "All the best!"
         )
     });
 }
