@@ -382,7 +382,7 @@ questionbank.questions = [
       optcpoints: "0"
     }, 
     {
-      statement: "Timeline Trivia<br/>The month and year where the IDFC Bank was born",
+      statement: "Timeline Trivia<br/>The month and year when the IDFC Bank was born",
       topic: 'Basic',
       seq: 1,
       weight: 1,
@@ -400,7 +400,7 @@ questionbank.questions = [
       optcpoints: "10"
     },
     {
-      statement: "Bank Trivia<br/>The number of companies under the IDFC group is:",
+      statement: "Bank Trivia<br/>The number of companies under the IDFC group are:",
       topic: 'Basic',
       seq: 2,
       weight: 1,
@@ -508,7 +508,7 @@ questionbank.questions = [
       optcpoints: "10"
     }, 
     {
-      statement: "Bank Trivia<br/>The number of countries IDFC is present in is:",
+      statement: "Bank Trivia<br/>The number of countries IDFC is present in are:",
       topic: 'Basic',
       seq: 2,
       weight: 1,
@@ -2058,7 +2058,7 @@ questionbank.questions = [
       optepoints: "0"
     },
     {
-      statement: "Culture Questions<br/>There is a potential project opportunity. The risk team has evaluated the project and flags a recovery risk. This project can help you meet your revenue targets. Recovery is the portfolio team's responsibility and not yours. Should you take up the project? Which value/s does this situation affect?",
+      statement: "Culture Questions<br/>There is a potential project opportunity. The risk team has evaluated the project and flags a recovery risk. This project can help you meet your revenue targets. Recovery is the portfolio team's responsibility and not yours. Should you take up the project? Which values does this situation affect?",
       topic: 'Advanced',
       seq: 7,
       weight: 1,

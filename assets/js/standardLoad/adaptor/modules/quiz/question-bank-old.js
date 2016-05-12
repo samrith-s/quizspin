@@ -27,6 +27,28 @@ questionbank.questions = [
         slide_id:321
     },
     {
+      statement: "Culture Trivia : Balance<br/>In order to win a big business deal you…",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "Cut corners to make things happen",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "Compromise team's or Firm's interest",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "Let the deal go if it doesn’t comply with the Firm's Policy or interest",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "A & B",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+    {
         statement: "Where is Gateway of India Located?",
         topic: 'Basic',
         seq: 1,
