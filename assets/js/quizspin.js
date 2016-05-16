@@ -39,7 +39,7 @@ var quesbank = [];
 
 
 $(function() {
-    // setScore(0);
+    setScore(0);
     initGame();
 });
 
@@ -269,7 +269,7 @@ function playQuiz(qCount) {
         if(data.correct) {
             quizScore.addCorrect(question);
             quizScore.pointsScored(qCount)
-            // setScore(quizScore.getScore());
+            setScore(quizScore.getScore());
             //increment score in scorm and commit
             free = true;
             freeSpin(0);
@@ -418,7 +418,7 @@ function victory() {
         finalText = "You scored "+ percentage + "<br>Congratulations! "
         retry_class = "hide"; 
         setScore(quizScore.getScore());
-        // setComplete();
+        setComplete();
     }
     else{
         finalText = "You scored "+ percentage + "% <br>Sorry, you haven't met the minimum score. Please try again."
@@ -470,7 +470,7 @@ function display_payoff() {
 
 function retryGame(){
     // location.reload();
-    // setScore(0);
+    setScore(0);
     initGame();
 }
  
