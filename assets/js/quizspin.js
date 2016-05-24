@@ -3,6 +3,7 @@ var free = false;
 var player = new Entity("player");
 
 var coins = new Currency("coins");
+var spinsound = document.getElementById('spinner-sound');
 
 var Score = function(totalQuestions) {
     this.correct = 0;
@@ -166,6 +167,7 @@ function pullHandle() {
         {
             start:
                 function() {
+                    PlaySound('spinner-sound');
                     m.addClass("no-click");
                 },
 
@@ -200,7 +202,12 @@ function pullHandle() {
 
                             duration: 1800
                         }
+                        
                     );
+                    setTimeout(function(){
+                            StopSound('spinner-sound');
+                    },2700);
+
                 }
         }
     );
@@ -484,4 +491,20 @@ function initInstructions(){
 
 function closeStartModal(){
     $("#messages").fadeOut(500);
+}
+
+function PlaySound(soundobj) {
+    var thissound = document.getElementById(soundobj);
+    $('#' + soundobj).stop();
+    thissound.volume = 1;
+    thissound.play();
+    $('#' + soundobj).animate({volume: 0.1}, 8000, function () {
+        thissound.volume = 1;
+    });
+}
+
+function StopSound(soundobj) {
+    var thissound = document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
 }
