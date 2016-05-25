@@ -159,10 +159,12 @@ function pullHandle() {
     machine3.shuffle(2, function() {
         processCombo(machine1, machine2, machine3);
         $("#handle img").removeClass("no-click");
+
     });
 
     m.animate({
             "width": "500px"
+
         },
         {
             start:
@@ -179,6 +181,7 @@ function pullHandle() {
                         ml = 450;
 
                     m.css("margin-left", "-" + ml + "px");
+                    PlaySound('cranker');
                 },
 
             duration: 800,
@@ -206,7 +209,7 @@ function pullHandle() {
                     );
                     setTimeout(function(){
                             StopSound('spinner-sound');
-                    },2700);
+                    },2650);
 
                 }
         }
