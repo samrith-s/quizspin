@@ -83,7 +83,6 @@ Question.getAllByWeight = function(weight) {
     var questions = $.grep(Question.all, function(a) {
         return (a.weight == weight);
     });
-    console.log(questions);
     return questions;
 }
 

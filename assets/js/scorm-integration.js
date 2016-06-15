@@ -12,9 +12,7 @@ function initCourse(min, max){
       var isCompleted = (scorm.get('cmi.core.lesson_status') == 'passed');
       if (!isCompleted) {
         scorm.set('cmi.core.lesson_status','failed');
-      }
-      // scorm.set("cmi.completion_status", "incomplete");
-      // scorm.set("cmi.success_status", "failed");
+      }      
     } else {
       //... let's alert the user then close the window.
       handleError("Error: Course could not connect with the LMS");
@@ -23,7 +21,6 @@ function initCourse(min, max){
 initCourse(0, 100);
 
 function setScore(score) {
-  console.log('score is ',score);
   scorm.set('cmi.core.score.raw', score);
   scorm.save();
 };
@@ -36,3 +33,9 @@ function setComplete(){
     scorm.set('cmi.core.lesson_status','passed');
     scorm.save();
 }
+
+function userTotalQuestion(value){
+  scorm.set('cmi.objectives.n.score.raw',value)
+  scorm.save()
+}
+

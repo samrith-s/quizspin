@@ -270,6 +270,7 @@ function playQuiz(qCount) {
         if(quizScore.getScore() >= 40) {
             setTimeout(function(){
                 victory();
+                setScore(quizScore.questionsAnswered.length);
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
                 $('#freespins span').eq(1).text(quizScore.getScore());
             },1000)
@@ -312,6 +313,7 @@ function playQuiz(qCount) {
         }
     }
     $(question).unbind('answered').on('answered', processAnswer);
+    setScore(quizScore.questionsAnswered.length);
 }
 
 function freeSpin(n) {
