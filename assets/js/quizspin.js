@@ -267,7 +267,7 @@ function playQuiz(qCount) {
     $("#quiz").fadeIn(1000);
 
     function checkVictory() {
-        if(quizScore.getScore() >= 40) {
+        if (quizScore.questionsAnswered.length == 30){
             setTimeout(function(){
                 victory();
                 setScore(quizScore.questionsAnswered.length);
@@ -423,17 +423,19 @@ function handleIcons() {
 }
 
 function victory() {
-    percentage = quizScore.getScore();
+    userScore = quizScore.getScore();
+    percentage = ((userScore/60)*100);
     $("#quiz").fadeOut();
     retry_class = "hide";
-    if (percentage >= 40){
-        finalText = "You scored "+ percentage + "<br>Congratulations! "
-        retry_class = "hide"; 
-        setScore(quizScore.getScore());
-        setComplete();
+    finalText = "";
+    if (percentage >= 90){
+        finalText = "You are Advanced user <br>Congratulations! "
     }
-    else{
-        finalText = "You scored "+ percentage + "% <br>Sorry, you haven't met the minimum score. Please try again."
+    else if (percentage >= 60 && percentage < 90){
+        finalText = "You are Intermediate user <br>Congratulations!"
+    }
+    else if (percentage < 60 ){
+        finalText = "You are Basic user <br>Congratulations!"
     }
     $("#messageBox").html("<h6 class='adjust-font'>Game Over</h6>" +
         "<h5 class='adjust-font'>" + finalText + "</h5>" +
@@ -443,7 +445,9 @@ function victory() {
     $("#messages").removeClass("environment");
     $("#messages").fadeIn();
     $('#retry-btn').unbind('click').on('click',retryGame);
-    
+    retry_class = "hide"; 
+    setScore(quizScore.getScore());
+    setComplete();
 }
 
 function commaSeparateNumber (val){
