@@ -255,7 +255,15 @@ function playQuiz(qCount) {
         return;
     }
     else if(!question) {
-        return playQuiz(qCount - 1);
+        $("#quiz").fadeOut(500);
+        $("#messages").css("display", "table");
+        $("#messages").removeClass("environment");
+        $("#messageBox").html("<p>No! questions remaining for this catergory</p>")
+        $("#messages").fadeIn(500);
+        setTimeout(function() {
+            $("#messages").fadeOut(500);
+            checkVictory();
+        }, 1000);
     }
     quizScore.totalScoring(question.seq)
     if(quesbank.indexOf(question) != -1){
