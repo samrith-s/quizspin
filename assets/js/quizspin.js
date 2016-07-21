@@ -89,6 +89,20 @@ Score.prototype.getNextGameGrade = function() {
 Score.prototype.getScore = function() {
     return Math.round(((this.passedLevel + 1) / 3) * 100) ;
 }
+Score.prototype.getGrade = function() {
+    var grade="";
+    grade = Math.round(((this.passedLevel + 1) / 3) * 100) 
+    if (grade == 0){
+        return "F"
+    }else if (grade == 33){
+        return "B"
+    }else if (grade == 67){
+        return "I"
+    }else if (grade == 100){
+        return "A"
+    }
+}
+
 
 player.createWallet(coins, 0, 9999999999, config.coins());
 
@@ -337,7 +351,7 @@ function playQuiz() {
                 victory();
                 setScore(quizScore.questionsAnswered.length);
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-                $('#freespins span').eq(1).text(quizScore.getScore());
+                $('#freespins span').eq(1).text(quizScore.getGrade());
             },1000)
         }
     }
@@ -358,7 +372,7 @@ function playQuiz() {
                 checkVictory();
             }, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-            $('#freespins span').eq(1).text(quizScore.getScore());
+            $('#freespins span').eq(1).text(quizScore.getGrade());
         }
         else {
             free = false;
@@ -373,7 +387,7 @@ function playQuiz() {
                 checkVictory();
             }, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-            $('#freespins span').eq(1).text(quizScore.getScore());
+            $('#freespins span').eq(1).text(quizScore.getGrade());
         }
     }
     $(question).unbind('answered').on('answered', processAnswer);
@@ -383,7 +397,7 @@ function playQuiz() {
 function freeSpin(n) {
     $("#blank").remove();
     $("#ptotemy-game").append("<div id='blank' class='environment'></div>");
-    $('#freespins span').eq(1).text(quizScore.getScore());
+    $('#freespins span').eq(1).text(quizScore.getGrade());
     setTimeout(function() {$("#freespins span").eq(1).fadeIn()}, 400);
     $(".slot-item-6 img").effect("pulsate");
 
@@ -488,22 +502,24 @@ function handleIcons() {
 
 function victory() {
     userScore = quizScore.getScore();
-    percentage = ((userScore/60)*100);
+    grade = quizScore.getGrade();
     $("#quiz").fadeOut();
     retry_class = "hide";
     finalText = "";
-    if (percentage >= 90){
-        finalText = "You are Advanced user <br>Congratulations! "
+    if (grade == "F"){
+        finalText = "You failed"
     }
-    else if (percentage >= 60 && percentage < 90){
-        finalText = "You are Intermediate user <br>Congratulations!"
-    }
-    else if (percentage < 60 ){
+    else if (grade == "B"){
         finalText = "You are Basic user <br>Congratulations!"
+    }
+    else if (grade == "I"){
+        finalText = "You are Intermediate user <br>Congratulations!"
+    }else if (grade == "A"){
+        finalText = "You are Advanced user <br>Congratulations!"
     }
     $("#messageBox").html("<h6 class='adjust-font'>Game Over</h6>" +
         "<h5 class='adjust-font'>" + finalText + "</h5>" +
-        "<h6 class='adjust-font'>Correct: "+ quizScore.correct +"<br/>Incorrect: "+ quizScore.incorrect +"</h6>" +
+        "<h6 style='display:none;' class='adjust-font'>Correct: "+ quizScore.correct +"<br/>Incorrect: "+ quizScore.incorrect +"</h6>" +
         "<div id='retry-btn' class='"+ retry_class +"'><span>Retry</span></div>");
     $("#messages").css("display", "table");
     $("#messages").removeClass("environment");
