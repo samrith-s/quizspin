@@ -241,7 +241,7 @@ function pullHandle() {
             start:
                 function() {
                     PlaySound('spinner-sound');
-                    m.addClass("no-click");
+                    $('#handle img').addClass("no-click");
                 },
 
             step:
