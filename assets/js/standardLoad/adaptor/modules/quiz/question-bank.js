@@ -1,6 +1,7 @@
 var questionbank = {};
-questionbank.sequentialQuestions = 4;
-questionbank.questionsFromTopic = 10;
+questionbank.passingThresholdInRound = 1;
+questionbank.questionsInRound = 10;
+questionbank.questionsFromTopic = 30;
 questionbank.questions = [
     {
       statement: "Timeline Trivia<br/>The year IDFC is founded, under the Chairmanship of Dr. Rakesh Mohan, to channel private capital into commercially viable projects.",

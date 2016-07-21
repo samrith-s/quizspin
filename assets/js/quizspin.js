@@ -6,33 +6,90 @@ var coins = new Currency("coins");
 var spinsound = document.getElementById('spinner-sound');
 
 var Score = function(totalQuestions) {
-    this.correct = 0;
-    this.incorrect = 0;
-    this.total = totalQuestions;
+    // fake stuff
     this.questionsAnswered = [];
-    this.sum= 0;
-    this.userScored= 0;
-    this.totalPoints= 0;
+
+    this.roundScores = [];
+    this.totalAnswered = 0;
+    // this.currentRoundNo = 0;
+    this.passedLevel = -1; // -1 is F, 0 - B, 1 - I, 2 - A
+    this.currentLevel = 0;
+};
+// Level will be a number (0, 1 or 2)
+Score.prototype.createRound = function(roundNo, level) {
+    this.roundScores.push({
+        totalQuestions: questionbank.questionsInRound,
+        roundNo: roundNo,
+        level: level,
+        questionsAnswered: [],
+        correct: 0,
+        incorrect: 0,
+        passed: false
+    });
+    return _.find(this.roundScores, {roundNo: roundNo});
+};
+Score.prototype.getRoundNo = function() {
+    return Math.floor(this.totalAnswered / questionbank.questionsInRound);
 };
 Score.prototype.addCorrect = function(question) {
-    this.correct++;
-    this.questionsAnswered.push(question);
+    var currentRound = null;
+    var roundNo = this.getRoundNo();
+    var level = this.getNextGameGrade();
+    if(!this.roundScores[roundNo])
+        currentRound = this.createRound(roundNo, level);
+    else currentRound = this.getRound(roundNo);
+    currentRound.correct++;
+    currentRound.questionsAnswered.push(question);
+    currentRound.passed = this.isRoundPassed(currentRound);
+    this.totalAnswered++;
+    this.setGameGrade();
 }
-Score.prototype.addIncorrect = function(question) {
-    this.incorrect++;
-    this.questionsAnswered.push(question);
-}
-Score.prototype.pointsScored = function(count) {
-    this.userScored += count;
-}
-
-Score.prototype.totalScoring = function(count) {
-    this.totalPoints += count;
-}
-
+Score.prototype.isRoundPassed = function(round) {
+    var answeredCount = round.questionsAnswered.length;
+    if(answeredCount >= round.totalQuestions && round.correct >= questionbank.passingThresholdInRound)
+        return true;
+    else
+        return false;
+};
+Score.prototype.getRound = function(roundNo) {
+    return _.find(this.roundScores, {roundNo: roundNo});
+};
+Score.prototype.addIncorrect = function(question, roundNo, level) {
+    var currentRound = null;
+    var roundNo = this.getRoundNo();
+    var level = this.getNextGameGrade();
+    if(!this.roundScores[roundNo])
+        currentRound = this.createRound(roundNo, level);
+    else currentRound = this.getRound(roundNo);
+    currentRound.incorrect++;
+    currentRound.questionsAnswered.push(question);
+    currentRound.passed = this.isRoundPassed(currentRound);
+    this.totalAnswered++;
+    this.setGameGrade();
+};
+Score.prototype.setGameGrade = function() {
+    var grade = -1;
+    _.map(this.roundScores, function(round) {
+        if(round.passed && round.level > grade) {
+            grade = round.level
+        }
+    });
+    this.passedLevel = grade;
+};
+Score.prototype.getNextGameGrade = function() {
+    if (this.passedLevel >= 2) {
+        return 2;
+    }
+    // if (this.passedLevel < 0) {
+    //     return 1;
+    // }
+    else 
+        return this.passedLevel + 1;
+};
 Score.prototype.getScore = function() {
-    return Math.round(this.userScored);
+    return Math.round(((this.passedLevel + 1) / 3) * 100) ;
 }
+
 player.createWallet(coins, 0, 9999999999, config.coins());
 
 var quesbank = [];
@@ -222,30 +279,32 @@ function processCombo(machine1, machine2, machine3) {
 
     if(!free)
     {
-        if((!isQuestion(machine1.active) && !isQuestion(machine2.active) && isQuestion(machine3.active)) || (!isQuestion(machine1.active) && isQuestion(machine2.active) && !isQuestion(machine3.active)) || (isQuestion(machine1.active) && !isQuestion(machine2.active) && !isQuestion(machine3.active))){
-            playQuiz(1);
-        }
-        else if((!isQuestion(machine1.active) && isQuestion(machine2.active) && isQuestion(machine3.active)) || (isQuestion(machine1.active) && !isQuestion(machine2.active) && isQuestion(machine3.active)) || (isQuestion(machine1.active) && isQuestion(machine2.active) && !isQuestion(machine3.active))){
-            playQuiz(2)
+        playQuiz();
+        // if((!isQuestion(machine1.active) && !isQuestion(machine2.active) && isQuestion(machine3.active)) || (!isQuestion(machine1.active) && isQuestion(machine2.active) && !isQuestion(machine3.active)) || (isQuestion(machine1.active) && !isQuestion(machine2.active) && !isQuestion(machine3.active))){
+        //     playQuiz(1);
+        // }
+        // else if((!isQuestion(machine1.active) && isQuestion(machine2.active) && isQuestion(machine3.active)) || (isQuestion(machine1.active) && !isQuestion(machine2.active) && isQuestion(machine3.active)) || (isQuestion(machine1.active) && isQuestion(machine2.active) && !isQuestion(machine3.active))){
+        //     playQuiz(2)
 
-        }
-        else if(isQuestion(machine1.active) && isQuestion(machine2.active) && isQuestion(machine3.active)){
-            playQuiz(3)
-        }
+        // }
+        // else if(isQuestion(machine1.active) && isQuestion(machine2.active) && isQuestion(machine3.active)){
+        //     playQuiz(3)
+        // }
     }
 }
 
-function playQuiz(qCount) {
-    var question;
-    if (qCount == 1){
+function playQuiz() {
+    var qCount = quizScore.getNextGameGrade(), question = null;
+    if (qCount == 0){
         question = _.sample(_.filter(quesbank,{topic:'Basic'}));
     }
-    else if (qCount == 2){
+    else if (qCount == 1){
         question = _.sample(_.filter(quesbank,{topic:'Intermediate'})); 
     } 
-    else if(qCount == 3){
+    else if(qCount == 2){
         question = _.sample(_.filter(quesbank,{topic:'Advanced'}));   
     }
+    console.log(_.map(question.options, "correct"));
     if(!question && qCount == 1){
         $("#messages").css("display", "table");
         $("#messages").removeClass("environment");
@@ -255,17 +314,15 @@ function playQuiz(qCount) {
         return;
     }
     else if(!question) {
-        $("#quiz").fadeOut(500);
         $("#messages").css("display", "table");
         $("#messages").removeClass("environment");
-        $("#messageBox").html("<p>No! questions remaining for this catergory</p>")
+        $("#messageBox").html("<p>No Questions from this category</p>")
         $("#messages").fadeIn(500);
-        setTimeout(function() {
-            $("#messages").fadeOut(500);
-            checkVictory();
-        }, 1000);
+        setTimeout(function() { $("#messages").fadeOut(500);}, 1000);
+        // return playQuiz(qCount - 1);
+        return;
     }
-    quizScore.totalScoring(question.seq)
+    // quizScore.totalScoring(question.seq)
     if(quesbank.indexOf(question) != -1){
         quesbank.splice(quesbank.indexOf(question), 1);
     }
@@ -275,7 +332,7 @@ function playQuiz(qCount) {
     $("#quiz").fadeIn(1000);
 
     function checkVictory() {
-        if (quizScore.questionsAnswered.length == 30){
+        if (quizScore.totalAnswered == 30){
             setTimeout(function(){
                 victory();
                 setScore(quizScore.questionsAnswered.length);
@@ -287,7 +344,6 @@ function playQuiz(qCount) {
     function processAnswer(e, data) {
         if(data.correct) {
             quizScore.addCorrect(question);
-            quizScore.pointsScored(qCount)
             setScore(quizScore.getScore());
             //increment score in scorm and commit
             free = true;
