@@ -1,5 +1,5 @@
 var questionbank = {};
-questionbank.passingThresholdInRound = 1;
+questionbank.passingThresholdInRound = 8;
 questionbank.questionsInRound = 10;
 questionbank.questionsFromTopic = 30;
 questionbank.questions = [
