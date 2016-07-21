@@ -587,8 +587,8 @@ questionbank.questions = [
       weight: 1,
 
       opta: "Fixed Pay Only",
-      optacorrect: true,
-      optapoints: "10",
+      optacorrect: false,
+      optapoints: "0",
 
       optb: "Variable Pay Only",
       optbcorrect: false,
@@ -598,9 +598,9 @@ questionbank.questions = [
       optccorrect: true,
       optcpoints: "10",
 
-      optc: "None of the above",
-      optccorrect: false,
-      optcpoints: "0"
+      optd: "None of the above",
+      optdcorrect: false,
+      optdpoints: "0"
     }, 
     {
       statement: "Bank Trivia<br/>Your medical Insurance covers the following people:",
