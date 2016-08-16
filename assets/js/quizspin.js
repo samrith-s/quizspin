@@ -318,7 +318,7 @@ function playQuiz() {
     else if(qCount == 2){
         question = _.sample(_.filter(quesbank,{topic:'Advanced'}));   
     }
-    console.log(_.map(question.options, "correct"));
+    // console.log(_.map(question.options, "correct"));
     if(!question && qCount == 1){
         $("#messages").css("display", "table");
         $("#messages").removeClass("environment");
