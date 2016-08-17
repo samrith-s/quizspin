@@ -400,7 +400,239 @@ questionbank.questions = [
       optd: "SWIFT",
       optdcorrect: true,
       optdpoints: "10"
-    },   
+    },  
+
+
+    {
+      statement: "Forex Markets<br/>The _____________ rate is the price at which two currencies can be traded against each other.",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "Swap",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "Trading",
+      optbcorrect: true,
+      optbpoints: "10",
+
+      optc: "Exchange",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "Inter-bank",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
+    {
+      statement: "Forex Markets<br/>When there are no restrictions on the amount of currency that can be traded on the international market, the currency is called:",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "Internationally Convertible",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "Fully Convertible",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "Partially Convertible",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "Non-convertible",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
+    {
+      statement: "Forex Markets<br/>Foreign Currency transactions in India are governed by the :",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "FEMA Act",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "FICCI Act",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "FICRA Act",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "SEBI Act",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
+    {
+      statement: "Forex Markets<br/>The ISO 4217 Code for the United States Dollar is",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "US$",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "USD",
+      optbcorrect: true,
+      optbpoints: "10",
+
+      optc: "$",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "USS",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
+    {
+      statement: "Forex Markets<br/>The ISO 4217 Code for the Indian Rupee is",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "RS",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "IRS",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "INR",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "IND",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
+    {
+      statement: "Forex Markets<br/>What is the purpose of chats and technical analysis to a Forex trader?",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "To analyze historical price and historical volatility in order to predict future market behavior",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "To see a visual graphic output of historical price against time",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "To assist the Forex trader with making decision whether to BUY or SELL",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "All of the above are correct",
+      optdcorrect: true,
+      optdpoints: "10"
+    }, 
+
+    {
+      statement: "Forex Markets<br/>When the market volatility rises then it is safe to say that –",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "The risk that arise from trading is higher",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "The risk that arise from trading is lower",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "The risk that arise from trading does not change",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "There is no correlation between risk and market volatility",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
+    {
+      statement: "Forex Markets<br/>Is it correct to say that all foreign exchange transactions takes place in one centralized Exchange?",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "Yes",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "No",
+      optbcorrect: true,
+      optbpoints: "10",
+
+      optc: "More than 90% of the trades takes place only at Banks",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "More than 90% of the trades takes place through online brokers",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
+    {
+      statement: "Forex Markets<br/>LIBOR stands for:",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "London Inter Bank Opening Rate",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "Last Inter Bank Opening Rate",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "London Inter Bank Offer Rate",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "Last Inter Bank Offer Rate",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
+ {
+      statement: "Forex Markets<br/>If USD/INR is 65",
+      topic: 'Basic',
+      seq: 1,
+      weight: 1,
+
+      opta: "6536 INR",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "100 INR",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "1.53 INR",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "13,256 INR",
+      optdcorrect: false,
+      optdpoints: "0"
+    }, 
+
     {
       statement: "Basics of Credit<br/>A measure of whether the business has enough resources to meet obligations for next 12 months is the ___________.",
       topic: 'Intermediate',
@@ -813,6 +1045,236 @@ questionbank.questions = [
       optdcorrect: false,
       optdpoints: "0"
     },
+
+    {
+      statement: "Forex Markets<br/>What is the biggest market in the world in terms of volume of transactions?",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "The forex market",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "The interest rate market",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "The bond market",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "The stock market",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+    {
+      statement: "Forex Markets<br/>Currencies are traded in currency _________",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "groupings",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "sets",
+      optbcorrect: true,
+      optbpoints: "10",
+
+      optc: "pairs",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "derivatives",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+   
+    {
+      statement: "Forex Markets<br/>The difference between the bid price and the ask price is known as the _________",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "vig",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "exchange rate",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "interest rate",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "spread",
+      optdcorrect: true,
+      optdpoints: "10"
+    },
+   
+    {
+      statement: "Forex Markets<br/>Buy = _________ and Sell = _________",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "short, long",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "cost, revenue",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "long, short",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "spread, exchange",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+   
+    {
+      statement: "Forex Markets<br/>_________ gains / losses are the profits or losses that would result if an open position were closed at the current exchange rate",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "Future",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "Potential",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "Unrealized",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "Present value",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+   
+    {
+      statement: "Forex Markets<br/>Once the position is closed, gains and losses are said to be _________",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "Confirmed",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "Theoretical",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "Banked",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "Realized",
+      optdcorrect: true,
+      optdpoints: "10"
+    },
+   
+    {
+      statement: "Forex Markets<br/>The Chinese Renminbi is pegged to which currency",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "The US Dollar",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "The Yen",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "The Euro",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "The Pound",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+   
+    {
+      statement: "Forex Markets<br/>Forex is an 'over-the-counter' (OTC) market supported by forex dealers serving as _________",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "intermediaries",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "regulators",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "market-makers",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "correspondents",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+   
+    {
+      statement: "Forex Markets<br/>If EUR/USD is 1",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "120 EUR",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "100 EUR",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "83 EUR",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "78 EUR",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+   
+    {
+      statement: "Forex Markets<br/>The open of which market signals the open of the Forex trading hours after the weekend?",
+      topic: 'Intermediate',
+      seq: 4,
+      weight: 1,
+
+      opta: "Sydney",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "New York",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "Tokyo",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "London",
+      optdcorrect: false,
+      optdpoints: "0"
+    },
+
     {
       statement: "Basics of Credit<br/>How does one measure the number of inventory turns in a company?",
       topic: 'Advanced',
@@ -1379,6 +1841,245 @@ questionbank.questions = [
       optd: "After receipt of documents ",
       optdcorrect: true,
       optdpoints: "10",
+
+    },
+
+    {
+      statement: "Forex Markets<br/> In the EUR/USD currency pair, EUR is the ________ currency and USD is the _________ or counter currency",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "long, short",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "objective, subjective",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "first, second",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "base, quote",
+      optdcorrect: true,
+      optdpoints: "10",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>A _________ is equal to 0",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "trade",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "pip",
+      optbcorrect: true,
+      optbpoints: "10",
+
+      optc: "selling price",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "spread",
+      optdcorrect: false,
+      optdpoints: "0",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>A _________ forex trade is a contract to trade a given amount of a currency pair derivative with a market-maker, at the current buy / sell price",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "short",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "futures",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "spot",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "margin",
+      optdcorrect: false,
+      optdpoints: "0",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>The EUR / USD rate is quoted as 1.3310/1.3312 by the bank.  At what rate can you sell the EUR / USD to the bank?",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "1.3312",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "1.3310",
+      optbcorrect: true,
+      optbpoints: "10",
+
+      optc: "1.33",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "1.34",
+      optdcorrect: false,
+      optdpoints: "0",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>The GBP / USD rate is quoted as 1.9250/1.9255 by the bank.  At what rate can you buy GBP / USD from the bank?",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "1.9250",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "1.9255",
+      optbcorrect: true,
+      optbpoints: "10",
+
+      optc: "1.93",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "1.92",
+      optdcorrect: false,
+      optdpoints: "0",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>The GBP / USD rate is quoted as 1.The GBP / USD rate is quoted as 1.0.05. 005.5.. 0.",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "5.0",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "0.05",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "0.005",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "0.0005",
+      optdcorrect: false,
+      optdpoints: "0",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>A binding contract in the foreign exchange market that locks in the exchange rate for the purchase or sale of a currency on a future date is called a:",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "Option",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "Compulsory Option",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "Forward",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "Spot",
+      optdcorrect: false,
+      optdpoints: "0",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>A currency forward does not involve any upfront payment",
+      seq: 7,
+      weight: 1,
+
+      opta: "Always",
+      optacorrect: true,
+      optapoints: "10",
+
+      optb: "Never",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "It depends on the exchange rates",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "It depends on the interest rates",
+      optdcorrect: false,
+      optdpoints: "0",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>Consider an announcement from the Fed that the US interest rates raised in 0",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "It would decrease the value of the USD against other currencies in most of the cases",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "It would not affect the USD exchange rate at all",
+      optbcorrect: false,
+      optbpoints: "0",
+
+      optc: "It would increase the value of the USD against other currencies in most of the cases",
+      optccorrect: true,
+      optcpoints: "10",
+
+      optd: "It would increase the value of the USD against other currencies in any case",
+      optdcorrect: false,
+      optdpoints: "0",
+
+    },
+
+    {
+      statement: "Forex Markets<br/>The “Carry Trade” describes a trade where the investor:",
+      topic: 'Advanced',
+      seq: 7,
+      weight: 1,
+
+      opta: "Sells a currency with a high interest rate and buys a currency with lower interest rate",
+      optacorrect: false,
+      optapoints: "0",
+
+      optb: "Sells a currency with a low interest rate and buys a currency with higher interest rate",
+      optbcorrect: true,
+      optbpoints: "10",
+
+      optc: "Buys any currency of the Caribbean",
+      optccorrect: false,
+      optcpoints: "0",
+
+      optd: "Buys the same amount of two currencies with the same interest rate",
+      optdcorrect: false,
+      optdpoints: "0",
 
     },
 ];
