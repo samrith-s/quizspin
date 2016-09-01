@@ -349,7 +349,8 @@ function playQuiz() {
         if (quizScore.totalAnswered == 30){
             setTimeout(function(){
                 victory();
-                setScore(quizScore.questionsAnswered.length);
+                // setScore(quizScore.questionsAnswered.length);
+                setScore(quizScore.getScore());
                 $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
                 $('#freespins span').eq(1).text(quizScore.getGrade());
             },1000)
@@ -391,7 +392,7 @@ function playQuiz() {
         }
     }
     $(question).unbind('answered').on('answered', processAnswer);
-    setScore(quizScore.questionsAnswered.length);
+    // setScore(quizScore.questionsAnswered.length);
 }
 
 function freeSpin(n) {
