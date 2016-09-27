@@ -28,7 +28,7 @@ config.slotmachine = {
     locations: [
         
         {name: "machine", states: [
-            {name: "default", representation: "<img src='assets/img/slotmachine.png' id='slotmachineimg'/><div class='location' id='handle'><img src='assets/img/handles.png'></div><div id='slots'></div><div id='displaybox'><span>Rewards this round: 0</span></div><div id='freespins'><span>Grade</span><br /><span>0</span></div><div id='currencyholder'><span>" + config.currencyName + "</span><span>" + config.coins() + "</span></div><div id='info-btn'><span>Instructions</span></div><div id='payofftable'><div id='payoffs'><h3>Payoff Table</h3><div></div></div><div id='botPanel'><div><img src='assets/img/payoff.png' /><img src='assets/img/info.png' /><img src='assets/img/about.png' /></div></div></div>"}
+            {name: "default", representation: "<img src='assets/img/slotmachine.png' id='slotmachineimg'/><div class='location' id='handle'><img src='assets/img/handles.png'></div><div id='slots'></div><div id='displaybox'><span>Rewards this round: 0</span></div><div id='freespins' style='display:none;'><span>Grade</span><br /><span>0</span></div><div id='currencyholder'><span>" + config.currencyName + "</span><span>" + config.coins() + "</span></div><div id='info-btn'><span>Instructions</span></div><div id='payofftable'><div id='payoffs'><h3>Payoff Table</h3><div></div></div><div id='botPanel'><div><img src='assets/img/payoff.png' /><img src='assets/img/info.png' /><img src='assets/img/about.png' /></div></div></div>"}
         ]},
         {name: "branding", states: [
             {name: "default", representation: ""}

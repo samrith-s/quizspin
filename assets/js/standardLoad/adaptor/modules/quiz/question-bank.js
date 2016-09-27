@@ -1,7 +1,7 @@
 var questionbank = {};
-questionbank.passingThresholdInRound = 8;
-questionbank.questionsInRound = 10;
-questionbank.questionsFromTopic = 30;
+questionbank.passingThresholdInRound = 2;
+questionbank.questionsInRound = 3;
+questionbank.questionsFromTopic = 9;
 questionbank.questions = [
     {
       statement: "Basics of credit<br/>The risk of not receiving interest on a loan is called ________.",

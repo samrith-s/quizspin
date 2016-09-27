@@ -45,11 +45,15 @@ Score.prototype.addCorrect = function(question) {
     this.setGameGrade();
 }
 Score.prototype.isRoundPassed = function(round) {
-    var answeredCount = round.questionsAnswered.length;
-    if(answeredCount >= round.totalQuestions && round.correct >= questionbank.passingThresholdInRound)
+    var roundCompleted = this.isRoundCompleted;
+    if(roundCompleted && round.correct >= questionbank.passingThresholdInRound)
         return true;
     else
         return false;
+};
+Score.prototype.isRoundCompleted = function(round) {
+    var answeredCount = round.questionsAnswered.length;
+    return answeredCount >= round.totalQuestions;
 };
 Score.prototype.getRound = function(roundNo) {
     return _.find(this.roundScores, {roundNo: roundNo});
@@ -65,7 +69,16 @@ Score.prototype.addIncorrect = function(question, roundNo, level) {
     currentRound.questionsAnswered.push(question);
     currentRound.passed = this.isRoundPassed(currentRound);
     this.totalAnswered++;
-    this.setGameGrade();
+};
+Score.prototype.isGameFailed = function() {
+    var failed = false;
+    var self = this;
+    _.map(this.roundScores, function(round) {
+        if(self.isRoundCompleted(round) && !self.isRoundPassed(round)) {
+            failed = true
+        }
+    });
+    return failed;
 };
 Score.prototype.setGameGrade = function() {
     var grade = -1;
@@ -77,14 +90,15 @@ Score.prototype.setGameGrade = function() {
     this.passedLevel = grade;
 };
 Score.prototype.getNextGameGrade = function() {
-    if (this.passedLevel >= 2) {
-        return 2;
+    roundNo = this.getRoundNo();
+    clamped = roundNo;
+    if (clamped < 0) {
+        throw Error('roundNo should be > 0')
     }
-    // if (this.passedLevel < 0) {
-    //     return 1;
-    // }
-    else 
-        return this.passedLevel + 1;
+    if (clamped >= 2) {
+        clamped = 2;
+    }
+    return clamped;
 };
 Score.prototype.getScore = function() {
     return Math.round(((this.passedLevel + 1) / 3) * 100) ;
@@ -111,7 +125,6 @@ var quesbank = [];
 
 
 $(function() {
-    setScore(0);
     initGame();
 });
 
@@ -336,22 +349,21 @@ function playQuiz() {
     $("#quiz").fadeIn(1000);
 
     function checkVictory() {
-        console.log(quizScore.currentLevel)
-        // if (quizScore.totalAnswered == 9){
-        //     setTimeout(function(){
-        //         victory();
-        //         // setScore(quizScore.questionsAnswered.length);
-        //         setScore(quizScore.getScore());
-        //         $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-        //         $('#freespins span').eq(1).text(quizScore.getGrade());
-        //     },1000)
-        // }
+        failed = quizScore.isGameFailed()
+        if (quizScore.isGameFailed()) {
+            setTimeout(function(){
+                victory(failed);
+            },1000)
+        }
+        else if (quizScore.totalAnswered >= questionbank.questionsFromTopic) {
+            setTimeout(function(){
+                victory(failed);
+            },1000)
+        }
     }
     function processAnswer(e, data) {
         if(data.correct) {
             quizScore.addCorrect(question);
-            setScore(quizScore.getScore());
-            //increment score in scorm and commit
             free = true;
             freeSpin(0);
             $("#quiz").fadeOut(500);
@@ -383,7 +395,6 @@ function playQuiz() {
         }
     }
     $(question).unbind('answered').on('answered', processAnswer);
-    // setScore(quizScore.questionsAnswered.length);
 }
 
 function freeSpin(n) {
@@ -492,22 +503,18 @@ function handleIcons() {
     });
 }
 
-function victory() {
+function victory(failed) {
     userScore = quizScore.getScore();
     grade = quizScore.getGrade();
     $("#quiz").fadeOut();
-    retry_class = "hide";
+    retry_class = "";
     finalText = "";
-    if (grade == "F"){
-        finalText = "You failed"
+    if(failed){
+        finalText = "You failed";
     }
-    else if (grade == "B"){
-        finalText = "You are Basic user <br>Congratulations!"
-    }
-    else if (grade == "I"){
-        finalText = "You are Intermediate user <br>Congratulations!"
-    }else if (grade == "A"){
-        finalText = "You are Advanced user <br>Congratulations!"
+    else{
+        finalText = "You Won";
+        retry_class = "hide";
     }
     $("#messageBox").html("<h6 class='adjust-font'>Game Over</h6>" +
         "<h5 class='adjust-font'>" + finalText + "</h5>" +
@@ -518,8 +525,6 @@ function victory() {
     $("#messages").fadeIn();
     $('#retry-btn').unbind('click').on('click',retryGame);
     retry_class = "hide"; 
-    setScore(quizScore.getScore());
-    setComplete();
 }
 
 function commaSeparateNumber (val){
@@ -557,8 +562,6 @@ function display_payoff() {
 
 
 function retryGame(){
-    // location.reload();
-    setScore(0);
     initGame();
 }
  
