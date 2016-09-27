@@ -294,16 +294,6 @@ function processCombo(machine1, machine2, machine3) {
     if(!free)
     {
         playQuiz();
-        // if((!isQuestion(machine1.active) && !isQuestion(machine2.active) && isQuestion(machine3.active)) || (!isQuestion(machine1.active) && isQuestion(machine2.active) && !isQuestion(machine3.active)) || (isQuestion(machine1.active) && !isQuestion(machine2.active) && !isQuestion(machine3.active))){
-        //     playQuiz(1);
-        // }
-        // else if((!isQuestion(machine1.active) && isQuestion(machine2.active) && isQuestion(machine3.active)) || (isQuestion(machine1.active) && !isQuestion(machine2.active) && isQuestion(machine3.active)) || (isQuestion(machine1.active) && isQuestion(machine2.active) && !isQuestion(machine3.active))){
-        //     playQuiz(2)
-
-        // }
-        // else if(isQuestion(machine1.active) && isQuestion(machine2.active) && isQuestion(machine3.active)){
-        //     playQuiz(3)
-        // }
     }
 }
 
@@ -318,7 +308,7 @@ function playQuiz() {
     else if(qCount == 2){
         question = _.sample(_.filter(quesbank,{topic:'Advanced'}));   
     }
-    // console.log(_.map(question.options, "correct"));
+    console.log(_.map(question.options, "correct"));
     if(!question && qCount == 1){
         $("#messages").css("display", "table");
         $("#messages").removeClass("environment");
@@ -346,15 +336,16 @@ function playQuiz() {
     $("#quiz").fadeIn(1000);
 
     function checkVictory() {
-        if (quizScore.totalAnswered == 30){
-            setTimeout(function(){
-                victory();
-                // setScore(quizScore.questionsAnswered.length);
-                setScore(quizScore.getScore());
-                $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
-                $('#freespins span').eq(1).text(quizScore.getGrade());
-            },1000)
-        }
+        console.log(quizScore.currentLevel)
+        // if (quizScore.totalAnswered == 9){
+        //     setTimeout(function(){
+        //         victory();
+        //         // setScore(quizScore.questionsAnswered.length);
+        //         setScore(quizScore.getScore());
+        //         $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
+        //         $('#freespins span').eq(1).text(quizScore.getGrade());
+        //     },1000)
+        // }
     }
     function processAnswer(e, data) {
         if(data.correct) {
