@@ -357,6 +357,7 @@ function playQuiz() {
         }
     }
     function processAnswer(e, data) {
+        // console.log(data);
         if(data.correct) {
             quizScore.addCorrect(question);
             setScore(quizScore.getScore());
@@ -366,10 +367,13 @@ function playQuiz() {
             $("#quiz").fadeOut(500);
             $("#messages").css("display", "table");
             $("#messages").removeClass("environment");
-            $("#messageBox").html("<p>Yes! That was correct</p>")
+            $("#messageBox").html("<p>Yes! That was correct</p>"  +
+                "<p><button type='button' class='know_more' style='background: rgba(225, 228, 20, 0.8);;border: none;color: white;font-size: 0.6em;padding: 5px;cursor: pointer;'>Know More!</button></p>"
+                )
             $("#messages").fadeIn(500);
+            know_more_image(data.img,0);
             setTimeout(function() {
-                $("#messages").fadeOut(500);
+                // $("#messages").fadeOut(500);
                 checkVictory();
             }, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
@@ -381,10 +385,13 @@ function playQuiz() {
             $("#quiz").fadeOut(500);
             $("#messages").css("display", "table");
             $("#messages").removeClass("environment");
-            $("#messageBox").html("<p>Oops! That was incorrect</p>")
+            $("#messageBox").html("<p>Oops! That was incorrect</p>"  +
+                "<p><button type='button' class='know_more' style='background: rgba(225, 228, 20, 0.8);;border: none;color: white;font-size: 0.6em;padding: 5px;cursor: pointer;'>Know More!</button></p>"
+                )
             $("#messages").fadeIn(500);
+            know_more_image(data.img,0);
             setTimeout(function() { 
-                $("#messages").fadeOut(500);
+                // $("#messages").fadeOut(500);
                 checkVictory();
             }, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
@@ -402,7 +409,7 @@ function freeSpin(n) {
     setTimeout(function() {$("#freespins span").eq(1).fadeIn()}, 400);
     $(".slot-item-6 img").effect("pulsate");
 
-    setTimeout(function() { $("#messages").fadeOut(); }, 2000);
+    // setTimeout(function() { $("#messages").fadeOut(); }, 2000);
     if(n>=1) {
         setTimeout(function() {
             $("#handle img").trigger('click');
@@ -597,4 +604,22 @@ function StopSound(soundobj) {
     var thissound = document.getElementById(soundobj);
     thissound.pause();
     thissound.currentTime = 0;
+}
+
+function know_more_image(img,freespin){
+    $('.know_more').unbind('click').bind('click',function(){
+        $("#messages").fadeOut(500, function() {
+            $("#messages").css("display", "table");
+            $("#messages").removeClass("environment");
+            $("#messageBox").html("<div id='know_more_image_wrapper' style='width: 50%;margin: auto;position: relative;'><img src='" + img + "' id='know_more_img' style='width: 100%;height: auto;'></div><div class='exit_message' style='position: absolute;top: 0;right: 0;font-size: 0.6em;background: rgba(140, 72, 72, 0.8);padding: 5px;cursor:pointer;'>Exit</div>")
+            $("#messages").fadeIn(500);
+            close_know_more(freespin);    
+        })
+    });
+}
+
+function close_know_more(freespin){
+    $('.exit_message').unbind('click').bind('click',function(){
+        $("#messages").fadeOut();
+    });
 }
