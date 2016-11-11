@@ -6,7 +6,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>The risk of not receiving interest on a loan is called ________.",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q1.jpg",
       seq: 1,
       weight: 1,
 
@@ -30,7 +30,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>Substandard Assets are those that are outstanding for a period _________.",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q2.jpg",
       seq: 1,
       weight: 1,
 
@@ -53,7 +53,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>What are the 5 C's of Credit?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q3.jpg",
       seq: 1,
       weight: 1,
 
@@ -76,7 +76,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>The Balance Sheet measures the performance of the company over the past one year.",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q4.jpg",
       seq: 1,
       weight: 1,
 
@@ -92,7 +92,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>What is the net operating cycle of a company?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q5.jpg",
       seq: 1,
       weight: 1,
 
@@ -115,7 +115,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>How does one calculate the current ratio of the company?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q6.jpg",
       seq: 1,
       weight: 1,
 
@@ -138,7 +138,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>Pro Forma Analysis is done by  ______________.",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q7.jpg",
       seq: 1,
       weight: 1,
 
@@ -162,7 +162,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>What does DSCR stand for?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q8.jpg",
       seq: 1,
       weight: 1,
 
@@ -185,7 +185,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>How does one calculate the gearing of a company?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q9.jpg",
       seq: 1,
       weight: 1,
 
@@ -208,7 +208,7 @@ questionbank.questions = [
     {
       statement: "Basics of credit<br/>A Cash Flow Statement measures changes in the balance sheet and income affecting the cash position",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q10.jpg",
       seq: 1,
       weight: 1,
 
@@ -224,7 +224,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Which of this is a risk in international trade transactions?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q11.jpg",
       seq: 1,
       weight: 1,
 
@@ -247,7 +247,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Trade Finance pertains only to loans given for international trade",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q12.jpg",
       seq: 1,
       weight: 1,
 
@@ -263,7 +263,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Packing Credit is another term for",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q13.jpg",
       seq: 1,
       weight: 1,
 
@@ -286,7 +286,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>A performance guarantee is a non-fund based facility",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q14.jpg",
       seq: 1,
       weight: 1,
 
@@ -301,7 +301,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>A Letter of Credit is a fund based facility",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q15.jpg",
       seq: 1,
       weight: 1,
 
@@ -316,7 +316,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Documentary Credits is another name for:",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q16.jpg",
       seq: 1,
       weight: 1,
 
@@ -339,7 +339,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>What does LC stand for?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q16.jpg",
       seq: 1,
       weight: 1,
 
@@ -362,7 +362,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>What does PCFC stand for?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q17.jpg",
       seq: 1,
       weight: 1,
 
@@ -385,7 +385,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>PCFC is riskier than normal packing credit",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q18.jpg",
       seq: 1,
       weight: 1,
 
@@ -401,7 +401,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Trade transmissions are done using the _____________ network",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q19.jpg",
       seq: 1,
       weight: 1,
 
@@ -426,7 +426,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The _____________ rate is the price at which two currencies can be traded against each other.",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q20.jpg",
       seq: 1,
       weight: 1,
 
@@ -450,7 +450,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>When there are no restrictions on the amount of currency that can be traded on the international market, the currency is called:",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q21.jpg",
       seq: 1,
       weight: 1,
 
@@ -474,7 +474,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>Foreign Currency transactions in India are governed by the :",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q22.jpg",
       seq: 1,
       weight: 1,
 
@@ -498,7 +498,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The ISO 4217 Code for the United States Dollar is",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q23.jpg",
       seq: 1,
       weight: 1,
 
@@ -522,7 +522,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The ISO 4217 Code for the Indian Rupee is",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q24.jpg",
       seq: 1,
       weight: 1,
 
@@ -546,7 +546,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>What is the purpose of chats and technical analysis to a Forex trader?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q25.jpg",
       seq: 1,
       weight: 1,
 
@@ -570,7 +570,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>When the market volatility rises then it is safe to say that –",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q26.jpg",
       seq: 1,
       weight: 1,
 
@@ -594,7 +594,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>Is it correct to say that all foreign exchange transactions takes place in one centralized Exchange?",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q27.jpg",
       seq: 1,
       weight: 1,
 
@@ -618,7 +618,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>LIBOR stands for:",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q28.jpg",
       seq: 1,
       weight: 1,
 
@@ -642,7 +642,7 @@ questionbank.questions = [
  {
       statement: "Forex Markets<br/>If USD/INR is 65",
       topic: 'Basic',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q29.jpg",
       seq: 1,
       weight: 1,
 
@@ -666,7 +666,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>A measure of whether the business has enough resources to meet obligations for next 12 months is the ___________.",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q30.jpg",
       seq: 3,
       weight: 1,
 
@@ -689,7 +689,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>A statement that allows you to measure amounts as a percentage of another amount on the same statement is __________.",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q32.jpg",
       seq: 3,
       weight: 1,
 
@@ -706,13 +706,13 @@ questionbank.questions = [
       optcpoints: "0",
 
       optd: "Pro Forma Analysis",
-      optccorrect: false,
-      optcpoints: "0"
+      optdcorrect: false,
+      optdpoints: "0"
     },               
     {
       statement: "Basics of Credit<br/>What is measured through Activity Ratios in ratio analysis?",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q31.jpg",
       seq: 3,
       weight: 1,
 
@@ -735,7 +735,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>Turnover ratios measure how many times _____________.",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q33.jpg",
       seq: 3,
       weight: 1,
 
@@ -758,7 +758,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>What is Asymmetric Information?",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q34.jpg",
       seq: 3,
       weight: 1,
 
@@ -781,7 +781,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>How does one calculate the net operating cycle for a company?",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q35.jpg",
       seq: 3,
       weight: 1,
 
@@ -804,7 +804,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>How does one calculate the quick ratio of the company?",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q36.jpg",
       seq: 3,
       weight: 1,
 
@@ -827,7 +827,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>RBI guidelines stipulate that credit exposure of a bank to a group borrower should not exceed ______.",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q37.jpg",
       seq: 3,
       weight: 1,
 
@@ -850,7 +850,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>Would a gearing of 3.5x be considered high for a company?",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q38.jpg",
       seq: 3,
       weight: 1,
 
@@ -866,7 +866,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>The quick ratio is more stringent in gauging whether a company has liquidity.",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q39.jpg",
       seq: 3,
       weight: 1,
 
@@ -882,7 +882,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>An _________ Letter of Credit cannot be canceled or amended without the consent of all parties including the Exporter",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q40.jpg",
       seq: 4,
       weight: 1,
 
@@ -905,7 +905,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>When goods are sent by ship you receive acknowledgment in the form of:",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q41.jpg",
       seq: 4,
       weight: 1,
 
@@ -928,7 +928,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Non fund based facilities are less risky than Fund based facilities",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q42.jpg",
       seq: 4,
       weight: 1,
 
@@ -944,7 +944,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>The following is a transport document:",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q43.jpg",
       seq: 4,
       weight: 1,
 
@@ -967,7 +967,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>LC facilities are a part of:",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q44.jpg",
       seq: 4,
       weight: 1,
 
@@ -990,7 +990,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Post-shipment Credit facilities are a part of:",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q45.jpg",
       seq: 4,
       weight: 1,
 
@@ -1013,7 +1013,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Advance Payment Guarantees are a part of:",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q46.jpg",
       seq: 4,
       weight: 1,
 
@@ -1036,7 +1036,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Risk on a bank is always better than risk on even a AAA rated corporate",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q47.jpg",
       seq: 4,
       weight: 1,
 
@@ -1052,7 +1052,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Documents against Payment basis transactions are also called ____________ transactions",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q48.jpg",
       seq: 4,
       weight: 1,
 
@@ -1075,7 +1075,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Documents against Acceptance basis transactions are also called ____________ transactions",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q49.jpg",
       seq: 4,
       weight: 1,
 
@@ -1099,7 +1099,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>What is the biggest market in the world in terms of volume of transactions?",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q50.jpg",
       seq: 4,
       weight: 1,
 
@@ -1122,7 +1122,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>Currencies are traded in currency _________",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q51.jpg",
       seq: 4,
       weight: 1,
 
@@ -1146,7 +1146,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The difference between the bid price and the ask price is known as the _________",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q54.jpg",
       seq: 4,
       weight: 1,
 
@@ -1170,7 +1170,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>Buy = _________ and Sell = _________",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q51.jpg",
       seq: 4,
       weight: 1,
 
@@ -1194,7 +1194,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>_________ gains / losses are the profits or losses that would result if an open position were closed at the current exchange rate",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q54.jpg",
       seq: 4,
       weight: 1,
 
@@ -1218,7 +1218,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>Once the position is closed, gains and losses are said to be _________",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q51.jpg",
       seq: 4,
       weight: 1,
 
@@ -1242,7 +1242,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The Chinese Renminbi is pegged to which currency",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q56.jpg",
       seq: 4,
       weight: 1,
 
@@ -1266,7 +1266,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>Forex is an 'over-the-counter' (OTC) market supported by forex dealers serving as _________",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q57.jpg",
       seq: 4,
       weight: 1,
 
@@ -1290,7 +1290,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>If EUR/USD is 1",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q58.jpg",
       seq: 4,
       weight: 1,
 
@@ -1314,7 +1314,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The open of which market signals the open of the Forex trading hours after the weekend?",
       topic: 'Intermediate',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q59.jpg",
       seq: 4,
       weight: 1,
 
@@ -1338,7 +1338,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>How does one measure the number of inventory turns in a company?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q60.jpg",
       seq: 7,
       weight: 1,
 
@@ -1360,36 +1360,9 @@ questionbank.questions = [
 
     },
     {
-      statement: "Basics of Credit<br/>A process where a debit exposure or claim is directly offset by a credit exposure to the same counterparty to reduce risk for the bank is called __________.",
-      topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
-      seq: 7,
-      weight: 1,
-
-      opta: "Balance",
-      optacorrect: false,
-      optapoints: "0",
-
-      optb: "Collaboration",
-      optbcorrect: false,
-      optbpoints: "0",
-
-      optc: "Drive",
-      optccorrect: false,
-      optcpoints: "0",
-
-      optd: "Honesty",
-      optdcorrect: false,
-      optdpoints: "0",
-
-      opte: "Collaboration and Honesty",
-      optecorrect: true,
-      optepoints: "10"
-    },
-    {
       statement: "Basics of Credit<br/>You have two equally competent employees - A and B - in your team. A has previously worked with a major client. You have put B on a project with the client. The client requests the replacement of B with A as he has a good rapport with A. There is nothing wrong in the B's performance. Do you give in to the client request? Which values does this situation affect?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q61.jpg",
       seq: 7,
       weight: 1,
 
@@ -1413,7 +1386,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>What would a higher inventory turnover ratio than industry average mean for a company?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q62.jpg",
       seq: 7,
       weight: 1,
 
@@ -1436,7 +1409,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>A company has a receivables turnover ratio of 8.9x as against the industry average of 7.8x. What does this tell us?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q63.jpg",
       seq: 7,
       weight: 1,
 
@@ -1458,36 +1431,9 @@ questionbank.questions = [
 
     },
     {
-      statement: "Basics of Credit<br/>There is a project with 7 risk factors. You have mitigated 6 of the risks. However, the seventh risk may derail the project. Taking up the project will double the revenue that your company is making. Should you take up the project? Which values does this situation affect?",
-      topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
-      seq: 7,
-      weight: 1,
-
-      opta: "Balance",
-      optacorrect: false,
-      optapoints: "0",
-
-      optb: "Collaboration",
-      optbcorrect: false,
-      optbpoints: "0",
-
-      optc: "Drive",
-      optccorrect: false,
-      optcpoints: "0",
-
-      optd: "Honesty",
-      optdcorrect: false,
-      optdpoints: "0",
-
-      opte: "Balance & Honesty",
-      optecorrect: true,
-      optepoints: "10"
-    },
-    {
       statement: "Basics of Credit<br/>What does an asset turnover of 0.72x indicate?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q65.jpg",
       seq: 7,
       weight: 1,
 
@@ -1510,7 +1456,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>What does a low current ratio indicate?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q66.jpg",
       seq: 7,
       weight: 1,
 
@@ -1531,9 +1477,9 @@ questionbank.questions = [
       optdpoints: "10"
     },
     {
-      statement: "c<br/>A debt-to-assets ratio is an indicator of the company's _____________.",
+      statement: "<br/>A debt-to-assets ratio is an indicator of the company's _____________.",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q67.jpg",
       seq: 7,
       weight: 1,
 
@@ -1557,7 +1503,7 @@ questionbank.questions = [
     {
       statement: "Basics of Credit<br/>What is Loss Given Default?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q68.jpg",
       seq: 7,
       weight: 1,
 
@@ -1575,40 +1521,12 @@ questionbank.questions = [
 
       optd: "Exposure at default for any given loan",
       optdcorrect: false,
-      optdpoints: "0",
-
-      opte: "Balance and Collaboration",
-      optecorrect: true,
-      optepoints: "10"
-    },
-
-    {
-      statement: "Basics of Credit<br/>You can use your budget for either setting up an incubation centre where people are rewarded for new ideas OR for immediate distribution as bonus to your team. What do you do? Which value/s does this situation affect?",
-      topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
-      seq: 7,
-      weight: 1,
-
-      opta: "Balance",
-      optacorrect: true,
-      optapoints: "10",
-
-      optb: "Collaboration",
-      optbcorrect: false,
-      optbpoints: "0",
-
-      optc: "Drive",
-      optccorrect: false,
-      optcpoints: "0",
-
-      optd: "Honesty",
-      optdcorrect: false,
       optdpoints: "0"
     },
     {
       statement: "Basics of Credit<br/>What is Altman's Z Score model used for?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q69.jpg",
       seq: 7,
       weight: 1,
 
@@ -1629,36 +1547,9 @@ questionbank.questions = [
       optdpoints: "0"
     },
     {
-      statement: "Culture Questions<br/>There is a potentially big opportunity that could alone meet your target. You discovered this opportunity via your network. However, you are currently under-staffed and there may be a delay in hiring for your team. The project can be taken up by another team who is well-staffed. Do you pass on the lead? Which values does this situation affect?",
-      topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
-      seq: 7,
-      weight: 1,
-
-      opta: "Balance",
-      optacorrect: false,
-      optapoints: "0",
-
-      optb: "Collaboration",
-      optbcorrect: false,
-      optbpoints: "0",
-
-      optc: "Drive",
-      optccorrect: false,
-      optcpoints: "0",
-
-      optd: "Honesty",
-      optdcorrect: false,
-      optdpoints: "0",
-
-      opte: "Balance and Collaboration",
-      optecorrect: true,
-      optepoints: "10"
-    },
-    {
       statement: "Basics of Credit<br/>Which of the following would be the weakest risk protection for a loan?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q70.jpg",
       seq: 7,
       weight: 1,
 
@@ -1681,7 +1572,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Which of the following gives the holder the title of goods:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q71.jpg",
       seq: 7,
       weight: 1,
 
@@ -1705,7 +1596,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/> How many copies of the Bill of Lading are provided by the shipping carrier?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q72.jpg",
       seq: 7,
       weight: 1,
 
@@ -1728,7 +1619,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>The current version of the Uniform Customs and Practice for Documentary Credits is:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q73.jpg",
       seq: 7,
       weight: 1,
 
@@ -1752,7 +1643,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>The Exporter trusts the importer to pay after receipt of goods.  This form of clean payment is called:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q74.jpg",
       seq: 7,
       weight: 1,
 
@@ -1775,7 +1666,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Bid Bonds and Retention Bonds are types of:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q75.jpg",
       seq: 7,
       weight: 1,
 
@@ -1800,7 +1691,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Shipping Documents are sent by the",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q76.jpg",
       seq: 7,
       weight: 1,
 
@@ -1825,7 +1716,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Bid Bonds and Retention Bonds are types of:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q77.jpg",
       seq: 7,
       weight: 1,
 
@@ -1842,7 +1733,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>Who receives shipping documents in a direct transaction?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q78.jpg",
       seq: 7,
       weight: 1,
 
@@ -1867,7 +1758,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>  It is always required to get an LC confirmed for it to be valid",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q79.jpg",
       seq: 7,
       weight: 1,
 
@@ -1881,9 +1772,9 @@ questionbank.questions = [
     },
 
     {
-      statement: "Basics of Trade<br/>   A LC is captured in the bank’s balance sheet as:",
+      statement: "Basics of Trade<br/>  A LC is captured in the bank’s balance sheet as:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q80.jpg",
       seq: 7,
       weight: 1,
 
@@ -1907,7 +1798,7 @@ questionbank.questions = [
     {
       statement: "Basics of Trade<br/>LC negotiation happens:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q81.jpg",
       seq: 7,
       weight: 1,
 
@@ -1932,7 +1823,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/> In the EUR/USD currency pair, EUR is the ________ currency and USD is the _________ or counter currency",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q82.jpg",
       seq: 7,
       weight: 1,
 
@@ -1957,7 +1848,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>A _________ is equal to 0",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q83.jpg",
       seq: 7,
       weight: 1,
 
@@ -1982,7 +1873,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>A _________ forex trade is a contract to trade a given amount of a currency pair derivative with a market-maker, at the current buy / sell price",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q84.jpg",
       seq: 7,
       weight: 1,
 
@@ -2007,7 +1898,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The EUR / USD rate is quoted as 1.3310/1.3312 by the bank.  At what rate can you sell the EUR / USD to the bank?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q85.jpg",
       seq: 7,
       weight: 1,
 
@@ -2032,7 +1923,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The GBP / USD rate is quoted as 1.9250/1.9255 by the bank.  At what rate can you buy GBP / USD from the bank?",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q86.jpg",
       seq: 7,
       weight: 1,
 
@@ -2057,7 +1948,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The GBP / USD rate is quoted as 1.The GBP / USD rate is quoted as 1.0.05. 005.5.. 0.",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q90.jpg",
       seq: 7,
       weight: 1,
 
@@ -2082,7 +1973,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>A binding contract in the foreign exchange market that locks in the exchange rate for the purchase or sale of a currency on a future date is called a:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q87.jpg",
       seq: 7,
       weight: 1,
 
@@ -2107,7 +1998,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>A currency forward does not involve any upfront payment",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q88.jpg",
       seq: 7,
       weight: 1,
 
@@ -2132,7 +2023,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>Consider an announcement from the Fed that the US interest rates raised in 0",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q90.jpg",
       seq: 7,
       weight: 1,
 
@@ -2157,7 +2048,7 @@ questionbank.questions = [
     {
       statement: "Forex Markets<br/>The “Carry Trade” describes a trade where the investor:",
       topic: 'Advanced',
-      img: "assets/img/axiscg/Slide1.png",
+      img: "assets/img/axiscg/Q89.jpg",
       seq: 7,
       weight: 1,
 

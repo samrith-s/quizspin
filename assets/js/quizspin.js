@@ -368,13 +368,13 @@ function playQuiz() {
             $("#messages").css("display", "table");
             $("#messages").removeClass("environment");
             $("#messageBox").html("<p>Yes! That was correct</p>"  +
-                "<p><button type='button' class='know_more' style='background: rgba(225, 228, 20, 0.8);;border: none;color: white;font-size: 0.6em;padding: 5px;cursor: pointer;'>Know More!</button></p>"
+                "<p><button type='button' class='know_more' style='background: rgba(225, 228, 20, 0.8);;border: none;color: black !important;font-size: 0.6em;padding: 5px;cursor: pointer;'>Know More!</button></p>"
                 )
             $("#messages").fadeIn(500);
             know_more_image(data.img,0);
             setTimeout(function() {
                 // $("#messages").fadeOut(500);
-                checkVictory();
+                // checkVictory();
             }, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
             $('#freespins span').eq(1).text(quizScore.getGrade());
@@ -386,18 +386,40 @@ function playQuiz() {
             $("#messages").css("display", "table");
             $("#messages").removeClass("environment");
             $("#messageBox").html("<p>Oops! That was incorrect</p>"  +
-                "<p><button type='button' class='know_more' style='background: rgba(225, 228, 20, 0.8);;border: none;color: white;font-size: 0.6em;padding: 5px;cursor: pointer;'>Know More!</button></p>"
+                "<p><button type='button' class='know_more' style='background: rgba(225, 228, 20, 0.8);;border: none;color: black !important;font-size: 0.6em;padding: 5px;cursor: pointer;'>Know More!</button></p>"
                 )
             $("#messages").fadeIn(500);
             know_more_image(data.img,0);
             setTimeout(function() { 
                 // $("#messages").fadeOut(500);
-                checkVictory();
+                // checkVictory();
             }, 1000);
             $('#currencyholder span').eq(1).text(quizScore.questionsAnswered.length + '/' + quizScore.total)
             $('#freespins span').eq(1).text(quizScore.getGrade());
         }
     }
+
+    function know_more_image(img,freespin){
+        $('.know_more').unbind('click').bind('click',function(){
+            $("#messages").fadeOut(500, function() {
+                $("#messages").css("display", "table");
+                $("#messages").removeClass("environment");
+                $("#messageBox").html("<div id='know_more_image_wrapper' style='width: 50%;margin: auto;position: relative;'><img src='" + img + "' id='know_more_img' style='width: 100%;height: auto;'></div><div class='exit_message' style='position: absolute;top: 0;right: 0;font-size: 0.6em;background: rgba(140, 72, 72, 0.8);padding: 5px;cursor:pointer;'>Exit</div>")
+                $("#messages").fadeIn(500);
+                close_know_more(freespin);    
+            })
+        });
+    }
+
+    function close_know_more(freespin){
+        $('.exit_message').unbind('click').bind('click',function(){
+            checkVictory();
+            $("#messages").fadeOut();
+        });
+    }
+
+
+
     $(question).unbind('answered').on('answered', processAnswer);
     // setScore(quizScore.questionsAnswered.length);
 }
@@ -502,7 +524,7 @@ function handleIcons() {
         $("#payoffs div").text("Pull the lever to get a question. " +
                         "The complexity of the question depends on the number of question marks that appear. " +
                         "If you don't see a question mark, pull the lever again. " +
-                        "Answer a question correctly to earn points. Repeat until you reach a score of 40. " +
+                        "Answer a question correctly to move on to the Basic, Intermediate and then the Advanced level. " +
                         "All the best!"
         )
     });
@@ -606,20 +628,3 @@ function StopSound(soundobj) {
     thissound.currentTime = 0;
 }
 
-function know_more_image(img,freespin){
-    $('.know_more').unbind('click').bind('click',function(){
-        $("#messages").fadeOut(500, function() {
-            $("#messages").css("display", "table");
-            $("#messages").removeClass("environment");
-            $("#messageBox").html("<div id='know_more_image_wrapper' style='width: 50%;margin: auto;position: relative;'><img src='" + img + "' id='know_more_img' style='width: 100%;height: auto;'></div><div class='exit_message' style='position: absolute;top: 0;right: 0;font-size: 0.6em;background: rgba(140, 72, 72, 0.8);padding: 5px;cursor:pointer;'>Exit</div>")
-            $("#messages").fadeIn(500);
-            close_know_more(freespin);    
-        })
-    });
-}
-
-function close_know_more(freespin){
-    $('.exit_message').unbind('click').bind('click',function(){
-        $("#messages").fadeOut();
-    });
-}
